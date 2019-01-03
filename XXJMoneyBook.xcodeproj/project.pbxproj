@@ -1,0 +1,724 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F057DAA1C8D6B28003DA3C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F057DA91C8D6B28003DA3C7 /* main.m */; };
+		7F057DAD1C8D6B28003DA3C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F057DAC1C8D6B28003DA3C7 /* AppDelegate.m */; };
+		7F057DB61C8D6B28003DA3C7 /* AZXTallyBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F057DB41C8D6B28003DA3C7 /* AZXTallyBook.xcdatamodeld */; };
+		7F057DB81C8D6B28003DA3C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F057DB71C8D6B28003DA3C7 /* Assets.xcassets */; };
+		7F057DBB1C8D6B28003DA3C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F057DB91C8D6B28003DA3C7 /* LaunchScreen.storyboard */; };
+		7F057DE51C8D6B8E003DA3C7 /* XXJAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F057DDF1C8D6B8E003DA3C7 /* XXJAccountViewController.m */; };
+		7F057DE61C8D6B8E003DA3C7 /* XXJNewAccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F057DE11C8D6B8E003DA3C7 /* XXJNewAccountTableViewController.m */; };
+		7F057DE81C8D6B8E003DA3C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F057DE41C8D6B8E003DA3C7 /* Main.storyboard */; };
+		7F057DED1C8DA504003DA3C7 /* XXJAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F057DEC1C8DA504003DA3C7 /* XXJAccountTableViewCell.m */; };
+		7F077CF11C926DCC00D85707 /* XXJAllHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077CF01C926DCC00D85707 /* XXJAllHistoryViewController.m */; };
+		7F077CF61C926E9300D85707 /* XXJAllHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077CF51C926E9300D85707 /* XXJAllHistoryTableViewCell.m */; };
+		7F077CFA1C92B0D400D85707 /* XXJMonthHIstoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077CF91C92B0D400D85707 /* XXJMonthHIstoryViewController.m */; };
+		7F077D031C93F67700D85707 /* XXJPieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D021C93F67700D85707 /* XXJPieView.m */; };
+		7F077D071C940B9700D85707 /* XXJPieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D061C940B9700D85707 /* XXJPieViewController.m */; };
+		7F077D4B1C9516CD00D85707 /* XXJPieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D4A1C9516CD00D85707 /* XXJPieTableViewCell.m */; };
+		7F077D501C966B8000D85707 /* XXJTypeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D4F1C966B8000D85707 /* XXJTypeDetailViewController.m */; };
+		7F077D541C96C73F00D85707 /* XXJSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D531C96C73F00D85707 /* XXJSettingTableViewController.m */; };
+		7F077D591C96D37C00D85707 /* XXJOperateTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D581C96D37C00D85707 /* XXJOperateTypeTableViewController.m */; };
+		7F077D5D1C96D47700D85707 /* XXJOperateTypeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D5C1C96D47700D85707 /* XXJOperateTypeTableViewCell.m */; };
+		7F10B83A1C9939CC00A8F3AF /* XXJAddTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F10B8391C9939CB00A8F3AF /* XXJAddTypeViewController.m */; };
+		7F10B83E1C9942F200A8F3AF /* XXJAddTypeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F10B83D1C9942F200A8F3AF /* XXJAddTypeCollectionViewCell.m */; };
+		7FE29C951CA3C77000681ED6 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE29C941CA3C77000681ED6 /* UIViewController+BackButtonHandler.m */; };
+		7FF2307C1C8FC4200065F312 /* Account+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF230791C8FC4200065F312 /* Account+CoreDataProperties.m */; };
+		7FF2307D1C8FC4200065F312 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF2307B1C8FC4200065F312 /* Account.m */; };
+		893077345C69C7220C6F62F2 /* libPods-XXJMoneyBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413D924F20E75B5AF88306E /* libPods-XXJMoneyBook.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6F152EFECE01BD412CA477F0 /* Pods-XXJMoneyBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXJMoneyBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-XXJMoneyBook/Pods-XXJMoneyBook.release.xcconfig"; sourceTree = "<group>"; };
+		7F057DA51C8D6B28003DA3C7 /* XXJMoneyBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XXJMoneyBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F057DA91C8D6B28003DA3C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F057DAB1C8D6B28003DA3C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7F057DAC1C8D6B28003DA3C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7F057DB51C8D6B28003DA3C7 /* AZXTallyBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AZXTallyBook.xcdatamodel; sourceTree = "<group>"; };
+		7F057DB71C8D6B28003DA3C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F057DBA1C8D6B28003DA3C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7F057DBC1C8D6B28003DA3C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F057DDE1C8D6B8E003DA3C7 /* XXJAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJAccountViewController.h; sourceTree = "<group>"; };
+		7F057DDF1C8D6B8E003DA3C7 /* XXJAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJAccountViewController.m; sourceTree = "<group>"; };
+		7F057DE01C8D6B8E003DA3C7 /* XXJNewAccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJNewAccountTableViewController.h; sourceTree = "<group>"; };
+		7F057DE11C8D6B8E003DA3C7 /* XXJNewAccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJNewAccountTableViewController.m; sourceTree = "<group>"; };
+		7F057DE41C8D6B8E003DA3C7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7F057DEB1C8DA504003DA3C7 /* XXJAccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJAccountTableViewCell.h; sourceTree = "<group>"; };
+		7F057DEC1C8DA504003DA3C7 /* XXJAccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJAccountTableViewCell.m; sourceTree = "<group>"; };
+		7F077CEF1C926DCC00D85707 /* XXJAllHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJAllHistoryViewController.h; sourceTree = "<group>"; };
+		7F077CF01C926DCC00D85707 /* XXJAllHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJAllHistoryViewController.m; sourceTree = "<group>"; };
+		7F077CF41C926E9300D85707 /* XXJAllHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJAllHistoryTableViewCell.h; sourceTree = "<group>"; };
+		7F077CF51C926E9300D85707 /* XXJAllHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJAllHistoryTableViewCell.m; sourceTree = "<group>"; };
+		7F077CF81C92B0D400D85707 /* XXJMonthHIstoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJMonthHIstoryViewController.h; sourceTree = "<group>"; };
+		7F077CF91C92B0D400D85707 /* XXJMonthHIstoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJMonthHIstoryViewController.m; sourceTree = "<group>"; };
+		7F077D011C93F67700D85707 /* XXJPieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJPieView.h; sourceTree = "<group>"; };
+		7F077D021C93F67700D85707 /* XXJPieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJPieView.m; sourceTree = "<group>"; };
+		7F077D051C940B9700D85707 /* XXJPieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJPieViewController.h; sourceTree = "<group>"; };
+		7F077D061C940B9700D85707 /* XXJPieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJPieViewController.m; sourceTree = "<group>"; };
+		7F077D491C9516CD00D85707 /* XXJPieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJPieTableViewCell.h; sourceTree = "<group>"; };
+		7F077D4A1C9516CD00D85707 /* XXJPieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJPieTableViewCell.m; sourceTree = "<group>"; };
+		7F077D4E1C966B8000D85707 /* XXJTypeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJTypeDetailViewController.h; sourceTree = "<group>"; };
+		7F077D4F1C966B8000D85707 /* XXJTypeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJTypeDetailViewController.m; sourceTree = "<group>"; };
+		7F077D521C96C73F00D85707 /* XXJSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJSettingTableViewController.h; sourceTree = "<group>"; };
+		7F077D531C96C73F00D85707 /* XXJSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJSettingTableViewController.m; sourceTree = "<group>"; };
+		7F077D571C96D37C00D85707 /* XXJOperateTypeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJOperateTypeTableViewController.h; sourceTree = "<group>"; };
+		7F077D581C96D37C00D85707 /* XXJOperateTypeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJOperateTypeTableViewController.m; sourceTree = "<group>"; };
+		7F077D5B1C96D47700D85707 /* XXJOperateTypeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJOperateTypeTableViewCell.h; sourceTree = "<group>"; };
+		7F077D5C1C96D47700D85707 /* XXJOperateTypeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJOperateTypeTableViewCell.m; sourceTree = "<group>"; };
+		7F10B8381C9939CB00A8F3AF /* XXJAddTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJAddTypeViewController.h; sourceTree = "<group>"; };
+		7F10B8391C9939CB00A8F3AF /* XXJAddTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJAddTypeViewController.m; sourceTree = "<group>"; };
+		7F10B83C1C9942F200A8F3AF /* XXJAddTypeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXJAddTypeCollectionViewCell.h; sourceTree = "<group>"; };
+		7F10B83D1C9942F200A8F3AF /* XXJAddTypeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXJAddTypeCollectionViewCell.m; sourceTree = "<group>"; };
+		7FE29C931CA3C77000681ED6 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		7FE29C941CA3C77000681ED6 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		7FF230781C8FC4200065F312 /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7FF230791C8FC4200065F312 /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7FF2307A1C8FC4200065F312 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		7FF2307B1C8FC4200065F312 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		8413D924F20E75B5AF88306E /* libPods-XXJMoneyBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XXJMoneyBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12D907511D8FE4A19648ED2 /* Pods-XXJMoneyBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXJMoneyBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XXJMoneyBook/Pods-XXJMoneyBook.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F057DA21C8D6B28003DA3C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				893077345C69C7220C6F62F2 /* libPods-XXJMoneyBook.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CCE5227C9C9C4802E8F1BB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8413D924F20E75B5AF88306E /* libPods-XXJMoneyBook.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F3876582C9BBB475CBD6D0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F12D907511D8FE4A19648ED2 /* Pods-XXJMoneyBook.debug.xcconfig */,
+				6F152EFECE01BD412CA477F0 /* Pods-XXJMoneyBook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F057D9C1C8D6B28003DA3C7 = {
+			isa = PBXGroup;
+			children = (
+				7F057DA71C8D6B28003DA3C7 /* XXJMoneyBook */,
+				7F057DA61C8D6B28003DA3C7 /* Products */,
+				3F3876582C9BBB475CBD6D0D /* Pods */,
+				0CCE5227C9C9C4802E8F1BB9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7F057DA61C8D6B28003DA3C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F057DA51C8D6B28003DA3C7 /* XXJMoneyBook.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F057DA71C8D6B28003DA3C7 /* XXJMoneyBook */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CE91C926CC000D85707 /* CoreData */,
+				7F057DE91C8D6C5B003DA3C7 /* 记账 */,
+				7F077CED1C926D4B00D85707 /* 账本 */,
+				7F077D041C93F68E00D85707 /* 统计 */,
+				7F077D561C96C79000D85707 /* 设置 */,
+				7FE29C961CA3C7A800681ED6 /* Extension */,
+				7F057DB71C8D6B28003DA3C7 /* Assets.xcassets */,
+				7F057DE41C8D6B8E003DA3C7 /* Main.storyboard */,
+				7F057DB91C8D6B28003DA3C7 /* LaunchScreen.storyboard */,
+				7F057DBC1C8D6B28003DA3C7 /* Info.plist */,
+				7F057DA81C8D6B28003DA3C7 /* Supporting Files */,
+			);
+			path = XXJMoneyBook;
+			sourceTree = "<group>";
+		};
+		7F057DA81C8D6B28003DA3C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F057DA91C8D6B28003DA3C7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F057DE91C8D6C5B003DA3C7 /* 记账 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CF21C926E3100D85707 /* 记账首页 */,
+				7F057DEA1C8D6C7A003DA3C7 /* 新建账单 */,
+			);
+			name = "记账";
+			sourceTree = "<group>";
+		};
+		7F057DEA1C8D6C7A003DA3C7 /* 新建账单 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CE81C926C9A00D85707 /* Controller */,
+			);
+			name = "新建账单";
+			sourceTree = "<group>";
+		};
+		7F057DEE1C8DA50C003DA3C7 /* tableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F057DEB1C8DA504003DA3C7 /* XXJAccountTableViewCell.h */,
+				7F057DEC1C8DA504003DA3C7 /* XXJAccountTableViewCell.m */,
+			);
+			name = tableViewCell;
+			sourceTree = "<group>";
+		};
+		7F077CE71C926C7200D85707 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7F057DDE1C8D6B8E003DA3C7 /* XXJAccountViewController.h */,
+				7F057DDF1C8D6B8E003DA3C7 /* XXJAccountViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7F077CE81C926C9A00D85707 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7F057DE01C8D6B8E003DA3C7 /* XXJNewAccountTableViewController.h */,
+				7F057DE11C8D6B8E003DA3C7 /* XXJNewAccountTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7F077CE91C926CC000D85707 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7F057DAB1C8D6B28003DA3C7 /* AppDelegate.h */,
+				7F057DAC1C8D6B28003DA3C7 /* AppDelegate.m */,
+				7F057DB41C8D6B28003DA3C7 /* AZXTallyBook.xcdatamodeld */,
+				7FF230341C8E75960065F312 /* managedObject */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		7F077CED1C926D4B00D85707 /* 账本 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CF31C926E5200D85707 /* 全部记录 */,
+				7F077CFB1C92B0DD00D85707 /* 每月记录 */,
+				7F077CF71C926FDB00D85707 /* tableViewCell */,
+			);
+			name = "账本";
+			sourceTree = "<group>";
+		};
+		7F077CEE1C926D5900D85707 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CEF1C926DCC00D85707 /* XXJAllHistoryViewController.h */,
+				7F077CF01C926DCC00D85707 /* XXJAllHistoryViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7F077CF21C926E3100D85707 /* 记账首页 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CE71C926C7200D85707 /* Controller */,
+				7F057DEE1C8DA50C003DA3C7 /* tableViewCell */,
+			);
+			name = "记账首页";
+			sourceTree = "<group>";
+		};
+		7F077CF31C926E5200D85707 /* 全部记录 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CEE1C926D5900D85707 /* Controller */,
+			);
+			name = "全部记录";
+			sourceTree = "<group>";
+		};
+		7F077CF71C926FDB00D85707 /* tableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CF41C926E9300D85707 /* XXJAllHistoryTableViewCell.h */,
+				7F077CF51C926E9300D85707 /* XXJAllHistoryTableViewCell.m */,
+			);
+			name = tableViewCell;
+			sourceTree = "<group>";
+		};
+		7F077CFB1C92B0DD00D85707 /* 每月记录 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D001C92C97C00D85707 /* Controller */,
+			);
+			name = "每月记录";
+			sourceTree = "<group>";
+		};
+		7F077D001C92C97C00D85707 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CF81C92B0D400D85707 /* XXJMonthHIstoryViewController.h */,
+				7F077CF91C92B0D400D85707 /* XXJMonthHIstoryViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7F077D041C93F68E00D85707 /* 统计 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D4D1C966B5600D85707 /* 饼状图 */,
+				7F077D4C1C9516D200D85707 /* pieTableViewCell */,
+				7F077D511C966B8500D85707 /* 类型详细 */,
+			);
+			name = "统计";
+			sourceTree = "<group>";
+		};
+		7F077D081C940B9C00D85707 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D051C940B9700D85707 /* XXJPieViewController.h */,
+				7F077D061C940B9700D85707 /* XXJPieViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7F077D091C940BA700D85707 /* PieView */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D011C93F67700D85707 /* XXJPieView.h */,
+				7F077D021C93F67700D85707 /* XXJPieView.m */,
+			);
+			name = PieView;
+			sourceTree = "<group>";
+		};
+		7F077D4C1C9516D200D85707 /* pieTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D491C9516CD00D85707 /* XXJPieTableViewCell.h */,
+				7F077D4A1C9516CD00D85707 /* XXJPieTableViewCell.m */,
+			);
+			name = pieTableViewCell;
+			sourceTree = "<group>";
+		};
+		7F077D4D1C966B5600D85707 /* 饼状图 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D081C940B9C00D85707 /* Controller */,
+				7F077D091C940BA700D85707 /* PieView */,
+			);
+			name = "饼状图";
+			sourceTree = "<group>";
+		};
+		7F077D511C966B8500D85707 /* 类型详细 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D4E1C966B8000D85707 /* XXJTypeDetailViewController.h */,
+				7F077D4F1C966B8000D85707 /* XXJTypeDetailViewController.m */,
+			);
+			name = "类型详细";
+			sourceTree = "<group>";
+		};
+		7F077D551C96C74C00D85707 /* 设置首页 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D521C96C73F00D85707 /* XXJSettingTableViewController.h */,
+				7F077D531C96C73F00D85707 /* XXJSettingTableViewController.m */,
+			);
+			name = "设置首页";
+			sourceTree = "<group>";
+		};
+		7F077D561C96C79000D85707 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D551C96C74C00D85707 /* 设置首页 */,
+				7F077D5A1C96D38300D85707 /* 类别管理 */,
+				7F10B83B1C9939D000A8F3AF /* 添加类别 */,
+			);
+			name = "设置";
+			sourceTree = "<group>";
+		};
+		7F077D5A1C96D38300D85707 /* 类别管理 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D571C96D37C00D85707 /* XXJOperateTypeTableViewController.h */,
+				7F077D581C96D37C00D85707 /* XXJOperateTypeTableViewController.m */,
+				7F077D5E1C96D48800D85707 /* operateTableViewCell */,
+			);
+			name = "类别管理";
+			sourceTree = "<group>";
+		};
+		7F077D5E1C96D48800D85707 /* operateTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D5B1C96D47700D85707 /* XXJOperateTypeTableViewCell.h */,
+				7F077D5C1C96D47700D85707 /* XXJOperateTypeTableViewCell.m */,
+			);
+			name = operateTableViewCell;
+			sourceTree = "<group>";
+		};
+		7F10B83B1C9939D000A8F3AF /* 添加类别 */ = {
+			isa = PBXGroup;
+			children = (
+				7F10B8381C9939CB00A8F3AF /* XXJAddTypeViewController.h */,
+				7F10B8391C9939CB00A8F3AF /* XXJAddTypeViewController.m */,
+				7F10B83F1C9942F700A8F3AF /* collectionViewCell */,
+			);
+			name = "添加类别";
+			sourceTree = "<group>";
+		};
+		7F10B83F1C9942F700A8F3AF /* collectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F10B83C1C9942F200A8F3AF /* XXJAddTypeCollectionViewCell.h */,
+				7F10B83D1C9942F200A8F3AF /* XXJAddTypeCollectionViewCell.m */,
+			);
+			name = collectionViewCell;
+			sourceTree = "<group>";
+		};
+		7FE29C961CA3C7A800681ED6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7FE29C931CA3C77000681ED6 /* UIViewController+BackButtonHandler.h */,
+				7FE29C941CA3C77000681ED6 /* UIViewController+BackButtonHandler.m */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		7FF230341C8E75960065F312 /* managedObject */ = {
+			isa = PBXGroup;
+			children = (
+				7FF230781C8FC4200065F312 /* Account+CoreDataProperties.h */,
+				7FF230791C8FC4200065F312 /* Account+CoreDataProperties.m */,
+				7FF2307A1C8FC4200065F312 /* Account.h */,
+				7FF2307B1C8FC4200065F312 /* Account.m */,
+			);
+			name = managedObject;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F057DA41C8D6B28003DA3C7 /* XXJMoneyBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F057DD51C8D6B28003DA3C7 /* Build configuration list for PBXNativeTarget "XXJMoneyBook" */;
+			buildPhases = (
+				666ECB0D85F479B3E9421890 /* [CP] Check Pods Manifest.lock */,
+				7F057DA11C8D6B28003DA3C7 /* Sources */,
+				7F057DA21C8D6B28003DA3C7 /* Frameworks */,
+				7F057DA31C8D6B28003DA3C7 /* Resources */,
+				85D61F13FBC152F1D3E89121 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XXJMoneyBook;
+			productName = AZXTallyBook;
+			productReference = 7F057DA51C8D6B28003DA3C7 /* XXJMoneyBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F057D9D1C8D6B28003DA3C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = azx;
+				TargetAttributes = {
+					7F057DA41C8D6B28003DA3C7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 2SCD56D7X3;
+					};
+				};
+			};
+			buildConfigurationList = 7F057DA01C8D6B28003DA3C7 /* Build configuration list for PBXProject "XXJMoneyBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F057D9C1C8D6B28003DA3C7;
+			productRefGroup = 7F057DA61C8D6B28003DA3C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F057DA41C8D6B28003DA3C7 /* XXJMoneyBook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F057DA31C8D6B28003DA3C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F057DE81C8D6B8E003DA3C7 /* Main.storyboard in Resources */,
+				7F057DBB1C8D6B28003DA3C7 /* LaunchScreen.storyboard in Resources */,
+				7F057DB81C8D6B28003DA3C7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		666ECB0D85F479B3E9421890 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XXJMoneyBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85D61F13FBC152F1D3E89121 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XXJMoneyBook/Pods-XXJMoneyBook-resources.sh",
+				"${PODS_ROOT}/VENCalculatorInputView/VENCalculatorInputView/Images/VENCalculatorIconBackspace.png",
+				"${PODS_ROOT}/VENCalculatorInputView/VENCalculatorInputView/Images/VENCalculatorIconBackspace@2x.png",
+				"${PODS_ROOT}/VENCalculatorInputView/VENCalculatorInputView/VENCalculatorInputView.xib",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VENCalculatorIconBackspace.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VENCalculatorIconBackspace@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VENCalculatorInputView.nib",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XXJMoneyBook/Pods-XXJMoneyBook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F057DA11C8D6B28003DA3C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FF2307D1C8FC4200065F312 /* Account.m in Sources */,
+				7F10B83A1C9939CC00A8F3AF /* XXJAddTypeViewController.m in Sources */,
+				7F077CFA1C92B0D400D85707 /* XXJMonthHIstoryViewController.m in Sources */,
+				7F077D541C96C73F00D85707 /* XXJSettingTableViewController.m in Sources */,
+				7F077D591C96D37C00D85707 /* XXJOperateTypeTableViewController.m in Sources */,
+				7F057DED1C8DA504003DA3C7 /* XXJAccountTableViewCell.m in Sources */,
+				7F077CF11C926DCC00D85707 /* XXJAllHistoryViewController.m in Sources */,
+				7FE29C951CA3C77000681ED6 /* UIViewController+BackButtonHandler.m in Sources */,
+				7F057DE51C8D6B8E003DA3C7 /* XXJAccountViewController.m in Sources */,
+				7F077CF61C926E9300D85707 /* XXJAllHistoryTableViewCell.m in Sources */,
+				7F057DB61C8D6B28003DA3C7 /* AZXTallyBook.xcdatamodeld in Sources */,
+				7F057DAD1C8D6B28003DA3C7 /* AppDelegate.m in Sources */,
+				7F057DAA1C8D6B28003DA3C7 /* main.m in Sources */,
+				7F057DE61C8D6B8E003DA3C7 /* XXJNewAccountTableViewController.m in Sources */,
+				7F077D5D1C96D47700D85707 /* XXJOperateTypeTableViewCell.m in Sources */,
+				7F077D4B1C9516CD00D85707 /* XXJPieTableViewCell.m in Sources */,
+				7FF2307C1C8FC4200065F312 /* Account+CoreDataProperties.m in Sources */,
+				7F077D501C966B8000D85707 /* XXJTypeDetailViewController.m in Sources */,
+				7F077D071C940B9700D85707 /* XXJPieViewController.m in Sources */,
+				7F10B83E1C9942F200A8F3AF /* XXJAddTypeCollectionViewCell.m in Sources */,
+				7F077D031C93F67700D85707 /* XXJPieView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7F057DB91C8D6B28003DA3C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F057DBA1C8D6B28003DA3C7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F057DD31C8D6B28003DA3C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F057DD41C8D6B28003DA3C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F057DD61C8D6B28003DA3C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F12D907511D8FE4A19648ED2 /* Pods-XXJMoneyBook.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2SCD56D7X3;
+				INFOPLIST_FILE = XXJMoneyBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.rocbird.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F057DD71C8D6B28003DA3C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F152EFECE01BD412CA477F0 /* Pods-XXJMoneyBook.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 2SCD56D7X3;
+				INFOPLIST_FILE = XXJMoneyBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.rocbird.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F057DA01C8D6B28003DA3C7 /* Build configuration list for PBXProject "XXJMoneyBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F057DD31C8D6B28003DA3C7 /* Debug */,
+				7F057DD41C8D6B28003DA3C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F057DD51C8D6B28003DA3C7 /* Build configuration list for PBXNativeTarget "XXJMoneyBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F057DD61C8D6B28003DA3C7 /* Debug */,
+				7F057DD71C8D6B28003DA3C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7F057DB41C8D6B28003DA3C7 /* AZXTallyBook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7F057DB51C8D6B28003DA3C7 /* AZXTallyBook.xcdatamodel */,
+			);
+			currentVersion = 7F057DB51C8D6B28003DA3C7 /* AZXTallyBook.xcdatamodel */;
+			path = AZXTallyBook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7F057D9D1C8D6B28003DA3C7 /* Project object */;
+}
