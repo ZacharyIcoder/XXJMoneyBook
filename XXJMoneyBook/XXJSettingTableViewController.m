@@ -6,11 +6,11 @@
 //  Copyright © 2016年 azx. All rights reserved.
 //
 /*
-    object   Key
-    密保问题  questionAZX
-    密保答案  answerAZX
-    密码使用  useCodeAZX
-*/
+ object   Key
+ 密保問題  questionAZX
+ 密保答案  answerAZX
+ 密碼使用  useCodeAZX
+ */
 
 #import "XXJSettingTableViewController.h"
 #import "XXJOperateTypeTableViewController.h"
@@ -47,16 +47,16 @@
     [super viewWillAppear:animated];
     
     if ([self.defaults boolForKey:@"useCodeAZX"]) {
-        // 若用户使用密码
+        // 若用戶使用密碼
         self.changeCode.textColor = [UIColor blueColor];
         self.codeProtectQuestion.textColor = [UIColor blueColor];
         [self.codeSwitch setOn:YES];
-
+        
     } else {
-        // 用户将其设置为关或者是第一次进入应用，密码保护默认为关
+        // 用戶將其設定為關或者是第一次進入應用，密碼保護默認為關
         self.codeSwitch.on = NO;
         
-        // 密保关闭时，第一个section第2、3个cell都默认不能点击
+        // 密保關閉時，第一個section第2、3個cell都默認不能點擊
         if (!self.codeSwitch.isOn) {
             [self cellsInteractionWithSwitchOn:NO];
         }
@@ -65,8 +65,8 @@
 
 - (void)judgeFirstLoadThisView {
     if (![self.defaults boolForKey:@"haveLoadedAZXSettingTableViewController"]) {
-        // 第一次进入此页面
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"教程" message:@"在设置页面你可以开启密码保护，进行类别名称管理" preferredStyle:UIAlertControllerStyleAlert];
+        // 第一次進入此頁面
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"教學" message:@"在設定頁面你可以開啓密碼保護，進行類別名稱管理" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"知道了，不再提醒" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self.defaults setBool:YES forKey:@"haveLoadedAZXSettingTableViewController"];
@@ -83,23 +83,23 @@
     if (sender.isOn) {
         self.changeCode.textColor = [UIColor blueColor];
         self.codeProtectQuestion.textColor = [UIColor blueColor];
-        // 下面两个cell可以被点击
+        // 下面兩個cell可以被點擊
         [self cellsInteractionWithSwitchOn:YES];
         
-        // 弹出对话框输入新密码
+        // 彈出對話框輸入新密碼
         [self alertInputNewCode];
         
-        // 将useCodeAZX设为YES，使得下次打开应用时需要输入密码
+        // 將useCodeAZX設為YES，使得下次打開應用時需要輸入密碼
         [self.defaults setBool:YES forKey:@"useCodeAZX"];
     } else {
         [self returnToSwitchOffStatus];
-     
+        
         [self.defaults setBool:NO forKey:@"useCodeAZX"];
     }
 }
 
 - (void)cellsInteractionWithSwitchOn:(BOOL)switchIsOn {
-    // 打开开关可以点击，关闭开关不能点击
+    // 打開開關可以點擊，關閉開關不能點擊
     if (switchIsOn) {
         for (NSInteger i = 1; i < 3; i++) {
             UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
@@ -114,25 +114,25 @@
 }
 
 - (void)alertInputNewCode {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"设置" message:@"请输入新密码" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"設定" message:@"請輸入新密碼" preferredStyle:UIAlertControllerStyleAlert];
     
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         if ([self.defaults stringForKey:@"codeAZX"]) {
-            // 如果以前设置过密码，则显示其上
+            // 如果以前設定過密碼，則顯示其上
             textField.text = [self.defaults objectForKey:@"codeAZX"];
         }
     }];
     
-    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self.defaults setObject:alert.textFields[0].text forKey:@"codeAZX"];
         [self askUserToSetCodeProtect];
     }];
     
     UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        // 如果取消的话，则恢复到开关关闭的状态
+        // 如果取消的話，則恢復到開關關閉的狀態
         [self.codeSwitch setOn:NO animated:YES];
         [self returnToSwitchOffStatus];
-
+        
     }];
     
     [alert addAction:actionCancel];
@@ -144,43 +144,43 @@
 - (void)returnToSwitchOffStatus {
     self.changeCode.textColor = [UIColor lightGrayColor];
     self.codeProtectQuestion.textColor = [UIColor lightGrayColor];
-    // 下面两个cell不能被点击
+    // 下面兩個cell不能被點擊
     [self cellsInteractionWithSwitchOn:NO];
 }
 
 - (void)askUserToSetCodeProtect {
-    UIAlertController *whetherSetCodeProtect = [UIAlertController alertControllerWithTitle:@"提示" message:@"设置密码保护问题可以使您在忘记密码时找回密码" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *whetherSetCodeProtect = [UIAlertController alertControllerWithTitle:@"提示" message:@"設定密碼保護問題可以使您在忘記密碼時找回密碼" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *yes = [UIAlertAction actionWithTitle:@"现在设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *yes = [UIAlertAction actionWithTitle:@"現在設定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self setUpCodeProtectQuestion];
     }];
     
-    UIAlertAction *no = [UIAlertAction actionWithTitle:@"以后再说" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *no = [UIAlertAction actionWithTitle:@"以後再說" style:UIAlertActionStyleCancel handler:nil];
     
     [whetherSetCodeProtect addAction:no];
     [whetherSetCodeProtect addAction:yes];
     
     [self presentViewController:whetherSetCodeProtect animated:YES completion:nil];
-
+    
 }
 
 - (void)setUpCodeProtectQuestion {
-    __block UIAlertController *addProtectQuestion = [UIAlertController alertControllerWithTitle:@"设置" message:@"输入问题及答案" preferredStyle:UIAlertControllerStyleAlert];
+    __block UIAlertController *addProtectQuestion = [UIAlertController alertControllerWithTitle:@"設定" message:@"輸入問題及答案" preferredStyle:UIAlertControllerStyleAlert];
     [addProtectQuestion addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.placeholder = @"设置问题";
+        textField.placeholder = @"設定問題";
     }];
     [addProtectQuestion addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-        textField.placeholder = @"设置答案";
+        textField.placeholder = @"設定答案";
     }];
     
-    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         if (addProtectQuestion.textFields[0].text != nil && addProtectQuestion.textFields[1].text != nil) {
-            // 如果都输入了内容，将问题与答案保存起来
+            // 如果都輸入了內容，將問題與答案保存起來
             [self.defaults setObject:addProtectQuestion.textFields[0].text forKey:@"questionAZX"];
             [self.defaults setObject:addProtectQuestion.textFields[1].text forKey:@"answerAZX"];
         } else {
-            UIAlertController *remainder = [UIAlertController alertControllerWithTitle:@"提示" message:@"问题与答案都不能为空" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *enterAgain = [UIAlertAction actionWithTitle:@"再次输入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIAlertController *remainder = [UIAlertController alertControllerWithTitle:@"提示" message:@"問題與答案都不能為空" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *enterAgain = [UIAlertAction actionWithTitle:@"再次輸入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [self setUpCodeProtectQuestion];
             }];
             
@@ -194,7 +194,7 @@
     }];
     
     UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-
+    
     [addProtectQuestion addAction:actionCancel];
     [addProtectQuestion addAction:actionOK];
     
@@ -221,15 +221,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (self.codeSwitch.isOn && indexPath.section == 0 && indexPath.row == 1) {
-        // 开关打开并点击修改密码
+        // 開關打開並點擊修改密碼
         [self alertChangeCode];
     } else if (self.codeSwitch.isOn && indexPath.section == 0 && indexPath.row == 2) {
         [self changeProtectQuestion];
     } else if (indexPath.section == 2 && indexPath.row == 0) {
-        // 清除所有数据
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"警告" message:@"全部数据删除后将无法找回" preferredStyle:UIAlertControllerStyleAlert];
+        // 清除所有資料
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"警告" message:@"全部資料刪除後將無法找回" preferredStyle:UIAlertControllerStyleAlert];
         
-        UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"确定删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"確定刪除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
             [self deleteAllAccounts];
         }];
         
@@ -253,7 +253,7 @@
     NSError *error = nil;
     NSArray *allAccounts = [appDelegate.managedObjectContext executeFetchRequest:request error:&error];
     
-    // 将所有account删除
+    // 將所有account刪除
     for (Account *account in allAccounts) {
         [appDelegate.managedObjectContext deleteObject:account];
     }
@@ -263,24 +263,24 @@
 #pragma mark - change Code and protect question methods
 
 - (void)alertChangeCode {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"设置" message:@"请输入旧的密码，以验证身份" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"設定" message:@"請輸入舊的密碼，以驗證身份" preferredStyle:UIAlertControllerStyleAlert];
     
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.secureTextEntry = YES;
     }];
     
-    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"確認" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         if ([alert.textFields[0].text isEqualToString:[self.defaults objectForKey:@"codeAZX"]]) {
-            // 旧密码正确，则输入新密码
+            // 舊密碼正確，則輸入新密碼
             [self enterNewCode];
         } else {
-            // 旧密码错误
+            // 舊密碼錯誤
             [self wrongOldCode];
         }
     }];
     
-    UIAlertAction *actionForget = [UIAlertAction actionWithTitle:@"忘记密码" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        // 忘记密码，弹出密保问题
+    UIAlertAction *actionForget = [UIAlertAction actionWithTitle:@"忘記密碼" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        // 忘記密碼，彈出密保問題
         [self showProtectQuestion];
     }];
     
@@ -292,18 +292,18 @@
 }
 
 - (void)enterNewCode {
-    // 用来比较两次输入新密码是否一样
+    // 用來比較兩次輸入新密碼是否一樣
     __block NSString *tmpNewCode = [NSString string];
     
-    // 输入新密码
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"设置" message:@"请输入新密码" preferredStyle:UIAlertControllerStyleAlert];
+    // 輸入新密碼
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"設定" message:@"請輸入新密碼" preferredStyle:UIAlertControllerStyleAlert];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.secureTextEntry = YES;
     }];
     
-    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         tmpNewCode = alert.textFields[0].text;
-        // 再次输入密码
+        // 再次輸入密碼
         [self enterNewCodeAgainWithCode:tmpNewCode];
     }];
     
@@ -316,32 +316,32 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     }];
-
+    
     
     
 }
 
 - (void)enterNewCodeAgainWithCode:(NSString *)tmpNewCode {
-    // 再次输入密码
+    // 再次輸入密碼
     
-    UIAlertController *alert2 = [UIAlertController alertControllerWithTitle:@"设置" message:@"再次输入新密码" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert2 = [UIAlertController alertControllerWithTitle:@"設定" message:@"再次輸入新密碼" preferredStyle:UIAlertControllerStyleAlert];
     [alert2 addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.secureTextEntry = YES;
     }];
     
-    UIAlertAction *actionOK2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *actionOK2 = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         if ([alert2.textFields[0].text isEqualToString:tmpNewCode]) {
-            // 如果两次密码相同，保存密码
+            // 如果兩次密碼相同，保存密碼
             [self.defaults setObject:tmpNewCode forKey:@"codeAZX"];
-            // 弹窗显示修改成功
+            // 彈窗顯示修改成功
             [self changeSuccessfully];
         } else {
-            // 两次密码输入不相同
-            UIAlertController *alertWrong = [UIAlertController alertControllerWithTitle:@"提示" message:@"两次输入密码必须相同" preferredStyle:UIAlertControllerStyleAlert];
+            // 兩次密碼輸入不相同
+            UIAlertController *alertWrong = [UIAlertController alertControllerWithTitle:@"提示" message:@"兩次輸入密碼必須相同" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-            UIAlertAction *enterAgain = [UIAlertAction actionWithTitle:@"再次输入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                // 递归调用enterNewCode函数，再次输入
+            UIAlertAction *enterAgain = [UIAlertAction actionWithTitle:@"再次輸入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                // 遞歸調用enterNewCode函數，再次輸入
                 [self enterNewCode];
             }];
             
@@ -365,15 +365,15 @@
 }
 
 - (void)wrongOldCode {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"密码错误，请重试" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"密碼錯誤，請重試" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"再次输入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        // 点击重试，再次弹出修改密码对话框
+    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"再次輸入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        // 點擊重試，再次彈出修改密碼對話框
         [self alertChangeCode];
     }];
     
-    UIAlertAction *actionForget = [UIAlertAction actionWithTitle:@"忘记密码" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        // 忘记密码，则弹出密码保护问题
+    UIAlertAction *actionForget = [UIAlertAction actionWithTitle:@"忘記密碼" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        // 忘記密碼，則彈出密碼保護問題
         [self showProtectQuestion];
     }];
     
@@ -384,16 +384,16 @@
 }
 
 - (void)showProtectQuestion {
-    UIAlertController *question = [UIAlertController alertControllerWithTitle:@"输入答案" message:[NSString stringWithFormat:@"%@", [self.defaults objectForKey:@"questionAZX"]] preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *question = [UIAlertController alertControllerWithTitle:@"輸入答案" message:[NSString stringWithFormat:@"%@", [self.defaults objectForKey:@"questionAZX"]] preferredStyle:UIAlertControllerStyleAlert];
     
     [question addTextFieldWithConfigurationHandler:nil];
     
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         if ([question.textFields[0].text isEqualToString:[self.defaults objectForKey:@"answerAZX"]]) {
-            // 如果答案正确，让用户设置新密码
+            // 如果答案正確，讓用戶設定新密碼
             [self enterNewCode];
         } else {
-            // 否则弹出错误提示
+            // 否則彈出錯誤提示
             [self wrongAnswer];
         }
     }];
@@ -407,10 +407,10 @@
 }
 
 - (void)wrongAnswer {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"答案错误，请重试" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"答案錯誤，請重試" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"再次输入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        // 点击重试，再次弹出密保问题对话框
+    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"再次輸入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        // 點擊重試，再次彈出密保問題對話框
         [self showProtectQuestion];
     }];
     
@@ -424,7 +424,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     }];
-
+    
 }
 
 
@@ -438,13 +438,13 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     }];
-
+    
 }
 
 - (void)changeProtectQuestion {
-    UIAlertController *changeQuestion = [UIAlertController alertControllerWithTitle:@"设置" message:@"修改问题与答案" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *changeQuestion = [UIAlertController alertControllerWithTitle:@"設定" message:@"修改問題與答案" preferredStyle:UIAlertControllerStyleAlert];
     
-    // 默认显示问题与答案
+    // 默認顯示問題與答案
     [changeQuestion addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.text = [self.defaults objectForKey:@"questionAZX"];
     }];
@@ -452,7 +452,7 @@
         textField.text = [self.defaults objectForKey:@"answerAZX"];
     }];
     
-    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self.defaults setObject:changeQuestion.textFields[0].text forKey:@"questionAZX"];
         [self.defaults setObject:changeQuestion.textFields[1].text forKey:@"answerAZX"];
     }];
@@ -474,13 +474,13 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"addNewType"]) {
-        // 如果是添加新类别
+        // 如果是添加新類別
     } else if ([segue.identifier isEqualToString:@"changeType"]) {
-        // 如果是重命名类别
+        // 如果是重命名類別
         XXJOperateTypeTableViewController *viewController = [segue destinationViewController];
         viewController.operationType = @"changeType";
     } else if ([segue.identifier isEqualToString:@"deleteAndMoveType"]) {
-        // 如果是移动类别位置
+        // 如果是移動類別位置
         XXJOperateTypeTableViewController *viewController = [segue destinationViewController];
         viewController.operationType = @"deleteAndMoveType";
     }

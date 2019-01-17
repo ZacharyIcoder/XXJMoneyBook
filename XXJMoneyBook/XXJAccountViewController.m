@@ -17,7 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *accountTableView;
 
-@property (weak, nonatomic) IBOutlet UILabel *moneySumLabel; // 结余总金额
+@property (weak, nonatomic) IBOutlet UILabel *moneySumLabel; // 結餘總金額
 
 @property (weak, nonatomic) IBOutlet UIButton *addNewButton;
 
@@ -28,7 +28,7 @@
 
 @property (nonatomic, strong) NSMutableArray *fetchedResults;
 
-@property (nonatomic, strong) NSArray *typeArray; // 存放各个类型，以便如果是从别的界面转来可以选中该行
+@property (nonatomic, strong) NSArray *typeArray; // 存放各個類型，以便如果是從別的界面轉來可以選中該行
 
 @property (nonatomic, strong) NSUserDefaults *defaults;
 
@@ -36,7 +36,7 @@
 
 @implementation XXJAccountViewController
 
-// navigation控制时从下一界面返回时不会再次调用viewDidLoad，应用viewWillAppear
+// navigation控制時從下一界面返回時不會再次調用viewDidLoad，應用viewWillAppear
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.accountTableView.delegate = self;
@@ -48,19 +48,19 @@
     
     self.defaults = [NSUserDefaults standardUserDefaults];
     
-    // 判断是否第一次使用app
+    // 判斷是否第一次使用app
     [self judgeFirstLoadThisView];
     
     NSLog(@"%d", [self.defaults boolForKey:@"appDidLaunch"]);
     
-    // 判断是否需要输入密码
+    // 判斷是否需要輸入密碼
     [self judgeWhetherNeedCode];
 }
 
 - (void)judgeFirstLoadThisView {
     if (![self.defaults boolForKey:@"haveLoadedAZXAccountViewController"]) {
-        // 第一次进入此页面
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"欢迎使用简单记账" message:@"点击红色按钮记录新账，首页显示所选日期的所有账单，点击相应账单可编辑其内容，手指左滑可以删除相应账单" preferredStyle:UIAlertControllerStyleAlert];
+        // 第一次進入此頁面
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"歡迎使用小小記帳本" message:@"點擊紅色按鈕記錄新帳，首頁顯示所選日期的所有帳單，點擊相應帳單可編輯其內容，手指左滑可以刪除相應帳單" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"知道了，不再提醒" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self.defaults setBool:YES forKey:@"haveLoadedAZXAccountViewController"];
@@ -74,26 +74,26 @@
 
 - (void)judgeWhetherNeedCode {
     if ([self.defaults boolForKey:@"useCodeAZX"] && ![self.defaults boolForKey:@"appDidLaunch"]) {
-        // useCodeAZX是在设置界面中设置的，appDidLaunch每次退出应用时都将其设为NO，以便下一次进入应用时如果有使用密码就会弹出对话框要求输入密码
+        // useCodeAZX是在設定界面中設定的，appDidLaunch每次退出應用時都將其設為NO，以便下一次進入應用時如果有使用密碼就會彈出對話框要求輸入密碼
         NSLog(@"needCode");
-        UIAlertController *enterCode = [UIAlertController alertControllerWithTitle:@"提示" message:@"请输入密码" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *enterCode = [UIAlertController alertControllerWithTitle:@"提示" message:@"請輸入密碼" preferredStyle:UIAlertControllerStyleAlert];
         [enterCode addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
             textField.secureTextEntry = YES;
         }];
         
-        UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             if ([enterCode.textFields[0].text isEqualToString:[self.defaults objectForKey:@"codeAZX"]]) {
-                // 如果密码正确，进入应用，并将appDidLaunch设为YES
+                // 如果密碼正確，進入應用，並將appDidLaunch設為YES
                 [self.defaults setBool:YES forKey:@"appDidLaunch"];
             } else {
-                // 如果密码不正确
+                // 如果密碼不正確
                 [self enterWrongCode];
-
+                
             }
         }];
         
-        UIAlertAction *actionForget = [UIAlertAction actionWithTitle:@"忘记密码" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            // 忘记密码，弹出密保问题
+        UIAlertAction *actionForget = [UIAlertAction actionWithTitle:@"忘記密碼" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            // 忘記密碼，彈出密保問題
             [self showProtectQuestion];
         }];
         
@@ -107,15 +107,15 @@
 #pragma mark - code methods
 
 - (void)enterWrongCode {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"密码错误，请重试" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"密碼錯誤，請重試" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"再次输入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        // 点击重试，再次弹出输入密码对话框
+    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"再次輸入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        // 點擊重試，再次彈出輸入密碼對話框
         [self judgeWhetherNeedCode];
     }];
     
-    UIAlertAction *actionForget = [UIAlertAction actionWithTitle:@"忘记密码" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        // 忘记密码，则弹出密码保护问题
+    UIAlertAction *actionForget = [UIAlertAction actionWithTitle:@"忘記密碼" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        // 忘記密碼，則彈出密碼保護問題
         [self showProtectQuestion];
     }];
     
@@ -129,60 +129,60 @@
     NSString *title = [NSString string];
     NSString *message = [NSString string];
     if ([self.defaults objectForKey:@"questionAZX"] == nil) {
-        // 如果未设置密保问题
+        // 如果未設定密保問題
         title = @"提示";
-        message = @"未设置密保问题";
+        message = @"未設定密保問題";
     } else {
-        // 如果设置了密保问题
-        title = @"输入答案";
+        // 如果設定了密保問題
+        title = @"輸入答案";
         message = [NSString stringWithFormat:@"%@", [self.defaults objectForKey:@"questionAZX"]];
     }
     
     UIAlertController *question = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         if ([question.textFields[0].text isEqualToString:[self.defaults objectForKey:@"answerAZX"]]) {
-            // 如果答案正确，让用户设置新密码
+            // 如果答案正確，讓用戶設定新密碼
             [self enterNewCode];
         } else {
-            // 否则弹出错误提示
+            // 否則彈出錯誤提示
             [self wrongAnswer];
         }
     }];
     
     UIAlertAction *no = [UIAlertAction actionWithTitle:@"返回" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        // 点击返回，返回输入密码对话框
+        // 點擊返回，返回輸入密碼對話框
         [self judgeWhetherNeedCode];
     }];
     
     if ([self.defaults objectForKey:@"questionAZX"] == nil) {
-        // 如果未设置密保问题
+        // 如果未設定密保問題
         [question addAction:no];
     } else {
-        // 如果设置了密保问题，加入输入文本框
+        // 如果設定了密保問題，加入輸入文本框
         [question addTextFieldWithConfigurationHandler:nil];
-
+        
         [question addAction:no];
         [question addAction:ok];
-
+        
     }
     
     [self presentViewController:question animated:YES completion:nil];
 }
 
 - (void)enterNewCode {
-    // 用来比较两次输入新密码是否一样
+    // 用來比較兩次輸入新密碼是否一樣
     __block NSString *tmpNewCode = [NSString string];
     
-    // 输入新密码
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"设置" message:@"请输入新密码" preferredStyle:UIAlertControllerStyleAlert];
+    // 輸入新密碼
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"設定" message:@"請輸入新密碼" preferredStyle:UIAlertControllerStyleAlert];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.secureTextEntry = YES;
     }];
     
-    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         tmpNewCode = alert.textFields[0].text;
-        // 再次输入密码
+        // 再次輸入密碼
         [self enterNewCodeAgainWithCode:tmpNewCode];
     }];
     
@@ -197,26 +197,26 @@
 }
 
 - (void)enterNewCodeAgainWithCode:(NSString *)tmpNewCode {
-    // 再次输入密码
+    // 再次輸入密碼
     
-    UIAlertController *alert2 = [UIAlertController alertControllerWithTitle:@"设置" message:@"再次输入新密码" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert2 = [UIAlertController alertControllerWithTitle:@"設定" message:@"再次輸入新密碼" preferredStyle:UIAlertControllerStyleAlert];
     [alert2 addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.secureTextEntry = YES;
     }];
     
-    UIAlertAction *actionOK2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *actionOK2 = [UIAlertAction actionWithTitle:@"確定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         if ([alert2.textFields[0].text isEqualToString:tmpNewCode]) {
-            // 如果两次密码相同，保存密码
+            // 如果兩次密碼相同，保存密碼
             [self.defaults setObject:tmpNewCode forKey:@"codeAZX"];
-            // 弹窗显示修改成功
+            // 彈窗顯示修改成功
             [self changeSuccessfully];
         } else {
-            // 两次密码输入不相同
-            UIAlertController *alertWrong = [UIAlertController alertControllerWithTitle:@"提示" message:@"两次输入密码必须相同" preferredStyle:UIAlertControllerStyleAlert];
+            // 兩次密碼輸入不相同
+            UIAlertController *alertWrong = [UIAlertController alertControllerWithTitle:@"提示" message:@"兩次輸入密碼必須相同" preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-            UIAlertAction *enterAgain = [UIAlertAction actionWithTitle:@"再次输入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                // 递归调用enterNewCode函数，再次输入
+            UIAlertAction *enterAgain = [UIAlertAction actionWithTitle:@"再次輸入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                // 遞歸調用enterNewCode函數，再次輸入
                 [self enterNewCode];
             }];
             
@@ -231,7 +231,7 @@
     
     [alert2 addAction:actionCancel2];
     [alert2 addAction:actionOK2];
-        
+    
     [self presentViewController:alert2 animated:YES completion:nil];
     
 }
@@ -246,10 +246,10 @@
 }
 
 - (void)wrongAnswer {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"答案错误，请重试" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"答案錯誤，請重試" preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"再次输入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        // 点击重试，再次弹出密保问题对话框
+    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"再次輸入" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        // 點擊重試，再次彈出密保問題對話框
         [self showProtectQuestion];
     }];
     
@@ -268,10 +268,10 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if (self.passedDate) { // 若有别处传来的日期(此时是那个没有记账按钮的UI在显示)
+    if (self.passedDate) { // 若有別處傳來的日期(此時是那個沒有記帳按鈕的UI在顯示)
         self.navigationItem.title = self.passedDate;
     } else {
-        // 刚打开应用时，将passedDate设为当前日期(为了在fetchAccount时能筛选并展示当天的账单)
+        // 剛打開應用時，將passedDate設為當前日期(為了在fetchAccount時能篩選並展示當天的帳單)
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateFormat = @"yyyy-MM-dd";
         self.passedDate = [dateFormatter stringFromDate:[NSDate date]];
@@ -281,7 +281,7 @@
     [self fetchAccounts];
     [self.accountTableView reloadData];
     
-    // 计算结余总额
+    // 計算結餘總額
     [self calculateMoneySumAndSetText];
     
 }
@@ -289,10 +289,10 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     if (self.selectedType) {
-        // 如果是从统计类型界面跳转而来
+        // 如果是從統計類型界面跳轉而來
         NSArray *indexArray = [self indexsOfObject:self.selectedType InArray:self.typeArray];
-
-        // 将相应type的行背景加深
+        
+        // 將相應type的行背景加深
         for (NSNumber *indexNumber in indexArray) {
             XXJAccountTableViewCell *cell = [self.accountTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:[indexNumber integerValue] inSection:0]];
             
@@ -301,10 +301,10 @@
     }
 }
 
-// 返回一个含有该object相同的元素所在index的数组，且元素被封装成NSNumber
+// 返回一個含有該object相同的元素所在index的數組，且元素被封裝成NSNumber
 - (NSArray *)indexsOfObject:(id)object InArray:(NSArray *)array {
     NSMutableArray *tmpArray = [NSMutableArray array];
-
+    
     for (NSInteger i = 0; i < array.count; i++) {
         id obj = array[i];
         if ([obj isEqual:object]) {
@@ -317,12 +317,12 @@
 - (void)fetchAccounts {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Account"];
     
-    [request setPredicate:[NSPredicate predicateWithFormat:@"date == %@", self.passedDate]];  // 根据传来的date筛选需要的结果
+    [request setPredicate:[NSPredicate predicateWithFormat:@"date == %@", self.passedDate]];  // 根據傳來的date篩選需要的結果
     
     NSError *error = nil;
     self.fetchedResults = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:request error:&error]];
     
-    // 暂时储存类型
+    // 暫時儲存類型
     NSMutableArray *tmpTypeArray = [NSMutableArray array];
     
     for (NSInteger i = 0; i < self.fetchedResults.count; i++) {
@@ -330,12 +330,12 @@
         [tmpTypeArray addObject:account.type];
     }
     
-    // 这一步是为从统计类型界面跳转而来做准备的，为了进入界面就默认从所有类型中选中该类型
+    // 這一步是為從統計類型界面跳轉而來做準備的，為了進入界面就默認從所有類型中選中該類型
     self.typeArray = [tmpTypeArray copy];
 }
 
 - (void)calculateMoneySumAndSetText {
-    // 计算结余总金额
+    // 計算結餘總金額
     double moneySum = 0;
     for (Account *account in self.fetchedResults) {
         if ([account.incomeType isEqualToString:@"income"]) {
@@ -345,11 +345,11 @@
         }
     }
     
-    NSString *moneySumString = [NSString stringWithFormat:@"今日结余: %@", [NSNumber numberWithDouble:[[NSString stringWithFormat:@"%.2f", moneySum] doubleValue]]];
+    NSString *moneySumString = [NSString stringWithFormat:@"今日結餘: %@", [NSNumber numberWithDouble:[[NSString stringWithFormat:@"%.2f", moneySum] doubleValue]]];
     
     NSMutableAttributedString *mutString = [[NSMutableAttributedString alloc] initWithString:moneySumString];
     
-    // 在moneySumLabel上前面字体黑色，后半段根据正负决定颜色
+    // 在moneySumLabel上前面字體黑色，後半段根據正負決定顏色
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 5)];
     
     if (moneySum >= 0) {
@@ -368,10 +368,10 @@
     cell.typeName.text = account.type;
     cell.money.text = account.money;
     
-    // 此处的图片名称通过相应的type作为key从NSUserDefaults中取出
+    // 此處的圖片名稱通過相應的type作為key從NSUserDefaults中取出
     cell.typeImage.image = [UIImage imageNamed:[self.defaults objectForKey:cell.typeName.text]];
     
-    // 根据类型选择不同颜色
+    // 根據類型選擇不同顏色
     if ([account.incomeType isEqualToString:@"income"]) {
         cell.money.textColor = [UIColor blueColor];
     } else {
@@ -404,44 +404,44 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // 首先删除CoreData里的数据
+        // 首先刪除CoreData里的資料
         [self.managedObjectContext deleteObject:self.fetchedResults[indexPath.row]];
-        // 然后移除提供数据源的fetchResults(不然会出现tableView的update问题而crush)
+        // 然後移除提供資料源的fetchResults(不然會出現tableView的update問題而crush)
         [self.fetchedResults removeObjectAtIndex:indexPath.row];
-        // 删除tableView的行
+        // 刪除tableView的行
         [self.accountTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        // 最后更新UI
+        // 最後更新UI
         [self calculateMoneySumAndSetText];
     }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
-    // 将detele改为删除
-    return @" 删除 ";
+    // 將detele改為刪除
+    return @" 刪除 ";
 }
 
 #pragma mark - PassingDateDelegate
 
 - (void)viewController:(XXJNewAccountTableViewController *)controller didPassDate:(NSString *)date {
-    self.passedDate = date;  // 接收从AZXNewAccountTableViewController传来的date值，用做Predicate来筛选Fetch的ManagedObject
+    self.passedDate = date;  // 接收從AZXNewAccountTableViewController傳來的date值，用做Predicate來篩選Fetch的ManagedObject
 }
 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue destinationViewController] isKindOfClass:[XXJNewAccountTableViewController class]]) {  // segue时将self设为AZXNewAccountTableViewController的代理
+    if ([[segue destinationViewController] isKindOfClass:[XXJNewAccountTableViewController class]]) {  // segue時將self設為AZXNewAccountTableViewController的代理
         XXJNewAccountTableViewController *viewController = [segue destinationViewController];
         viewController.delegate = self;
     }
     
     if ([segue.identifier isEqualToString:@"addNewAccount"]) {
-        // 点击记账按钮时，创建一个新账本，并告知不是点击tableView转来
+        // 點擊記帳按鈕時，創建一個新帳本，並告知不是點擊tableView轉來
         XXJNewAccountTableViewController *viewController = [segue destinationViewController];
         viewController.isSegueFromTableView = NO;
     } else if ([segue.identifier isEqualToString:@"segueToDetailView"]) {
-        // 点击已保存的账本记录，查看详细，并告知是点击tableView而来
-        // 转到详细页面时，要显示被点击cell的内容，所以要将account传过去，让其显示相应内容
+        // 點擊已保存的帳本記錄，查看詳細，並告知是點擊tableView而來
+        // 轉到詳細頁面時，要顯示被點擊cell的內容，所以要將account傳過去，讓其顯示相應內容
         XXJNewAccountTableViewController *viewController = [segue destinationViewController];
         viewController.isSegueFromTableView = YES;
         viewController.accountInSelectedRow = self.fetchedResults[self.accountTableView.indexPathForSelectedRow.row];

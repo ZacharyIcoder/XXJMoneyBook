@@ -22,17 +22,17 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 
-@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *rightSwipe; // 右滑手势
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *rightSwipe; // 右滑手勢
 
-@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *leftSwipe; // 左滑手势
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *leftSwipe; // 左滑手勢
 
-@property (strong, nonatomic) UILabel *nullLabel; // 用来显示"暂无数据"
+@property (strong, nonatomic) UILabel *nullLabel; // 用來顯示"暫無資料"
 
 @property (strong, nonatomic) NSString *incomeType;
 
-@property (assign, nonatomic) double totalMoney; // 收入/支出总额
+@property (assign, nonatomic) double totalMoney; // 收入/支出總額
 
-@property (strong, nonatomic) NSArray *dataArray; // fetch来的Accounts
+@property (strong, nonatomic) NSArray *dataArray; // fetch來的Accounts
 
 @property (strong, nonatomic) NSArray *uniqueDateArray;
 
@@ -40,21 +40,21 @@
 
 @property (strong, nonatomic) NSArray *sortedMoneyArray;
 
-@property (strong, nonatomic) NSArray *sortedPercentArray; // 相应类别所占总金额的比例
+@property (strong, nonatomic) NSArray *sortedPercentArray; // 相應類別所佔總金額的比例
 
-@property (strong, nonatomic) NSDictionary *dict; // 储存有[type:money]的字典
+@property (strong, nonatomic) NSDictionary *dict; // 儲存有[type:money]的字典
 
-@property (assign, nonatomic) NSInteger currentIndex; // 当前要显示的数据的index(随swipe而增减)
+@property (assign, nonatomic) NSInteger currentIndex; // 當前要顯示的資料的index(隨swipe而增減)
 
-@property (strong, nonatomic) NSString *currentDateString; // 当前日期，用来显示与筛选fetch结果
+@property (strong, nonatomic) NSString *currentDateString; // 當前日期，用來顯示與篩選fetch結果
 
-@property (strong, nonatomic) NSDate *currentDate; // 用来swipe时加减日期
+@property (strong, nonatomic) NSDate *currentDate; // 用來swipe時加減日期
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-@property (strong, nonatomic) NSArray *colors; // 一条渐变的颜色带
+@property (strong, nonatomic) NSArray *colors; // 一條漸變的顏色帶
 
-@property (strong, nonatomic) NSArray *colorArray; // 储存各种颜色(对应不同的type)
+@property (strong, nonatomic) NSArray *colorArray; // 儲存各種顏色(對應不同的type)
 
 @end
 
@@ -62,14 +62,14 @@
 
 - (NSInteger)currentIndex {
     if (!_currentIndex) {
-        _currentIndex = 0; // 默认为0
+        _currentIndex = 0; // 默認為0
     }
     return _currentIndex;
 }
 
 - (NSString *)incomeType {
     if (!_incomeType) {
-        _incomeType = @"expense"; // 默认为支出
+        _incomeType = @"expense"; // 默認為支出
     }
     return _incomeType;
 }
@@ -77,21 +77,21 @@
 - (NSArray *)colors {
     if (!_colors) {
         _colors = @[[UIColor colorWithRed:252/255.0 green:25/255.0 blue:28/255.0 alpha:1],
-                        [UIColor colorWithRed:254/255.0 green:200/255.0 blue:46/255.0 alpha:1],
-                        [UIColor colorWithRed:217/255.0 green:253/255.0 blue:53/255.0 alpha:1],
-                        [UIColor colorWithRed:42/255.0 green:253/255.0 blue:130/255.0 alpha:1],
-                        [UIColor colorWithRed:43/255.0 green:244/255.0 blue:253/255.0 alpha:1],
-                        [UIColor colorWithRed:18/255.0 green:92/255.0 blue:249/255.0 alpha:1],
-                        [UIColor colorWithRed:219/255.0 green:39/255.0 blue:249/255.0 alpha:1],
-                        [UIColor colorWithRed:253/255.0 green:105/255.0 blue:33/255.0 alpha:1],
-                        [UIColor colorWithRed:255/255.0 green:245/255.0 blue:54/255.0 alpha:1],
-                        [UIColor colorWithRed:140/255.0 green:253/255.0 blue:49/255.0 alpha:1],
-                        [UIColor colorWithRed:44/255.0 green:253/255.0 blue:218/255.0 alpha:1],
-                        [UIColor colorWithRed:29/255.0 green:166/255.0 blue:250/255.0 alpha:1],
-                        [UIColor colorWithRed:142/255.0 green:37/255.0 blue:248/255.0 alpha:1],
-                        [UIColor colorWithRed:249/255.0 green:31/255.0 blue:181/255.0 alpha:1]];
-                    
-    }  // 共14种颜色，从红到紫，呈彩虹状渐变
+                    [UIColor colorWithRed:254/255.0 green:200/255.0 blue:46/255.0 alpha:1],
+                    [UIColor colorWithRed:217/255.0 green:253/255.0 blue:53/255.0 alpha:1],
+                    [UIColor colorWithRed:42/255.0 green:253/255.0 blue:130/255.0 alpha:1],
+                    [UIColor colorWithRed:43/255.0 green:244/255.0 blue:253/255.0 alpha:1],
+                    [UIColor colorWithRed:18/255.0 green:92/255.0 blue:249/255.0 alpha:1],
+                    [UIColor colorWithRed:219/255.0 green:39/255.0 blue:249/255.0 alpha:1],
+                    [UIColor colorWithRed:253/255.0 green:105/255.0 blue:33/255.0 alpha:1],
+                    [UIColor colorWithRed:255/255.0 green:245/255.0 blue:54/255.0 alpha:1],
+                    [UIColor colorWithRed:140/255.0 green:253/255.0 blue:49/255.0 alpha:1],
+                    [UIColor colorWithRed:44/255.0 green:253/255.0 blue:218/255.0 alpha:1],
+                    [UIColor colorWithRed:29/255.0 green:166/255.0 blue:250/255.0 alpha:1],
+                    [UIColor colorWithRed:142/255.0 green:37/255.0 blue:248/255.0 alpha:1],
+                    [UIColor colorWithRed:249/255.0 green:31/255.0 blue:181/255.0 alpha:1]];
+        
+    }  // 共14種顏色，從紅到紫，呈彩虹狀漸變
     return _colors;
 }
 
@@ -107,7 +107,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.typeTableView.dataSource = self;
     self.pieView.dataSource = self;
     
@@ -123,8 +123,8 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     if (![defaults boolForKey:@"haveLoadedAZXPieViewController"]) {
-        // 第一次进入此页面
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"教程" message:@"首页显示本月的收支统计图，手指左右划动屏幕可改变当前显示月份，要查看某一类别的详细情况，点击该行" preferredStyle:UIAlertControllerStyleAlert];
+        // 第一次進入此頁面
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"教學" message:@"首頁顯示本月的收支統計圖，手指左右划動屏幕可改變當前顯示月份，要查看某一類別的詳細情況，點擊該行" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"知道了，不再提醒" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [defaults setBool:YES forKey:@"haveLoadedAZXPieViewController"];
@@ -145,7 +145,7 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    // 离开界面时将图上label全部移除
+    // 離開界面時將圖上label全部移除
     [self.pieView removeAllLabel];
 }
 
@@ -168,7 +168,7 @@
 }
 
 - (void)setSwipeGesture {
-    // 分别设置左右滑动手势
+    // 分別設定左右滑動手勢
     self.leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
     self.rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
     
@@ -180,7 +180,7 @@
 }
 
 - (void)handleSwipe:(UISwipeGestureRecognizer *)gesture {
-    // 创建一个标准日历
+    // 創建一個標準日曆
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     
     NSDateComponents *comps = [[NSDateComponents alloc] init];
@@ -190,7 +190,7 @@
         [comps setMonth:1];
         self.currentDate = [calendar dateByAddingComponents:comps toDate:self.currentDate options:0];
     } else if (gesture.direction == UISwipeGestureRecognizerDirectionRight) {
-        // 右滑月份减1
+        // 右滑月份減1
         [comps setMonth:-1];
         self.currentDate = [calendar dateByAddingComponents:comps toDate:self.currentDate options:0];
     }
@@ -201,12 +201,12 @@
 - (void)fetchData {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Account"];
     
-    // 设置日期格式
+    // 設定日期格式
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yyyy-MM-dd";
     
     if (self.currentDateString == nil) {
-        // 如果还未设置，默认显示当前所处月份
+        // 如果還未設定，默認顯示當前所處月份
         self.currentDate = [NSDate date];
         self.currentDateString = [[dateFormatter stringFromDate:self.currentDate] substringToIndex:7];
         
@@ -220,9 +220,9 @@
     self.dataArray = [self.managedObjectContext executeFetchRequest:request error:&error];
     
     if (self.dataArray.count == 0) {
-        // 如果没有数据，中间显示"暂无数据"
+        // 如果沒有資料，中間顯示"暫無資料"
         self.nullLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
-        self.nullLabel.text = @"暂无数据";
+        self.nullLabel.text = @"暫無資料";
         self.nullLabel.font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
         self.nullLabel.textColor = [UIColor lightGrayColor];
         [self.nullLabel sizeToFit];
@@ -232,9 +232,9 @@
 }
 
 
-// 得到了totalMoney(总金额)，sortedMoneyArray(某一类别的金额的数组)，uniqueTypeArray(类别数组，与左边的数组排序相同)，uniqueDateArray(日期数组)，sortedPercentArray(每个类别所花金额占总金额的比例)，colorArray（储存各种颜色对应不同的type)
+// 得到了totalMoney(總金額)，sortedMoneyArray(某一類別的金額的數組)，uniqueTypeArray(類別數組，與左邊的數組排序相同)，uniqueDateArray(日期數組)，sortedPercentArray(每個類別所花金額佔總金額的比例)，colorArray（儲存各種顏色對應不同的type)
 - (void)filterData {
-    // 设置各个属性的暂存数组，防止直接数据加入属性多次调用方法导致数据叠加
+    // 設定各個屬性的暫存數組，防止直接資料加入屬性多次調用方法導致資料疊加
     NSMutableArray *tmpTypeArray = [NSMutableArray array];
     NSMutableArray *tmpAccountArray = [NSMutableArray array];
     NSDictionary *tmpDict = [NSMutableDictionary dictionary];
@@ -253,18 +253,18 @@
     
     self.totalMoney = tmpMoney;
     
-    // 去掉重复元素
+    // 去掉重復元素
     NSSet *typeSet = [NSSet setWithArray:[tmpTypeArray copy]];
     
     //
     tmpTypeArray = [NSMutableArray array];
     
-    // 得到降序的无重复元素的日期数组
+    // 得到降序的無重復元素的日期數組
     NSSet *dateSet = [NSSet setWithArray:[tmpDateArray copy]];
     self.uniqueDateArray = [dateSet sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:nil ascending:NO]]];
     
     for (NSString *type in typeSet) {
-        // 从中过滤其中一个类别的所有Account，然后得到一个类别的总金额
+        // 從中過濾其中一個類別的所有Account，然後得到一個類別的總金額
         NSArray *array = [tmpAccountArray filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"type == %@", type]];
         
         double totalMoneyInOneType = 0;
@@ -272,15 +272,15 @@
             totalMoneyInOneType += [account.money doubleValue];
         }
         
-        // 将金额封装成NSNumber来排序
+        // 將金額封裝成NSNumber來排序
         [tmpMoneyArray addObject:[NSNumber numberWithDouble:totalMoneyInOneType]];
         
-        // 将type加入数组
+        // 將type加入數組
         [tmpTypeArray addObject:type];
         
     }
     
-    // 这里使用字典是为了使type和money能关联起来，而且因为money要排序的原因无法使它们在各自数组保持相同的index，所以用字典的方法
+    // 這裡使用字典是為了使type和money能關聯起來，而且因為money要排序的原因無法使它們在各自數組保持相同的index，所以用字典的方法
     tmpDict = [NSDictionary dictionaryWithObjects:[tmpMoneyArray copy] forKeys:[tmpTypeArray copy]];
     
     // 降序排列
@@ -292,34 +292,34 @@
     double tmpTotalPercent = 0;
     
     for (NSInteger i = 0; i < self.sortedMoneyArray.count; i++) {
-        // 将相应百分比(小数点后两位)加入数组
-        // 此处为了总和为100%，将最后一个设为总额减去数组前除最后一个外所有的元素的百分比
+        // 將相應百分比(小數點後兩位)加入數組
+        // 此處為了總和為100%，將最後一個設為總額減去數組前除最後一個外所有的元素的百分比
         double money = [self.sortedMoneyArray[i] doubleValue];
         
         double percent = [[NSString stringWithFormat:@"%.2f",money/self.totalMoney*100] doubleValue];
         
         if (i != self.sortedMoneyArray.count - 1) {
-            // 如果不是数组最后一个的话，直接加入数组
+            // 如果不是數組最後一個的話，直接加入數組
             [tmpSortedPercentArray addObject:[NSNumber numberWithDouble:percent]];
-            // 并累计前面百分比的总和
+            // 並累計前面百分比的總和
             tmpTotalPercent += percent;
         } else {
-            // 如果是最后一个元素，通过用1减去前面的总和得到
+            // 如果是最後一個元素，通過用1減去前面的總和得到
             [tmpSortedPercentArray addObject:[NSNumber numberWithDouble:[[NSString stringWithFormat:@"%.2f", 100-tmpTotalPercent] doubleValue]]];
         }
-
-        // 将相应颜色加入数组(超过数组的14时从头开始)
+        
+        // 將相應顏色加入數組(超過數組的14時從頭開始)
         [tmpColorArray addObject:self.colors[i%14]];
         
-        // 将相应类型加入数组
-        // 因为可能一个金额对应着多个类型，判断是否出现此情况，若出现，则将x++, 取出数组其余类型
+        // 將相應類型加入數組
+        // 因為可能一個金額對應著多個類型，判斷是否出現此情況，若出現，則將x++, 取出數組其餘類型
         if (i > 0 && (self.sortedMoneyArray[i-1] == self.sortedMoneyArray[i])) {
             x++;
         } else {
             x = 0;
         }
         NSString *type = [tmpDict allKeysForObject:self.sortedMoneyArray[i]][x];
-        // 此数组中加入的顺序与moneyArray中一样
+        // 此數組中加入的順序與moneyArray中一樣
         [tmpTypes addObject:type];
     }
     
@@ -331,12 +331,12 @@
 - (void)setMoneyLabel {
     NSMutableAttributedString *mutString;
     if ([self.incomeType isEqualToString:@"income"]) {
-        mutString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ 总收入: %@", self.currentDateString, [NSNumber numberWithDouble:self.totalMoney]]];
+        mutString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ 總收入: %@", self.currentDateString, [NSNumber numberWithDouble:self.totalMoney]]];
         [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(13, [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:self.totalMoney]].length)];
     } else {
-        mutString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ 总支出: %@", self.currentDateString, [NSNumber numberWithDouble:self.totalMoney]]];
+        mutString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ 總支出: %@", self.currentDateString, [NSNumber numberWithDouble:self.totalMoney]]];
         [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(13, [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:self.totalMoney]].length)];
-
+        
     }
     
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 12)];
@@ -365,7 +365,7 @@
     
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, type.length)];
     
-    // 计算金额显示的长度
+    // 計算金額顯示的長度
     NSInteger moneyLength = [NSString stringWithFormat:@"%@", money].length;
     
     if ([self.incomeType isEqualToString:@"income"]) {
@@ -384,15 +384,15 @@
 - (NSString *)filterLastZeros:(NSString *)string {
     NSString *str = string;
     if ([str containsString:@"."] && [string substringFromIndex:[string rangeOfString:@"."].location].length > 3) {
-        // 如果小数点后大于2位，只保留两位
+        // 如果小數點後大於2位，只保留兩位
         str = [string substringToIndex:[string rangeOfString:@"."].location+3];
     }
     if ([str containsString:@"."]) {
         if ([[str substringFromIndex:str.length-1] isEqualToString: @"0"]) {
-            // 如果最后一位为0，舍弃
+            // 如果最後一位為0，捨棄
             return [str substringToIndex:str.length-1];
         } else if ([[str substringFromIndex:str.length-2] isEqualToString:@"00"]) {
-            // 如果后两位为0，舍弃
+            // 如果後兩位為0，捨棄
             return [str substringToIndex:str.length-2];
         } else {
             return str;

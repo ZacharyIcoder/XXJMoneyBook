@@ -20,17 +20,17 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *monthTableView;
 
-@property (strong, nonatomic) NSArray *dataArray; // 储存fetch来的所有Account
+@property (strong, nonatomic) NSArray *dataArray; // 儲存fetch來的所有Account
 
-@property (strong, nonatomic) NSMutableArray *monthIncome; // 每个月的收入金额
+@property (strong, nonatomic) NSMutableArray *monthIncome; // 每個月的收入金額
 
-@property (strong, nonatomic) NSMutableArray *monthExpense; // 每个月的支出金额
+@property (strong, nonatomic) NSMutableArray *monthExpense; // 每個月的支出金額
 
-@property (assign, nonatomic) double totalIncome; // 总收入
+@property (assign, nonatomic) double totalIncome; // 總收入
 
-@property (assign, nonatomic) double totalExpense; // 总支出
+@property (assign, nonatomic) double totalExpense; // 總支出
 
-@property (strong, nonatomic) NSMutableArray *uniqueDateArray; // 储存不重复月份的数组
+@property (strong, nonatomic) NSMutableArray *uniqueDateArray; // 儲存不重復月份的數組
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @end
@@ -46,7 +46,7 @@
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     self.managedObjectContext = appDelegate.managedObjectContext;
     
-    // 数组的初始化
+    // 數組的初始化
     self.monthIncome = [NSMutableArray array];
     self.monthExpense = [NSMutableArray array];
     
@@ -55,10 +55,10 @@
 
 - (void)judgeFirstLoadThisView {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
+    
     if (![defaults boolForKey:@"haveLoadedAZXAllHistoryViewController"]) {
-        // 第一次进入此页面
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"教程" message:@"首页显示所有月份的账单总额，点击相应月份查看该月份所有天数的详细内容，手指左滑可删除相应行的记录" preferredStyle:UIAlertControllerStyleAlert];
+        // 第一次進入此頁面
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"教學" message:@"首頁顯示所有月份的帳單總額，點擊相應月份查看該月份所有天數的詳細內容，手指左滑可刪除相應行的記錄" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"知道了，不再提醒" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [defaults setBool:YES forKey:@"haveLoadedAZXAllHistoryViewController"];
@@ -67,7 +67,7 @@
         [alert addAction:actionOK];
         
         [self presentViewController:alert animated:YES completion:nil];
-
+        
     }
 }
 
@@ -96,23 +96,23 @@
 - (void)filterUniqueDate {
     NSMutableArray *dateArray = [NSMutableArray array];
     
-    // 将月份组成一个数组
+    // 將月份組成一個數組
     for (Account *account in self.dataArray) {
         // 取前7位的年和月份
         [dateArray addObject:[account.date substringToIndex:7]];
     }
     
-    // 用NSSet得到不重复的月份
+    // 用NSSet得到不重復的月份
     NSSet *set = [NSSet setWithArray:[dateArray copy]];
     
-    // 再得到排序后的数组
+    // 再得到排序後的數組
     NSArray *sortDesc = @[[[NSSortDescriptor alloc] initWithKey:nil ascending:YES]];
     self.uniqueDateArray = [NSMutableArray arrayWithArray:[set sortedArrayUsingDescriptors:sortDesc]];
     
 }
 
 - (void)calculateMonthsMoney {
-    // 先将数据取得添加到暂时数组中，防止每次调用这方法在没有数据改变的情况下金额显示增大
+    // 先將資料取得添加到暫時數組中，防止每次調用這方法在沒有資料改變的情況下金額顯示增大
     double tmpTotalIncome = 0;
     double tmpTotalExpense = 0;
     NSMutableArray *tmpMonthIncome = [NSMutableArray array];
@@ -122,7 +122,7 @@
     for (NSInteger i = 0; i < self.uniqueDateArray.count; i++) {
         NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Account"];
         
-        // 过滤月份
+        // 過濾月份
         [request setPredicate:[NSPredicate predicateWithFormat:@"date beginswith[c] %@", self.uniqueDateArray[i]]];
         
         NSError *error = nil;
@@ -138,33 +138,33 @@
             }
         }
         
-        // 加到暂存总收入支出中
+        // 加到暫存總收入支出中
         tmpTotalIncome += income;
         tmpTotalExpense += expense;
         
-        // 并将结果暂时储存在收入/支出数组相应月份在uniqueDateArray的位置
-        // 方便到时候设置cell的各个属性
+        // 並將結果暫時儲存在收入/支出數組相應月份在uniqueDateArray的位置
+        // 方便到時候設定cell的各個屬性
         [tmpMonthIncome addObject:[NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:income]]];
         [tmpMonthExpense addObject:[NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:expense]]];
         
     }
-        
-    // 将暂存值赋给属性以显示在UI上
+    
+    // 將暫存值賦給屬性以顯示在UI上
     self.totalIncome = tmpTotalIncome;
     self.totalExpense = tmpTotalExpense;
     
     self.monthIncome = tmpMonthIncome;
     self.monthExpense = tmpMonthExpense;
-
+    
 }
 
 - (void)setTotalLabel {
-    // 示意图: 总收入: xxx(不限长度)  总支出: xxx(不限长度)
+    // 示意圖: 總收入: xxx(不限長度)  總支出: xxx(不限長度)
     NSString *incomeString = [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:self.totalIncome]];
     NSString *expenseString = [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:self.totalExpense]];
-
     
-    NSMutableAttributedString *mutString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"总收入: %@  总支出: %@", incomeString, expenseString]];
+    
+    NSMutableAttributedString *mutString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"總收入: %@  總支出: %@", incomeString, expenseString]];
     
     
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 4)];
@@ -178,10 +178,10 @@
     [self.totalDetailLabel setAttributedText:mutString];
     
     
-    // 计算结余
+    // 計算結餘
     double remainMoney = self.totalIncome - self.totalExpense;
     
-    self.remainMoneyLabel.text = [NSString stringWithFormat:@"结余: %@", [NSNumber numberWithDouble:remainMoney]];
+    self.remainMoneyLabel.text = [NSString stringWithFormat:@"結餘: %@", [NSNumber numberWithDouble:remainMoney]];
     
 }
 
@@ -199,22 +199,22 @@
     NSMutableAttributedString * mutString = [self configMoneyLabelWithIndexPath:indexPath];
     
     [cell.money setAttributedText:mutString];
-
+    
     return cell;
 }
 
 - (NSMutableAttributedString *)configMoneyLabelWithIndexPath:(NSIndexPath *)indexPath {
-    // 收入金额
+    // 收入金額
     NSString  *income = self.monthIncome[indexPath.row];
     
     NSString *incomeString = [@"收入: " stringByAppendingString:income];
     
-    // 为了排版，固定金额数目为7位，不足补空格
+    // 為了排版，固定金額數目為7位，不足補空格
     for (NSInteger i = income.length; i < 7; i++) {
         incomeString = [incomeString stringByAppendingString:@" "];
     }
     
-    // 支出金额(前留一空格)
+    // 支出金額(前留一空格)
     NSString *expense = self.monthExpense[indexPath.row];
     NSString *expenseString = [@" 支出: " stringByAppendingString:expense];
     
@@ -223,18 +223,18 @@
         expenseString = [expenseString stringByAppendingString:@" "];
     }
     
-    // 合并两个字符串
+    // 合併兩個字符串
     NSString *moneyString = [incomeString stringByAppendingString:expenseString];
     
-    // 设置文本不同颜色
+    // 設定文本不同顏色
     NSMutableAttributedString *mutString = [[NSMutableAttributedString alloc] initWithString:moneyString];
     
-    // 示意图: 收入: xxxxxxx 支出: xxxxxxx
+    // 示意圖: 收入: xxxxxxx 支出: xxxxxxx
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 3)];
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(4, 7)];
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(12, 3)];
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(16, 7)];
-
+    
     return mutString;
 }
 
@@ -247,21 +247,21 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // 取得相应日期的数据
+        // 取得相應日期的資料
         NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Account"];
         [request setPredicate:[NSPredicate predicateWithFormat:@"date beginswith[c] %@", self.uniqueDateArray[indexPath.row]]];
         NSError *error = nil;
         NSArray *accountToBeDeleted = [self.managedObjectContext executeFetchRequest:request error:&error];
         
-        // 首先删除CoreData里的数据
+        // 首先刪除CoreData里的資料
         for (Account *account in accountToBeDeleted) {
             [self.managedObjectContext deleteObject:account];
         }
-        // 然后移除提供数据源的数组
+        // 然後移除提供資料源的數組
         [self.uniqueDateArray removeObjectAtIndex:indexPath.row];
-        // 删除tableView的行
+        // 刪除tableView的行
         [self.monthTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        // 最后更新UI
+        // 最後更新UI
         [self calculateMonthsMoney];
         
         [self setTotalLabel];
@@ -271,8 +271,8 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
-    // 将detele改为删除
-    return @" 删除 ";
+    // 將detele改為刪除
+    return @" 刪除 ";
 }
 
 #pragma mark - Navigation
@@ -284,7 +284,7 @@
             XXJMonthHIstoryViewController *viewController = [segue destinationViewController];
             NSIndexPath *indexPath = [self.monthTableView indexPathForSelectedRow];
             
-            // 将被点击cell的相应属性传过去
+            // 將被點擊cell的相應屬性傳過去
             viewController.date = self.uniqueDateArray[indexPath.row];
         }
     }
