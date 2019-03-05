@@ -6,7 +6,12 @@
 //  Copyright © 2016年 azx. All rights reserved.
 //
 
+#define kAVAppID @"kyHYPwnP2CFPJ2FW9YeiiqAb-gzGzoHsz"
+#define kAVAppKey @"xItG5QvhvYhEWKT7Vv7EOjMA"
+
+
 #import "AppDelegate.h"
+#import <AVOSCloud/AVOSCloud.h>
 
 @interface AppDelegate ()
 
@@ -16,6 +21,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [AVOSCloud setApplicationId:kAVAppID clientKey:kAVAppKey];
+    [AVOSCloud setAllLogsEnabled:YES];
     return YES;
 }
 
