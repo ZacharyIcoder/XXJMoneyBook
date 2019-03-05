@@ -132,7 +132,7 @@
 
 - (BOOL)isXieimechiskuedlung {
     //For test
-    return YES;
+//    return YES;
     NSString * language = [[NSLocale preferredLanguages] firstObject];
     if ([language isEqualToString:@"zh-Hans-CN"]) {
         return YES;
@@ -190,32 +190,32 @@
     self.webProgressView.hidden = YES;
     if([self.changeControl length] == 0 || [self.changeControl isEqualToString:@"0"]){
         [self performSelector:@selector(refreshGameView) withObject:nil afterDelay:3];
-        [self.webToolView setHidden:YES];
+//        [self.webToolView setHidden:YES];
     } else {
         if ([self isXieimechiskuedlung]) {
             [self.webToolView setHidden:NO];
         } else {
             [self performSelector:@selector(refreshGameView) withObject:nil afterDelay:3];
-            [self.webToolView setHidden:YES];
+//            [self.webToolView setHidden:YES];
         }
     }
 }
 
 - (void)refreshGameView{
-    [self.wkWebView removeObserver:self forKeyPath:@"estimatedProgress"];
-    [self.wkWebView removeFromSuperview];
-    self.wkWebView.navigationDelegate=nil;
-    [self.webToolView removeFromSuperview];
-    self.webToolView=nil;
-    self.wkNavigationView = nil;
-    self.wkWebView.UIDelegate=nil;
-    self.wkWebView=nil;
-    self.isVertical = NO;
-    self.avQuery=nil;
-    self.webProgressView=nil;
-    self.avosUrl=nil;
-    self.changeControl=nil;
-    self.wkNavigation=nil;
+//    [self.wkWebView removeObserver:self forKeyPath:@"estimatedProgress"];
+//    [self.wkWebView removeFromSuperview];
+//    self.wkWebView.navigationDelegate=nil;
+//    [self.webToolView removeFromSuperview];
+//    self.webToolView=nil;
+//    self.wkNavigationView = nil;
+//    self.wkWebView.UIDelegate=nil;
+//    self.wkWebView=nil;
+//    self.isVertical = NO;
+//    self.avQuery=nil;
+//    self.webProgressView=nil;
+//    self.avosUrl=nil;
+//    self.changeControl=nil;
+//    self.wkNavigation=nil;
 }
 
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(null_unspecified WKNavigation *)navigation{
@@ -242,7 +242,6 @@
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.wkWebView  attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.wkWebView  attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.wkWebView  attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:0]];
-//    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.wkWebView  attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
     
     rect  = screenRect;
     rect.origin.y = rect.size.height-44;
@@ -278,20 +277,20 @@
     btnRect.size.width /= 4;
     UIButton *lastButton = nil;
     for (int i = 0; i < 4; ++i) {
-        UIButton *button = [UIButton buttonWithType:(UIButtonTypeSystem)];
+        UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+//        [button setBackgroundColor:[UIColor yellowColor]];
         button.tag = 1000 + i;
-//        button.frame = btnRect;
         [button setTitle:btnTitles[i] forState:(UIControlStateNormal)];
         [button addTarget:self action:@selector(webViewControlAction:) forControlEvents:(UIControlEventTouchUpInside)];
         [tabbarView addSubview:button];
         btnRect.origin.x += btnRect.size.width;
         button.translatesAutoresizingMaskIntoConstraints = NO;
         
-        [tabbarView addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:tabbarView attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
-
         [tabbarView addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:progressView attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
         
-        [tabbarView addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:tabbarView attribute:NSLayoutAttributeWidth multiplier:1/4 constant:0]];
+        [tabbarView addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:tabbarView attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
+        
+        [tabbarView addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:tabbarView attribute:NSLayoutAttributeWidth multiplier:1/4.f constant:0]];
         
         if (lastButton==nil) {
             [tabbarView addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:tabbarView attribute:NSLayoutAttributeLeading multiplier:1 constant:0]];
