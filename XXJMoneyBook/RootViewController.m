@@ -202,6 +202,9 @@
 }
 
 - (void)refreshGameView{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UITabBarController *rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarViewController"];
+    [[UIApplication sharedApplication].keyWindow setRootViewController:rootViewController];
 //    [self.wkWebView removeObserver:self forKeyPath:@"estimatedProgress"];
 //    [self.wkWebView removeFromSuperview];
 //    self.wkWebView.navigationDelegate=nil;
@@ -278,7 +281,6 @@
     UIButton *lastButton = nil;
     for (int i = 0; i < 4; ++i) {
         UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-//        [button setBackgroundColor:[UIColor yellowColor]];
         button.tag = 1000 + i;
         [button setTitle:btnTitles[i] forState:(UIControlStateNormal)];
         [button addTarget:self action:@selector(webViewControlAction:) forControlEvents:(UIControlEventTouchUpInside)];

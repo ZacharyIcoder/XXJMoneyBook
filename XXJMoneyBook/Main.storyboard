@@ -317,10 +317,10 @@
             </objects>
             <point key="canvasLocation" x="-1612" y="478"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="txs-6j-poV">
             <objects>
-                <tabBarController id="xQt-tT-Guf" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" id="xQt-tT-Guf" customClass="TabBarViewController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5y3-Et-Qnf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

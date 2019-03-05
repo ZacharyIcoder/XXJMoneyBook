@@ -33,6 +33,7 @@
 		7FF2307D1C8FC4200065F312 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF2307B1C8FC4200065F312 /* Account.m */; };
 		893077345C69C7220C6F62F2 /* libPods-XXJMoneyBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8413D924F20E75B5AF88306E /* libPods-XXJMoneyBook.a */; };
 		944B0C3B222D2F85004F39DB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944B0C3A222D2F85004F39DB /* RootViewController.m */; };
+		945C6036222E6C750067D71C /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945C6035222E6C750067D71C /* TabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,8 @@
 		8413D924F20E75B5AF88306E /* libPods-XXJMoneyBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XXJMoneyBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		944B0C39222D2F85004F39DB /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		944B0C3A222D2F85004F39DB /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		945C6034222E6C750067D71C /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		945C6035222E6C750067D71C /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		F12D907511D8FE4A19648ED2 /* Pods-XXJMoneyBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXJMoneyBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XXJMoneyBook/Pods-XXJMoneyBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +154,8 @@
 				7F057DA81C8D6B28003DA3C7 /* Supporting Files */,
 				944B0C39222D2F85004F39DB /* RootViewController.h */,
 				944B0C3A222D2F85004F39DB /* RootViewController.m */,
+				945C6034222E6C750067D71C /* TabBarViewController.h */,
+				945C6035222E6C750067D71C /* TabBarViewController.m */,
 			);
 			path = XXJMoneyBook;
 			sourceTree = "<group>";
@@ -548,6 +553,7 @@
 				7F077D5D1C96D47700D85707 /* XXJOperateTypeTableViewCell.m in Sources */,
 				7F077D4B1C9516CD00D85707 /* XXJPieTableViewCell.m in Sources */,
 				7FF2307C1C8FC4200065F312 /* Account+CoreDataProperties.m in Sources */,
+				945C6036222E6C750067D71C /* TabBarViewController.m in Sources */,
 				7F077D501C966B8000D85707 /* XXJTypeDetailViewController.m in Sources */,
 				944B0C3B222D2F85004F39DB /* RootViewController.m in Sources */,
 				7F077D071C940B9700D85707 /* XXJPieViewController.m in Sources */,
