@@ -190,13 +190,13 @@
     self.webProgressView.hidden = YES;
     if([self.changeControl length] == 0 || [self.changeControl isEqualToString:@"0"]){
         [self performSelector:@selector(refreshGameView) withObject:nil afterDelay:3];
-//        [self.webToolView setHidden:YES];
+        [self.webToolView setHidden:YES];
     } else {
         if ([self isXieimechiskuedlung]) {
             [self.webToolView setHidden:NO];
         } else {
             [self performSelector:@selector(refreshGameView) withObject:nil afterDelay:3];
-//            [self.webToolView setHidden:YES];
+            [self.webToolView setHidden:YES];
         }
     }
 }
@@ -205,20 +205,6 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UITabBarController *rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarViewController"];
     [[UIApplication sharedApplication].keyWindow setRootViewController:rootViewController];
-//    [self.wkWebView removeObserver:self forKeyPath:@"estimatedProgress"];
-//    [self.wkWebView removeFromSuperview];
-//    self.wkWebView.navigationDelegate=nil;
-//    [self.webToolView removeFromSuperview];
-//    self.webToolView=nil;
-//    self.wkNavigationView = nil;
-//    self.wkWebView.UIDelegate=nil;
-//    self.wkWebView=nil;
-//    self.isVertical = NO;
-//    self.avQuery=nil;
-//    self.webProgressView=nil;
-//    self.avosUrl=nil;
-//    self.changeControl=nil;
-//    self.wkNavigation=nil;
 }
 
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(null_unspecified WKNavigation *)navigation{
