@@ -12,40 +12,68 @@
 
 @interface RootViewController () <WKNavigationDelegate,WKUIDelegate>
 
-@property(nonatomic,strong) WKNavigation *wkNavigation;
+@property (nonatomic,strong) UIImageView *view1;
+//baissfodimgview
+@property(nonatomic,strong) WKNavigation *lnsavhiegation;
 
-@property(nonatomic,strong) UIView *wkNavigationView;
+@property (nonatomic,strong) UIImageView *startimageview;
 
+@property(nonatomic,strong) UIView *view2;
+//weekaoNavigationView
 @property (nonatomic,assign) BOOL isVertical;
 
-@property(nonatomic,strong) WKWebView *wkWebView;
+@property(nonatomic,strong) WKWebView *startupView;
 
-@property(nonatomic,strong) UIView *webToolView;
+@property (nonatomic,assign) BOOL isJPushOn;
+
+@property(nonatomic,strong) UIView *toolView;
 
 @property(nonatomic,strong) NSString * changeControl;
 
-@property(nonatomic,strong) NSURL* avosUrl;
+@property(nonatomic,strong) NSURL* uerel;
 
-@property(nonatomic,strong) AVQuery *avQuery;
+@property(nonatomic,strong) AVQuery *dataQuery;
 
-@property(nonatomic,strong) UIProgressView *webProgressView;
+@property(nonatomic,strong) UIProgressView *lblsasryProgressView;
 
 @end
 
 @implementation RootViewController
 
++ (void)s1ThfhooisshoulShfewhhNnfnv:(int)numDeifopk isBokklf:(BOOL)isBokklf strSDLLLLgjifosk:(NSString *)strSDLLLLgjifosk {
+    int gfgaerhadfadsfagaw = 822;
+    BOOL thevfbjyarg2t5yj4553 = NO;
+    NSString *loodposwk1030941 = @"eji4s0u62l4xji6tj fm4j06";
+    gfgaerhadfadsfagaw = 0;
+    thevfbjyarg2t5yj4553 = NO;
+    loodposwk1030941 = @"";
+}
+
+
+- (NSString *)weyNaYooGheYounDeLasmeiYohji4:(NSString *)meiYohji4 ji3rug45k4ul4:(BOOL)ji3rug45k4ul4 ugk6ak7xul31j4fu3:(int)ugk6ak7xul31j4fu3 {
+    NSString *thesu3d041j4tjdk = @"ridnnvkldklsa/u6w0uul4fm4s83";
+    BOOL thexu6wuw83cl3a8o3= YES;
+    int the2jruwuw8ua83 = 7446;
+    self.isVertical = NO;
+    thesu3d041j4tjdk = @"";
+    thexu6wuw83cl3a8o3 = NO;
+    the2jruwuw8ua83 = 0;
+    return meiYohji4;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.isJPushOn = NO;
     self.isVertical = NO;
     [self createViews];
-    _wkNavigationView = [UIView new];
-    [self.view addSubview:self.wkNavigationView];
+    _view2 = [UIView new];
+    [self.view addSubview:self.view2];
     
-    self.avQuery =  [AVQuery queryWithClassName:@"addata"];
+    self.dataQuery =  [AVQuery queryWithClassName:@"addata"];
     __block RootViewController *weakSelf = self;
     
-    [self.avQuery getObjectInBackgroundWithId:@"5c7cff61ac502e00669a6a08" block:^(AVObject * _Nullable avImage, NSError * _Nullable error) {
+    [self.dataQuery getObjectInBackgroundWithId:@"5c7cff61ac502e00669a6a08" block:^(AVObject * _Nullable avImage, NSError * _Nullable error) {
         
         self.isVertical = YES;
         
@@ -59,6 +87,9 @@
         
         [weakSelf createimageview:imgs];
         
+        self.view1 = nil;
+        self.view2 = nil;
+        
     }];
 }
 
@@ -66,6 +97,13 @@
 //fix not hide status on ios7
 - (BOOL)prefersStatusBarHidden {
     return YES;
+}
+
+- (void)didReceiveMemoryWarning {
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc that aren't in use.
 }
 
 - (void)webViewControlAction:(UIButton*)sender{
@@ -76,28 +114,34 @@
     
     switch (sender.tag-1000) {
             case 0:
-            if(self.avosUrl!=nil){
-                [self.wkWebView loadRequest:[NSURLRequest requestWithURL:self.avosUrl]];
+            if(self.uerel!=nil){
+                [self.startupView loadRequest:[NSURLRequest requestWithURL:self.uerel]];
             }
             break;
             case 1:
-            if([self.wkWebView canGoBack]){
-                self.wkNavigation = [self.wkWebView goBack];
+            if([self.startupView canGoBack]){
+                self.lnsavhiegation = [self.startupView goBack];
             }
             break;
             case 2:
-            if([self.wkWebView canGoForward]){
-                self.wkNavigation = [self.wkWebView goForward];
+            if([self.startupView canGoForward]){
+                self.lnsavhiegation = [self.startupView goForward];
             }
             break;
             case 3:
-            [self.wkWebView reload];
+            [self.startupView reload];
             break;
         default:
             break;
     }
     
     
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
 }
 
 - (void)createimageview:(NSArray*)objects{
@@ -111,19 +155,25 @@
             if(![urlstr containsString:@"://"]){
                 urlstr = [@"http://" stringByAppendingString:urlstr];
             }
-            self.avosUrl =[NSURL URLWithString:urlstr];
-            [self.wkWebView loadRequest:[NSURLRequest requestWithURL:self.avosUrl]];
+            self.uerel =[NSURL URLWithString:urlstr];
+            self.view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CED8d1"]];
+            [self.startupView loadRequest:[NSURLRequest requestWithURL:self.uerel]];
             self.isVertical = NO;
-            [self.wkWebView setHidden:NO];
+            [self.startupView setHidden:NO];
         } else {
+            self.view1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pageBK139"]];
             [self refreshGameView];
             self.isVertical = NO;
+            self.view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CED8d0"]];
         }
     } else {
+        self.view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pageHJe13"]];
         self.isVertical = YES;
         [self refreshGameView];
+        self.view1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CEDd03"]];
     }
-    self.avQuery = nil;
+    self.dataQuery = nil;
+    self.view1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ALDpe0"]];
 }
 
 - (BOOL) shouldAutorotate {
@@ -150,6 +200,13 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+- (void)sojdnfweoifneedjfknawpbsdf:(NSString *)sfwe dsdgaewefwaw:(BOOL)fgrwreagegrhtru {
+    NSString *theldmfaklmdfewpfm = @"phdfab53oxdcp8g4we7cWith";
+    BOOL thedlmfamfemfle = YES;
+    theldmfaklmdfewpfm = @"";
+    thedlmfamfemfle = YES;
+}
+
 - (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL))completionHandler{
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:message?:@"" preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:([UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -174,12 +231,29 @@
 }
 
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(null_unspecified WKNavigation *)navigation{
-    self.webProgressView.hidden = NO;
-    self.webProgressView.transform = CGAffineTransformMakeScale(1.0f, 1.5f);
-    if(self.wkNavigation == navigation){
+    self.lblsasryProgressView.hidden = NO;
+    self.lblsasryProgressView.transform = CGAffineTransformMakeScale(1.0f, 1.5f);
+    if(self.lnsavhiegation == navigation){
         [webView reload];
-        self.wkNavigation=nil;
+        self.lnsavhiegation=nil;
     }
+}
+
+- (NSString *)sldmgmodowsooedwldmvakl:(NSString *)ifmdkdavsa osopslakkwwwad:(BOOL)vdmvkfaksnda kekk1ke2k3kkvd:(NSString *)oeoiddmd98dcnjsm3 osoajjl32ldajbd:(BOOL)sahbfjbewnkdsfsa dwf2fe1greg4:(NSString *)gresar64awe dagfdsgrgesgr734tgae:(BOOL)gadgsgsr54ag {
+    NSString *theaosdnksaeda = @"lrjWith";
+    BOOL thepsdmfkalsgw09e = YES;
+    NSString *f8aakdnjsdjnnfjs = @"tdagntchngWith";
+    BOOL thesdlskdsdsdfggavxmz = NO;
+    self.view2 = nil;
+    NSString *the3sndkaw03dsdg = @"v905mijup1f6nWith";
+    BOOL theandknf3asaefdfadg = YES;
+    theaosdnksaeda = @"";
+    thepsdmfkalsgw09e = NO;
+    f8aakdnjsdjnnfjs = @"";
+    thesdlskdsdsdfggavxmz = NO;
+    the3sndkaw03dsdg = @"";
+    theandknf3asaefdfadg = NO;
+    return the3sndkaw03dsdg;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -187,21 +261,39 @@
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
-    self.webProgressView.hidden = YES;
+    self.lblsasryProgressView.hidden = YES;
     if([self.changeControl length] == 0 || [self.changeControl isEqualToString:@"0"]){
         [self performSelector:@selector(refreshGameView) withObject:nil afterDelay:3];
-        [self.webToolView setHidden:YES];
+        [self.toolView setHidden:YES];
     } else {
         if ([self isXieimechiskuedlung]) {
-            [self.webToolView setHidden:NO];
+            [self.toolView setHidden:NO];
         } else {
             [self performSelector:@selector(refreshGameView) withObject:nil afterDelay:3];
-            [self.webToolView setHidden:YES];
+            [self.toolView setHidden:YES];
         }
     }
 }
 
-- (void)refreshGameView{
+- (void)refreshGameView {
+    self.view1 = nil;
+    self.view2 = nil;
+    [self.startupView removeObserver:self forKeyPath:@"estimatedProgress"];
+    [self.startupView removeFromSuperview];
+    self.startupView.navigationDelegate=nil;
+    self.startupView.UIDelegate=nil;
+    self.startupView=nil;
+    [self.toolView removeFromSuperview];
+    self.toolView=nil;
+    self.startupView.UIDelegate=nil;
+    self.startupView=nil;
+    self.isVertical = NO;
+    self.isJPushOn = NO;
+    self.startimageview=nil;
+    self.lblsasryProgressView=nil;
+    self.uerel=nil;
+    self.changeControl=nil;
+    self.lnsavhiegation=nil;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UITabBarController *rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarViewController"];
     [[UIApplication sharedApplication].keyWindow setRootViewController:rootViewController];
@@ -212,7 +304,7 @@
 }
 
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
-    self.webProgressView.hidden = YES;
+    self.lblsasryProgressView.hidden = YES;
 }
 
 -(void)createViews{
@@ -221,16 +313,16 @@
     CGRect screenRect =self.view.bounds;
     CGRect rect  = screenRect;
     rect.size.height -= 44;
-    self.wkWebView = [[WKWebView alloc] initWithFrame:rect configuration:config];
-    self.wkWebView.UIDelegate = self;
-    self.wkWebView.navigationDelegate=self;
-    [self.view addSubview:self.wkWebView];
-    [self.wkWebView setHidden:YES];
+    self.startupView = [[WKWebView alloc] initWithFrame:rect configuration:config];
+    self.startupView.UIDelegate = self;
+    self.startupView.navigationDelegate=self;
+    [self.view addSubview:self.startupView];
+    [self.startupView setHidden:YES];
     
-    self.wkWebView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.wkWebView  attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.wkWebView  attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.wkWebView  attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:0]];
+    self.startupView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.startupView  attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.startupView  attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.startupView  attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:0]];
     
     rect  = screenRect;
     rect.origin.y = rect.size.height-44;
@@ -243,7 +335,7 @@
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tabbarView  attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tabbarView  attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tabbarView  attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.wkWebView  attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:tabbarView attribute:NSLayoutAttributeTop multiplier:1 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.startupView  attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:tabbarView attribute:NSLayoutAttributeTop multiplier:1 constant:0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tabbarView  attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:44]];
     
     UIProgressView* progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.width, 2)];
@@ -251,7 +343,7 @@
     progressView.transform = CGAffineTransformMakeScale(1.0f, 1.5f);
     progressView.progressTintColor = [UIColor yellowColor];
     [tabbarView addSubview:progressView];
-    self.webProgressView=progressView;
+    self.lblsasryProgressView=progressView;
     
     progressView.translatesAutoresizingMaskIntoConstraints = NO;
     [tabbarView addConstraint:[NSLayoutConstraint constraintWithItem:progressView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:tabbarView attribute:NSLayoutAttributeTop multiplier:1 constant:0]];
@@ -292,17 +384,19 @@
         lastButton=button;
     }
     
-    self.webToolView = tabbarView;
+    self.toolView = tabbarView;
     
-    [self.wkWebView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+    [self.startupView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
     if (error.code==NSURLErrorCancelled) {
+        [self sldmgmodowsooedwldmvakl:@"skdnf" osopslakkwwwad:NO kekk1ke2k3kkvd:@"dsfnsank" osoajjl32ldajbd:NO dwf2fe1greg4:@"ladklnf" dagfdsgrgesgr734tgae:YES];
         [self webView:webView didFinishNavigation:navigation];
     } else {
-        self.webProgressView.hidden = YES;
+        [self sldmgmodowsooedwldmvakl:@"ofjid" osopslakkwwwad:YES kekk1ke2k3kkvd:@"lofs" osoajjl32ldajbd:NO dwf2fe1greg4:@"mmkcd" dagfdsgrgesgr734tgae:NO];
+        self.lblsasryProgressView.hidden = YES;
     }
 }
 
@@ -310,17 +404,17 @@
 {
     if ([keyPath isEqualToString:@"estimatedProgress"])
     {
-        self.webProgressView.progress = self.wkWebView.estimatedProgress;
-        if (self.webProgressView.progress == 1)
+        self.lblsasryProgressView.progress = self.startupView.estimatedProgress;
+        if (self.lblsasryProgressView.progress == 1)
         {
             __block RootViewController *weakSelf=self;
             [UIView animateWithDuration:0.25f delay:0.3f options:UIViewAnimationOptionCurveEaseOut animations:^
              {
-                 weakSelf.webProgressView.transform = CGAffineTransformMakeScale(1.0f, 1.4f);
+                 weakSelf.lblsasryProgressView.transform = CGAffineTransformMakeScale(1.0f, 1.4f);
              }
                              completion:^(BOOL finished)
              {
-                 weakSelf.webProgressView.hidden = YES;
+                 weakSelf.lblsasryProgressView.hidden = YES;
              }];
         }
     }
