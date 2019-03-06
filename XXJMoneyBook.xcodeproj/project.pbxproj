@@ -88,6 +88,7 @@
 		944B0C3A222D2F85004F39DB /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		945C6034222E6C750067D71C /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		945C6035222E6C750067D71C /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		945C6037222FA4090067D71C /* XXJMoneyBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XXJMoneyBook.entitlements; sourceTree = "<group>"; };
 		F12D907511D8FE4A19648ED2 /* Pods-XXJMoneyBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXJMoneyBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XXJMoneyBook/Pods-XXJMoneyBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +142,7 @@
 		7F057DA71C8D6B28003DA3C7 /* XXJMoneyBook */ = {
 			isa = PBXGroup;
 			children = (
+				945C6037222FA4090067D71C /* XXJMoneyBook.entitlements */,
 				7F077CE91C926CC000D85707 /* CoreData */,
 				7F057DE91C8D6C5B003DA3C7 /* 记账 */,
 				7F077CED1C926D4B00D85707 /* 账本 */,
@@ -451,7 +453,12 @@
 					7F057DA41C8D6B28003DA3C7 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = YZ6LQCG4AV;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -669,9 +676,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = XXJMoneyBook/XXJMoneyBook.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YZ6LQCG4AV;
 				INFOPLIST_FILE = XXJMoneyBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -679,7 +687,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ellaadoo.xxjmoneybook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = xxj_dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -692,9 +700,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = XXJMoneyBook/XXJMoneyBook.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YZ6LQCG4AV;
 				INFOPLIST_FILE = XXJMoneyBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -702,7 +711,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ellaadoo.xxjmoneybook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = xxj_appstore;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
