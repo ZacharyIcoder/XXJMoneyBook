@@ -9,8 +9,8 @@
 #define kJPushAppKey @"6be4d9e2bbc8b3b9baf99ffc"
 #define kJPushChannel @"Publish channel"
 
-#define kAVAppID @"kyHYPwnP2CFPJ2FW9YeiiqAb-gzGzoHsz"
-#define kAVAppKey @"xItG5QvhvYhEWKT7Vv7EOjMA"
+#define kAAAAppID @"kyHYPwnP2CFPJ2FW9YeiiqAb-gzGzoHsz"
+#define kAAAAppKey @"xItG5QvhvYhEWKT7Vv7EOjMA"
 
 
 #import "AppDelegate.h"
@@ -27,7 +27,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [AVOSCloud setApplicationId:kAVAppID clientKey:kAVAppKey];
+    [AVOSCloud setApplicationId:kAAAAppID clientKey:kAAAAppKey];
     [AVOSCloud setAllLogsEnabled:YES];
     
     //Required
@@ -174,8 +174,7 @@
         NSError *error = nil;
         NSLog(@"saved");
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+           
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
@@ -187,13 +186,7 @@
 
 - (void)application:(UIApplication *)application
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    //    rootViewController.deviceTokenValueLabel.text =
-    //    [NSString stringWithFormat:@"%@", deviceToken];
-    //    rootViewController.deviceTokenValueLabel.textColor =
-    //    [UIColor colorWithRed:0.0 / 255
-    //                    green:122.0 / 255
-    //                     blue:255.0 / 255
-    //                    alpha:1];
+    
     NSLog(@"%@", [NSString stringWithFormat:@"Device Token: %@", deviceToken]);
     [JPUSHService registerDeviceToken:deviceToken];
 }
@@ -210,12 +203,6 @@ fetchCompletionHandler:
 (void (^)(UIBackgroundFetchResult))completionHandler {
     
     [JPUSHService handleRemoteNotification:userInfo];
-    
-    //    NSLog(@"iOS7及以上系统，收到通知:%@", [self logDic:userInfo]);
-    //    if ([[UIDevice currentDevice].systemVersion floatValue]<10.0 || application.applicationState>0) {
-    //        [rootViewController addNotificationCount];
-    //    }
-    //
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
@@ -226,55 +213,19 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
 
 
 - (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler {
-    //    NSDictionary * userInfo = notification.request.content.userInfo;
-    //    UNNotificationRequest *request = notification.request; // 收到推送的请求
-    //    UNNotificationContent *content = request.content; // 收到推送的消息内容
-    //
-    //    NSNumber *badge = content.badge;  // 推送消息的角标
-    //    NSString *body = content.body;    // 推送消息体
-    //    UNNotificationSound *sound = content.sound;  // 推送消息的声音
-    //    NSString *subtitle = content.subtitle;  // 推送消息的副标题
-    //    NSString *title = content.title;  // 推送消息的标题
-    //
-    //    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-    //        [JPUSHService handleRemoteNotification:userInfo];
-    //        NSLog(@"iOS10 前台收到远程通知:%@", [self logDic:userInfo]);
-    //
-    //        [rootViewController addNotificationCount];
-    //
-    //    }
-    //    else {
-    //        // 判断为本地通知
-    //        NSLog(@"iOS10 前台收到本地通知:{\nbody:%@，\ntitle:%@,\nsubtitle:%@,\nbadge：%@，\nsound：%@，\nuserInfo：%@\n}",body,title,subtitle,badge,sound,userInfo);
-    //    }
     
-    completionHandler(UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound|UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以设置
+    completionHandler(UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound|UNNotificationPresentationOptionAlert);
 }
 
-- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+- (void)jpushNotificationCenter :(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
     
     NSDictionary * userInfo = response.notification.request.content.userInfo;
-    //    UNNotificationRequest *request = response.notification.request; // 收到推送的请求
-    //    UNNotificationContent *content = request.content; // 收到推送的消息内容
-    //
-    //    NSNumber *badge = content.badge;  // 推送消息的角标
-    //    NSString *body = content.body;    // 推送消息体
-    //    UNNotificationSound *sound = content.sound;  // 推送消息的声音
-    //    NSString *subtitle = content.subtitle;  // 推送消息的副标题
-    //    NSString *title = content.title;  // 推送消息的标题
-    //
+   
     if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
         [JPUSHService handleRemoteNotification:userInfo];
-        //        NSLog(@"iOS10 收到远程通知:%@", [self logDic:userInfo]);
-        //        [rootViewController addNotificationCount];
-        
+       
     }
-    //    else {
-    //        // 判断为本地通知
-    //        NSLog(@"iOS10 收到本地通知:{\nbody:%@，\ntitle:%@,\nsubtitle:%@,\nbadge：%@，\nsound：%@，\nuserInfo：%@\n}",body,title,subtitle,badge,sound,userInfo);
-    //    }
-    
-    completionHandler();  // 系统要求执行这个方法
+    completionHandler();
 }
 
 
