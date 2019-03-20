@@ -6,7 +6,18 @@
 //  Copyright © 2016年 azx. All rights reserved.
 //
 
+#define kJPushAppKey @"6be4d9e2bbc8b3b9baf99ffc"
+#define kJPushChannel @"Publish channel"
+
+#define kAAAAppID @"kyHYPwnP2CFPJ2FW9YeiiqAb-gzGzoHsz"
+#define kAAAAppKey @"xItG5QvhvYhEWKT7Vv7EOjMA"
+
+
 #import "AppDelegate.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import "JPUSHService.h"
+#import <UserNotifications/UserNotifications.h>
+#import "JANALYTICSService.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +27,47 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [AVOSCloud setApplicationId:kAAAAppID clientKey:kAAAAppKey];
+    [AVOSCloud setAllLogsEnabled:YES];
+    
+    //Required
+    //notice: 3.0.0 及以后版本注册可以这样写，也可以继续用之前的注册方式
+    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+    if (@available(iOS 12.0, *)) {
+        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound|JPAuthorizationOptionProvidesAppNotificationSettings;
+    } else {
+        // Fallback on earlier versions
+        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+    }
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        // 可以添加自定义 categories
+        // NSSet<UNNotificationCategory *> *categories for iOS10 or later
+        // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
+    }
+    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    
+    [JPUSHService setupWithOption:launchOptions appKey:kJPushAppKey
+                          channel:kJPushChannel
+                 apsForProduction:NO
+            advertisingIdentifier: nil];
+    
+    
+    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
+        if(resCode == 0){
+            NSLog(@"registrationID获取成功：%@",registrationID);
+        }
+        else{
+            NSLog(@"registrationID获取失败，code：%d",resCode);
+        }
+    }];
+    
+    
+    JANALYTICSLaunchConfig * config = [[JANALYTICSLaunchConfig alloc] init];
+    config.appKey = kJPushAppKey;
+    config.channel = kJPushChannel;
+    [JANALYTICSService setupWithConfig:config];
+    
+    
     return YES;
 }
 
@@ -122,13 +174,66 @@
         NSError *error = nil;
         NSLog(@"saved");
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+           
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
         NSLog(@"saved");
     }
 }
+
+#pragma mark - Push Service
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    NSLog(@"%@", [NSString stringWithFormat:@"Device Token: %@", deviceToken]);
+    [JPUSHService registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application
+didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
+}
+
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:
+(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    [JPUSHService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
+- (void)application:(UIApplication *)application
+didReceiveLocalNotification:(UILocalNotification *)notification {
+    [JPUSHService showLocalNotificationAtFront:notification identifierKey:nil];
+}
+
+
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler {
+    
+    completionHandler(UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound|UNNotificationPresentationOptionAlert);
+}
+
+- (void)jpushNotificationCenter :(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+    
+    NSDictionary * userInfo = response.notification.request.content.userInfo;
+   
+    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [JPUSHService handleRemoteNotification:userInfo];
+       
+    }
+    completionHandler();
+}
+
+
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center openSettingsForNotification:(UNNotification *)notification{
+    
+    
+}
+
+
 
 @end
