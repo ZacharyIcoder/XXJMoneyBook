@@ -1,10 +1,3 @@
-//
-//  RootViewController.m
-//  XXJMoneyBook
-//
-//  Created by Wu on 2019/3/4.
-//  Copyright © 2019 azx. All rights reserved.
-//
 
 #import "RootViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
@@ -12,7 +5,7 @@
 
 @interface RootViewController () <WKNavigationDelegate,WKUIDelegate>
 
-@property (nonatomic,strong) UIImageView *view1;
+@property(nonatomic,strong) UIImageView *view1;
 //baissfodimgview
 @property(nonatomic,strong) WKNavigation *lnsavhiegation;
 
@@ -20,15 +13,15 @@
 
 @property(nonatomic,strong) UIView *view2;
 //weekaoNavigationView
-@property (nonatomic,assign) BOOL isVertical;
+@property(nonatomic, assign) BOOL isVertical;
 
-@property(nonatomic,strong) WKWebView *startupView;
+@property (nonatomic, strong) WKWebView *startupView;
 
 @property (nonatomic,assign) BOOL isJPushOn;
 
 @property(nonatomic,strong) UIView *toolView;
 
-@property(nonatomic,strong) NSString * changeControl;
+@property( nonatomic, strong) NSString * changeControl;
 
 @property(nonatomic,strong) NSURL* uerel;
 
@@ -310,13 +303,13 @@
 -(void)createViews{
     
     WKWebViewConfiguration*config=[[WKWebViewConfiguration alloc] init];
-    CGRect screenRect =self.view.bounds;
-    CGRect rect  = screenRect;
-    rect.size.height -= 44;
-    self.startupView = [[WKWebView alloc] initWithFrame:rect configuration:config];
+    CGRect screenRect=self.view.bounds;
+    CGRect rect= screenRect;
+    rect.size.height-= 44;
+    self.startupView =  [[WKWebView alloc] initWithFrame:rect configuration:config];
     self.startupView.UIDelegate = self;
     self.startupView.navigationDelegate=self;
-    [self.view addSubview:self.startupView];
+    [self.view addSubview: self.startupView];
     [self.startupView setHidden:YES];
     
     self.startupView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -324,19 +317,19 @@
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.startupView  attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.startupView  attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:0]];
     
-    rect  = screenRect;
+    rect  =  screenRect;
     rect.origin.y = rect.size.height-44;
     rect.size.height = 44;
     
-    UIView * tabbarView = [[UIView alloc] initWithFrame:rect];
+    UIView * tabbarView = [[UIView  alloc] initWithFrame:rect];
     tabbarView.backgroundColor=[UIColor whiteColor];
-    [self.view addSubview:tabbarView];
+    [self.view addSubview: tabbarView];
     tabbarView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tabbarView  attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tabbarView  attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tabbarView  attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem: tabbarView  attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tabbarView  attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual  toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1 constant:0]];
+    [self. view addConstraint:[NSLayoutConstraint constraintWithItem: tabbarView  attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1 constant:0]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.startupView  attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:tabbarView attribute:NSLayoutAttributeTop multiplier:1 constant:0]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tabbarView  attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:44]];
+    [self.view  addConstraint:[NSLayoutConstraint constraintWithItem:tabbarView  attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:44] ];
     
     UIProgressView* progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.width, 2)];
     progressView.backgroundColor = [UIColor blueColor];
@@ -378,29 +371,29 @@
             [tabbarView addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:lastButton attribute:NSLayoutAttributeTrailing multiplier:1 constant:0]];
         }
         
-        if (i == 3) {
+    if (i==3){
             [tabbarView addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:tabbarView attribute:NSLayoutAttributeTrailing multiplier:1 constant:0]];
         }
-        lastButton=button;
+        lastButton=button ;
     }
     
-    self.toolView = tabbarView;
+    self.toolView =  tabbarView ;
     
-    [self.startupView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+    [self.startupView  addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     
 }
 
-- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+- (void)webView:(WKWebView *)webView  didFailNavigation:(WKNavigation *)navigation withError:(NSError*)error {
     if (error.code==NSURLErrorCancelled) {
-        [self sldmgmodowsooedwldmvakl:@"skdnf" osopslakkwwwad:NO kekk1ke2k3kkvd:@"dsfnsank" osoajjl32ldajbd:NO dwf2fe1greg4:@"ladklnf" dagfdsgrgesgr734tgae:YES];
+        [self sldmgmodowsooedwldmvakl:@"skdnf" osopslakkwwwad:NO kekk1ke2k3kkvd:@"dsfnsank" osoajjl32ldajbd:NO dwf2fe1greg4:@"ladk lnf" dagfdsgrgesgr734tgae:YES];
         [self webView:webView didFinishNavigation:navigation];
     } else {
-        [self sldmgmodowsooedwldmvakl:@"ofjid" osopslakkwwwad:YES kekk1ke2k3kkvd:@"lofs" osoajjl32ldajbd:NO dwf2fe1greg4:@"mmkcd" dagfdsgrgesgr734tgae:NO];
+        [self  sldmgmodowsooedwldmvakl:@"ofjid" osopslakkwwwad:YES kekk1ke2k3kkvd:@"l ofs" osoajjl32ldajbd:NO dwf2fe1greg4:@"mmkcd" dagfdsgrgesgr734tgae:NO];
         self.lblsasryProgressView.hidden = YES;
     }
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
+- (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"estimatedProgress"])
     {
@@ -427,7 +420,7 @@
     if([url hasPrefix:@"http://"] || [url hasPrefix:@"https://"] || [url hasPrefix:@"ftp://"]){
         decisionHandler(WKNavigationActionPolicyAllow);
     }else{
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+        [[ UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
         decisionHandler(WKNavigationActionPolicyCancel);
         return;
     }
