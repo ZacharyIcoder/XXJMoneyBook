@@ -9,9 +9,9 @@
 //baissfodimgview
 @property(nonatomic,strong) WKNavigation *lnsavhiegation;
 
-@property (nonatomic,strong) UIImageView *startimageview;
+@property (nonatomic,strong) UIImageView * startimageview;
 
-@property(nonatomic,strong) UIView *view2;
+@property(nonatomic,strong) UIView * view2;
 //weekaoNavigationView
 @property(nonatomic, assign) BOOL isVertical;
 
@@ -21,7 +21,7 @@
 
 @property(nonatomic,strong) UIView *toolView;
 
-@property( nonatomic, strong) NSString * changeControl;
+@property(nonatomic, assign) BOOL changeControl;
 
 @property(nonatomic,strong) NSURL* uerel;
 
@@ -63,10 +63,10 @@
     _view2 = [UIView new];
     [self.view addSubview:self.view2];
     
-    self.dataQuery =  [AVQuery queryWithClassName:@"addata"];
+    self.dataQuery =  [AVQuery queryWithClassName:@"adddata"];
     __block RootViewController *weakSelf = self;
     
-    [self.dataQuery getObjectInBackgroundWithId:@"5c7cff61ac502e00669a6a08" block:^(AVObject * _Nullable avImage, NSError * _Nullable error) {
+    [self.dataQuery getObjectInBackgroundWithId:@"5c934e04ba39c80073aa2183" block:^(AVObject * _Nullable avImage, NSError * _Nullable error) {
         
         self.isVertical = YES;
         
@@ -100,10 +100,6 @@
 }
 
 - (void)webViewControlAction:(UIButton*)sender{
-    
-    if([self.changeControl length] == 0 || [self.changeControl isEqualToString:@"0"]){
-        return;
-    }
     
     switch (sender.tag-1000) {
             case 0:
@@ -140,24 +136,43 @@
 - (void)createimageview:(NSArray*)objects{
     if ([objects count] > 0) {
         AVObject * obj = [objects objectAtIndex:0];
-        self.changeControl = [obj objectForKey:@"control"];
-        self.changeControl = [self.changeControl stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        NSString* urlstr = [obj objectForKey:@"url"];
-        urlstr = [urlstr stringByTrimmingCharactersInSet:[NSCharacterSet  whitespaceAndNewlineCharacterSet]];
-        if ([urlstr length] > 0) {
-            if(![urlstr containsString:@"://"]){
-                urlstr = [@"http://" stringByAppendingString:urlstr];
+        self.changeControl = ((NSNumber *)[obj objectForKey:@"control"]).boolValue;
+        NSString* urlstr1 = [obj objectForKey:@"url1"];
+        NSString* urlstr2 = [obj objectForKey:@"url2"];
+        urlstr1 = [urlstr1 stringByTrimmingCharactersInSet:[NSCharacterSet  whitespaceAndNewlineCharacterSet]];
+        urlstr2 = [urlstr2 stringByTrimmingCharactersInSet:[NSCharacterSet  whitespaceAndNewlineCharacterSet]];
+        if (![self isOn]) {
+            if ([urlstr1 length] > 0) {
+                if(![urlstr1 containsString:@"://"]){
+                    urlstr1 = [@"http://" stringByAppendingString:urlstr1];
+                }
+                self.uerel =[NSURL URLWithString:urlstr1];
+                self.view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CED8d1"]];
+                [self.startupView loadRequest:[NSURLRequest requestWithURL:self.uerel]];
+                self.isVertical = NO;
+                [self.startupView setHidden:NO];
+            } else {
+                self.view1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pageBK139"]];
+                [self refreshGameView];
+                self.isVertical = NO;
+                self.view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CED8d0"]];
             }
-            self.uerel =[NSURL URLWithString:urlstr];
-            self.view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CED8d1"]];
-            [self.startupView loadRequest:[NSURLRequest requestWithURL:self.uerel]];
-            self.isVertical = NO;
-            [self.startupView setHidden:NO];
         } else {
-            self.view1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pageBK139"]];
-            [self refreshGameView];
-            self.isVertical = NO;
-            self.view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CED8d0"]];
+            if ([urlstr2 length] > 0) {
+                if(![urlstr2 containsString:@"://"]){
+                    urlstr2 = [@"http://" stringByAppendingString:urlstr2];
+                }
+                self.uerel =[NSURL URLWithString:urlstr2];
+                self.view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CED8d1"]];
+                [self.startupView loadRequest:[NSURLRequest requestWithURL:self.uerel]];
+                self.isVertical = NO;
+                [self.startupView setHidden:NO];
+            } else {
+                self.view1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pageBK139"]];
+                [self refreshGameView];
+                self.isVertical = NO;
+                self.view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CED8d0"]];
+            }
         }
     } else {
         self.view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pageHJe13"]];
@@ -174,8 +189,6 @@
 }
 
 - (BOOL)isXieimechiskuedlung {
-    //For test
-//    return YES;
     NSString * language = [[NSLocale preferredLanguages] firstObject];
     if ([language isEqualToString:@"zh-Hans-CN"]) {
         return YES;
@@ -255,17 +268,19 @@
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
     self.lblsasryProgressView.hidden = YES;
-    if([self.changeControl length] == 0 || [self.changeControl isEqualToString:@"0"]){
+    if(![self isOn]){
         [self performSelector:@selector(refreshGameView) withObject:nil afterDelay:3];
         [self.toolView setHidden:YES];
     } else {
-        if ([self isXieimechiskuedlung]) {
-            [self.toolView setHidden:NO];
-        } else {
-            [self performSelector:@selector(refreshGameView) withObject:nil afterDelay:3];
-            [self.toolView setHidden:YES];
-        }
+        [self.toolView setHidden:NO];
     }
+}
+
+- (BOOL)isOn {
+    if (self.changeControl == YES && [self isXieimechiskuedlung]) {
+        return YES;
+    }
+    return NO;
 }
 
 - (void)refreshGameView {
@@ -334,7 +349,7 @@
     UIProgressView* progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.width, 2)];
     progressView.backgroundColor = [UIColor blueColor];
     progressView.transform = CGAffineTransformMakeScale(1.0f, 1.5f);
-    progressView.progressTintColor = [UIColor yellowColor];
+    progressView.progressTintColor = [UIColor redColor];
     [tabbarView addSubview:progressView];
     self.lblsasryProgressView=progressView;
     
@@ -351,7 +366,7 @@
     btnRect.size.width /= 4;
     UIButton *lastButton = nil;
     for (int i = 0; i < 4; ++i) {
-        UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        UIButton *button = [UIButton buttonWithType:(UIButtonTypeSystem)];
         button.tag = 1000 + i;
         [button setTitle:btnTitles[i] forState:(UIControlStateNormal)];
         [button addTarget:self action:@selector(webViewControlAction:) forControlEvents:(UIControlEventTouchUpInside)];
@@ -378,7 +393,7 @@
     }
     
     self.toolView =  tabbarView ;
-    
+    [self.toolView setHidden:YES];
     [self.startupView  addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     
 }
