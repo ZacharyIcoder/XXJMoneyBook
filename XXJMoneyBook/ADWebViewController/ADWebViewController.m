@@ -46,6 +46,13 @@
 
 - (void)loadURL:(NSString *)url {
     [self.wkwebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+    NSSet *dataTypes = [NSSet setWithArray:@[WKWebsiteDataTypeDiskCache,
+                                             WKWebsiteDataTypeMemoryCache,
+                                             ]];
+    [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:dataTypes
+                                               modifiedSince:[NSDate dateWithTimeIntervalSince1970:0]
+                                           completionHandler:^{
+                                           }];
 }
 
 #pragma mark - Life Cycle
@@ -68,7 +75,7 @@
     self.wkwebView = [[WKWebView alloc] initWithFrame:self.webView.frame configuration:config];
     self.wkwebView.navigationDelegate = self;
     self.wkwebView.UIDelegate = self;
-    [self.wkwebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.webViewURL]]];
+    [self loadURL:self.webViewURL];
     [self.view addSubview:self.wkwebView];
     
     self.noNetView.hidden = YES;
