@@ -31,10 +31,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPe-q6-MNQ">
-                                <rect key="frame" x="145" y="561" width="85" height="49"/>
+                                <rect key="frame" x="16" y="561" width="343" height="49"/>
                                 <color key="backgroundColor" red="1" green="0.21216763787602866" blue="0.20941525563912822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="Fhv-Bf-faK"/>
                                     <constraint firstAttribute="height" constant="49" id="y8g-Qr-Kby"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -124,8 +123,10 @@
                             <constraint firstItem="2LY-9x-R6i" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="SNG-vb-FpF"/>
                             <constraint firstItem="Um8-II-S8f" firstAttribute="centerX" secondItem="rPe-q6-MNQ" secondAttribute="centerX" id="W9W-Kr-k1H"/>
                             <constraint firstItem="rPe-q6-MNQ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-8" id="a2Z-38-Let"/>
+                            <constraint firstItem="rPe-q6-MNQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="dvc-bA-a9s"/>
                             <constraint firstItem="rPe-q6-MNQ" firstAttribute="top" secondItem="Um8-II-S8f" secondAttribute="bottom" constant="8" symbolic="YES" id="eM4-5M-l6m"/>
                             <constraint firstItem="Um8-II-S8f" firstAttribute="top" secondItem="2LY-9x-R6i" secondAttribute="bottom" constant="8" symbolic="YES" id="jgM-wu-A4c"/>
+                            <constraint firstAttribute="trailing" secondItem="rPe-q6-MNQ" secondAttribute="trailing" constant="16" id="jzR-gA-brE"/>
                             <constraint firstItem="2LY-9x-R6i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qMH-Cp-gwq"/>
                             <constraint firstItem="Um8-II-S8f" firstAttribute="leading" secondItem="2LY-9x-R6i" secondAttribute="leading" id="qVg-PS-rOj"/>
                             <constraint firstAttribute="trailing" secondItem="2LY-9x-R6i" secondAttribute="trailing" id="uVJ-Na-KF8"/>
