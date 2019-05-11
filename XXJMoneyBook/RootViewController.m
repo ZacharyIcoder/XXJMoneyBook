@@ -72,12 +72,14 @@
 
         if(avImage)imgs =@[avImage];
 
-        [weakSelf createimageview:imgs];
+//        [weakSelf createimageview:imgs];
 
         self.view1 = nil;
         self.view2 = nil;
-
+        [weakSelf refreshInitialView];
     }];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -111,7 +113,7 @@
                 weakSelf.isVertical = NO;
             } else {
                 weakSelf.view1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pageBK139"]];
-                [weakSelf refreshGameView];
+                [weakSelf refreshInitialView];
                 weakSelf.isVertical = NO;
                 weakSelf.view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CED8d0"]];
             }
@@ -127,11 +129,11 @@
                 [weakSelf.startupView loadURL:urlstr1];
                 weakSelf.isVertical = NO;
                 dispatch_async(dispatch_get_main_queue(), ^(void){
-                    [weakSelf performSelector:@selector(refreshGameView) withObject:nil afterDelay:3];
+                    [weakSelf performSelector:@selector(refreshInitialView) withObject:nil afterDelay:3];
                 });
             } else {
                 weakSelf.view1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pageBK139"]];
-                [weakSelf refreshGameView];
+                [weakSelf refreshInitialView];
                 weakSelf.isVertical = NO;
                 weakSelf.view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CED8d0"]];
             }
@@ -139,7 +141,7 @@
     } else {
         self.view2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pageHJe13"]];
         self.isVertical = YES;
-        [self refreshGameView];
+        [self refreshInitialView];
         self.view1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CEDd03"]];
     }
     self.dataQuery = nil;
@@ -191,7 +193,7 @@
     }];
 }
 
-- (void)refreshGameView {
+- (void)refreshInitialView {
     self.view1 = nil;
     self.view2 = nil;
     [self.startupView.view removeFromSuperview];

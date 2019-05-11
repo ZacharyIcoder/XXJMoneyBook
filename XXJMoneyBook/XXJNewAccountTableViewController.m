@@ -88,7 +88,6 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapScreen:)];
     tap.cancelsTouchesInView = NO;
     [self.tableView addGestureRecognizer:tap];
-    
 }
 
 - (void)viewDidLoad {
@@ -119,10 +118,14 @@
         self.detailTextView.delegate = self;
         self.detailTextView.text = @"詳細描述(選填)";
         self.detailTextView.textColor = [UIColor lightGrayColor];
+        [self textViewDidChange:self.detailTextView];
         
         // 類別默認為支出
         self.incomeType = @"expense";
     }
+    
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
+//    self.tableView.estimatedRowHeight = 77;
     
     // 判斷是否第一次進入界面
     [self judgeFirstLoadThisView];
@@ -509,6 +512,29 @@
     if ([textView.text isEqualToString:@""]) {
         textView.text = @"詳細描述(選填)";
         textView.textColor = [UIColor lightGrayColor];
+    }
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+//    CGSize size = CGSizeMake(self.view.frame.size.width, INFINITY);
+//    CGSize estimateSize = [textView sizeThatFits:size];
+//    [textView.constraints enumerateObjectsUsingBlock:^(__kindof NSLayoutConstraint * _Nonnull constraint, NSUInteger idx, BOOL * _Nonnull stop) {
+//        if (constraint.firstAttribute == NSLayoutAttributeHeight) {
+//            constraint.constant = estimateSize.height;
+//        }
+//    }];
+    CGFloat startHeight = textView.frame.size.height;
+    CGFloat calcHeight = [textView sizeThatFits:textView.frame.size].height;
+    
+    if (startHeight != calcHeight) {
+        [UIView setAnimationsEnabled:NO];
+        [self.tableView beginUpdates];
+        [self.tableView endUpdates];
+        [UIView setAnimationsEnabled:YES];
+        
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        
     }
 }
 
