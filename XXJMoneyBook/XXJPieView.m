@@ -25,7 +25,7 @@
 
 - (void)drawRect:(CGRect)rect {
     // 先将背景色设为默认
-    [[UIColor whiteColor] set];
+    [[UIColor clearColor] set];
     UIRectFill(rect);
     
     self.labelArray = [NSMutableArray array];

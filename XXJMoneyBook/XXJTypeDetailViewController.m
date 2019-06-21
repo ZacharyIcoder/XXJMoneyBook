@@ -12,6 +12,7 @@
 #import "XXJAllHistoryTableViewCell.h"
 #import "XXJAccountViewController.h"
 #import <CoreData/CoreData.h>
+#import "UIColor+Hex.h"
 
 @interface XXJTypeDetailViewController () <UITableViewDataSource>
 
@@ -44,6 +45,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    self.title = @"細項";
     
     [self fetchData];
     
@@ -101,10 +104,10 @@
     // 支出用红色，收入用绿色
     if ([self.incomeType isEqualToString:@"income"]) {
         str = @"共收入:";
-        color = [UIColor blueColor];
+        color = [UIColor hexColor:@"d8ae47"];
     } else {
         str = @"共支出:";
-        color = [UIColor redColor];
+        color = [UIColor hexColor:@"ee4b2e"];
     }
     
     NSMutableAttributedString *mutString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@  %@  %@ %@", self.date, self.type, str, [NSNumber numberWithDouble:self.totalMoney]]];
@@ -129,9 +132,9 @@
     
     cell.money.text = [NSString stringWithFormat:@"%@", self.uniqueMoneyArray[indexPath.row]];
     if ([self.incomeType isEqualToString:@"income"]) {
-        cell.money.textColor = [UIColor blueColor];
+        cell.money.textColor = [UIColor hexColor:@"89aa9f"];
     } else {
-        cell.money.textColor = [UIColor redColor];
+        cell.money.textColor = [UIColor hexColor:@"f37171"];
     }
     
     return cell;

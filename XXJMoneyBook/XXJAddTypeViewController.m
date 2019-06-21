@@ -14,8 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *typeCollectionView;
 
-@property (weak, nonatomic) IBOutlet UIImageView *showImage;
-
 @property (weak, nonatomic) IBOutlet UITextField *typeTextField;
 
 @property (strong, nonatomic) NSMutableArray *typeArray; // 存放各種類別名稱(用來顯示collectionView中圖片的資料源)
@@ -83,6 +81,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"新增類別";
     self.typeCollectionView.delegate = self;
     self.typeCollectionView.dataSource = self;
     self.typeTextField.delegate = self;
@@ -117,7 +116,7 @@
     // 首先判斷是否新類別名已存在，不允許重復
     if ([self.expenseArray containsObject:self.typeTextField.text] || [self.incomeArray containsObject:self.typeTextField.text]) {
         [self popoverAlertControllerWithMessage:@"類別名已存在，請使用新的類別名"];
-    } else if (self.typeTextField.text && self.showImage.image) {
+    } else if (self.typeTextField.text) {
         // 若兩者都已輸入，將圖片與類別名保存並聯繫起來
         [self savePhotoWithTypeName];
         
@@ -141,7 +140,7 @@
 
 // 點擊back按鈕後調用 引用的他人寫的一個extension
 - (BOOL)navigationShouldPopOnBackButton {
-    if (![self.typeTextField.text isEqualToString:@""] && self.showImage.image) {
+    if (![self.typeTextField.text isEqualToString:@""]) {
         // 當二者都填上內容時，點擊返回詢問是否保存
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"還未保存，是否返回？" preferredStyle:UIAlertControllerStyleAlert];
         
@@ -270,9 +269,6 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     XXJAddTypeCollectionViewCell *cell = (XXJAddTypeCollectionViewCell *)[self.typeCollectionView cellForItemAtIndexPath:indexPath];
     
-    // 顯示選中的圖片
-    self.showImage.image = cell.image.image;
-    
     // 設為從已有圖片選擇
     self.isFromAlbum = NO;
 }
@@ -298,13 +294,6 @@
     }];
     
     NSString *type = [info objectForKey:UIImagePickerControllerMediaType];
-    
-    if ([type isEqualToString:@"public.image"]) {
-        // 當選擇的類型是圖片時，顯示在小imageView上
-        self.selectedPhoto = [info objectForKey:@"UIImagePickerControllerEditedImage"];
-        
-        self.showImage.image = self.selectedPhoto;
-    }
     
     // 設為從相冊選擇
     self.isFromAlbum = YES;

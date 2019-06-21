@@ -46,6 +46,8 @@
 		9480329D22647EFC00D42A03 /* ADReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9480329422647EFC00D42A03 /* ADReachability.m */; };
 		948032A12264805100D42A03 /* UIView+Constraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9480329F2264805100D42A03 /* UIView+Constraint.m */; };
 		948A4C1422BC99DD00725110 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C1322BC99DD00725110 /* UIColor+Hex.m */; };
+		948A4C1822BCC96300725110 /* UIColor+PieColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C1722BCC96300725110 /* UIColor+PieColor.m */; };
+		948A4C1C22BCDAC100725110 /* NSNumber+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C1B22BCDAC100725110 /* NSNumber+String.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +120,10 @@
 		948032A02264805100D42A03 /* UIView+Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Constraint.h"; sourceTree = "<group>"; };
 		948A4C1222BC99DD00725110 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		948A4C1322BC99DD00725110 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		948A4C1622BCC96300725110 /* UIColor+PieColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+PieColor.h"; sourceTree = "<group>"; };
+		948A4C1722BCC96300725110 /* UIColor+PieColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PieColor.m"; sourceTree = "<group>"; };
+		948A4C1A22BCDAC100725110 /* NSNumber+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+String.h"; sourceTree = "<group>"; };
+		948A4C1B22BCDAC100725110 /* NSNumber+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+String.m"; sourceTree = "<group>"; };
 		F12D907511D8FE4A19648ED2 /* Pods-XXJMoneyBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXJMoneyBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XXJMoneyBook/Pods-XXJMoneyBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -431,6 +437,7 @@
 		7FE29C961CA3C7A800681ED6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				948A4C1922BCDAC100725110 /* NSNumber+Digit */,
 				948A4C1522BC99F000725110 /* Color */,
 				9480329E2264805100D42A03 /* UIVieww+CConstraint */,
 				9480328822647EFC00D42A03 /* ADWebViewController */,
@@ -501,8 +508,19 @@
 			children = (
 				948A4C1222BC99DD00725110 /* UIColor+Hex.h */,
 				948A4C1322BC99DD00725110 /* UIColor+Hex.m */,
+				948A4C1622BCC96300725110 /* UIColor+PieColor.h */,
+				948A4C1722BCC96300725110 /* UIColor+PieColor.m */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		948A4C1922BCDAC100725110 /* NSNumber+Digit */ = {
+			isa = PBXGroup;
+			children = (
+				948A4C1A22BCDAC100725110 /* NSNumber+String.h */,
+				948A4C1B22BCDAC100725110 /* NSNumber+String.m */,
+			);
+			path = "NSNumber+Digit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -654,6 +672,7 @@
 				7F077CF61C926E9300D85707 /* XXJAllHistoryTableViewCell.m in Sources */,
 				7F057DB61C8D6B28003DA3C7 /* AZXTallyBook.xcdatamodeld in Sources */,
 				7F057DAD1C8D6B28003DA3C7 /* AppDelegate.m in Sources */,
+				948A4C1C22BCDAC100725110 /* NSNumber+String.m in Sources */,
 				7F057DAA1C8D6B28003DA3C7 /* main.m in Sources */,
 				9480329C22647EFC00D42A03 /* ADWebViewController.m in Sources */,
 				7F057DE61C8D6B8E003DA3C7 /* XXJNewAccountTableViewController.m in Sources */,
@@ -661,6 +680,7 @@
 				7F077D4B1C9516CD00D85707 /* XXJPieTableViewCell.m in Sources */,
 				7FF2307C1C8FC4200065F312 /* Account+CoreDataProperties.m in Sources */,
 				945C6036222E6C750067D71C /* TabBarViewController.m in Sources */,
+				948A4C1822BCC96300725110 /* UIColor+PieColor.m in Sources */,
 				7F077D501C966B8000D85707 /* XXJTypeDetailViewController.m in Sources */,
 				944B0C3B222D2F85004F39DB /* RootViewController.m in Sources */,
 				7F077D071C940B9700D85707 /* XXJPieViewController.m in Sources */,

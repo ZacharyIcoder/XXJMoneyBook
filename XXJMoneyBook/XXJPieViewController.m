@@ -13,6 +13,9 @@
 #import "XXJPieTableViewCell.h"
 #import "XXJTypeDetailViewController.h"
 #import <CoreData/CoreData.h>
+#import "UIColor+PieColor.h"
+#import "UIColor+Hex.h"
+#import "NSNumber+String.h"
 
 @interface XXJPieViewController () <UITableViewDataSource, XXJPieViewDataSource>
 
@@ -76,22 +79,21 @@
 
 - (NSArray *)colors {
     if (!_colors) {
-        _colors = @[[UIColor colorWithRed:252/255.0 green:25/255.0 blue:28/255.0 alpha:1],
-                    [UIColor colorWithRed:254/255.0 green:200/255.0 blue:46/255.0 alpha:1],
-                    [UIColor colorWithRed:217/255.0 green:253/255.0 blue:53/255.0 alpha:1],
-                    [UIColor colorWithRed:42/255.0 green:253/255.0 blue:130/255.0 alpha:1],
-                    [UIColor colorWithRed:43/255.0 green:244/255.0 blue:253/255.0 alpha:1],
-                    [UIColor colorWithRed:18/255.0 green:92/255.0 blue:249/255.0 alpha:1],
-                    [UIColor colorWithRed:219/255.0 green:39/255.0 blue:249/255.0 alpha:1],
-                    [UIColor colorWithRed:253/255.0 green:105/255.0 blue:33/255.0 alpha:1],
-                    [UIColor colorWithRed:255/255.0 green:245/255.0 blue:54/255.0 alpha:1],
-                    [UIColor colorWithRed:140/255.0 green:253/255.0 blue:49/255.0 alpha:1],
-                    [UIColor colorWithRed:44/255.0 green:253/255.0 blue:218/255.0 alpha:1],
-                    [UIColor colorWithRed:29/255.0 green:166/255.0 blue:250/255.0 alpha:1],
-                    [UIColor colorWithRed:142/255.0 green:37/255.0 blue:248/255.0 alpha:1],
-                    [UIColor colorWithRed:249/255.0 green:31/255.0 blue:181/255.0 alpha:1]];
-        
-    }  // 共14種顏色，從紅到紫，呈彩虹狀漸變
+        _colors = @[[UIColor pieColor1],
+                    [UIColor pieColor2],
+                    [UIColor pieColor3],
+                    [UIColor pieColor4],
+                    [UIColor pieColor5],
+                    [UIColor pieColor6],
+                    [UIColor pieColor7],
+                    [UIColor pieColor8],
+                    [UIColor pieColor9],
+                    [UIColor pieColor10],
+                    [UIColor pieColor11],
+                    [UIColor pieColor12],
+                    [UIColor pieColor13],
+                    [UIColor pieColor14]];
+    }
     return _colors;
 }
 
@@ -110,6 +112,7 @@
     
     self.typeTableView.dataSource = self;
     self.pieView.dataSource = self;
+    self.pieView.backgroundColor = [UIColor clearColor];
     
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     self.managedObjectContext = appDelegate.managedObjectContext;
@@ -117,6 +120,8 @@
     [self setSwipeGesture];
     
     [self judgeFirstLoadThisView];
+    
+    self.title = @"統計";
 }
 
 - (void)judgeFirstLoadThisView {
@@ -148,8 +153,6 @@
     // 離開界面時將圖上label全部移除
     [self.pieView removeAllLabel];
 }
-
-
 
 - (void)refreshAll {
     [self.pieView removeAllLabel];
@@ -203,7 +206,7 @@
     
     // 設定日期格式
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"yyyy-MM-dd";
+    dateFormatter.dateFormat = @"yyyy.MM.dd";
     
     if (self.currentDateString == nil) {
         // 如果還未設定，默認顯示當前所處月份
@@ -332,10 +335,10 @@
     NSMutableAttributedString *mutString;
     if ([self.incomeType isEqualToString:@"income"]) {
         mutString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ 總收入: %@", self.currentDateString, [NSNumber numberWithDouble:self.totalMoney]]];
-        [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(13, [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:self.totalMoney]].length)];
+        [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"d8ae47"] range:NSMakeRange(13, [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:self.totalMoney]].length)];
     } else {
         mutString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ 總支出: %@", self.currentDateString, [NSNumber numberWithDouble:self.totalMoney]]];
-        [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(13, [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:self.totalMoney]].length)];
+        [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"ee4b2e"] range:NSMakeRange(13, [NSString stringWithFormat:@"%@", [NSNumber numberWithDouble:self.totalMoney]].length)];
         
     }
     
@@ -360,8 +363,9 @@
     
     NSNumber *percent = self.sortedPercentArray[indexPath.row];
     NSString *percentString = [NSString stringWithFormat:@"%@", percent];
-    
-    NSMutableAttributedString *mutString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@     %@     %@%%", type, money, [self filterLastZeros:percentString]]];
+    percentString = [@(percentString.doubleValue) stringForCurrencyWithDigit:2];
+    NSString *blankString = @"   ";
+    NSMutableAttributedString *mutString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@  %@%%", type, blankString, money, blankString, [self filterLastZeros:percentString]]];
     
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, type.length)];
     
@@ -369,12 +373,12 @@
     NSInteger moneyLength = [NSString stringWithFormat:@"%@", money].length;
     
     if ([self.incomeType isEqualToString:@"income"]) {
-        [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(type.length + 5, moneyLength)];
+        [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"d8ae47"] range:NSMakeRange(type.length + blankString.length, moneyLength)];
     } else {
-        [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(type.length + 5, moneyLength)];
+        [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"ee4b2e"] range:NSMakeRange(type.length + blankString.length, moneyLength)];
     }
     
-    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(type.length + 5 + moneyLength + 5, percentString.length + 1)];
+    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(type.length + blankString.length + moneyLength + blankString.length, percentString.length)];
     
     [cell.moneyLabel setAttributedText:mutString];
     
