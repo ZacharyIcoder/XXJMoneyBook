@@ -61,12 +61,10 @@
         }
     }];
     
-    
-    JANALYTICSLaunchConfig * config = [[JANALYTICSLaunchConfig alloc] init];
+    JANALYTICSLaunchConfig *config = [[JANALYTICSLaunchConfig alloc] init];
     config.appKey = kJPushAppKey;
     config.channel = kJPushChannel;
     [JANALYTICSService setupWithConfig:config];
-    
     
     return YES;
 }
