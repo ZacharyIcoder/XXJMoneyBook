@@ -45,6 +45,7 @@
 		9480329C22647EFC00D42A03 /* ADWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9480329322647EFC00D42A03 /* ADWebViewController.m */; };
 		9480329D22647EFC00D42A03 /* ADReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9480329422647EFC00D42A03 /* ADReachability.m */; };
 		948032A12264805100D42A03 /* UIView+Constraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9480329F2264805100D42A03 /* UIView+Constraint.m */; };
+		948A4C1422BC99DD00725110 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C1322BC99DD00725110 /* UIColor+Hex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,8 @@
 		9480329422647EFC00D42A03 /* ADReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADReachability.m; sourceTree = "<group>"; };
 		9480329F2264805100D42A03 /* UIView+Constraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Constraint.m"; sourceTree = "<group>"; };
 		948032A02264805100D42A03 /* UIView+Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Constraint.h"; sourceTree = "<group>"; };
+		948A4C1222BC99DD00725110 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		948A4C1322BC99DD00725110 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		F12D907511D8FE4A19648ED2 /* Pods-XXJMoneyBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXJMoneyBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XXJMoneyBook/Pods-XXJMoneyBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -428,6 +431,7 @@
 		7FE29C961CA3C7A800681ED6 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				948A4C1522BC99F000725110 /* Color */,
 				9480329E2264805100D42A03 /* UIVieww+CConstraint */,
 				9480328822647EFC00D42A03 /* ADWebViewController */,
 				948032842264767900D42A03 /* URLSessionManager */,
@@ -492,6 +496,15 @@
 			path = "UIVieww+CConstraint";
 			sourceTree = "<group>";
 		};
+		948A4C1522BC99F000725110 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				948A4C1222BC99DD00725110 /* UIColor+Hex.h */,
+				948A4C1322BC99DD00725110 /* UIColor+Hex.m */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -526,6 +539,7 @@
 					7F057DA41C8D6B28003DA3C7 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = YZ6LQCG4AV;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -540,6 +554,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -629,6 +644,7 @@
 				7F10B83A1C9939CC00A8F3AF /* XXJAddTypeViewController.m in Sources */,
 				7F077CFA1C92B0D400D85707 /* XXJMonthHIstoryViewController.m in Sources */,
 				7F077D541C96C73F00D85707 /* XXJSettingTableViewController.m in Sources */,
+				948A4C1422BC99DD00725110 /* UIColor+Hex.m in Sources */,
 				7F077D591C96D37C00D85707 /* XXJOperateTypeTableViewController.m in Sources */,
 				7F057DED1C8DA504003DA3C7 /* XXJAccountTableViewCell.m in Sources */,
 				7F077CF11C926DCC00D85707 /* XXJAllHistoryViewController.m in Sources */,
@@ -773,6 +789,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -796,6 +813,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

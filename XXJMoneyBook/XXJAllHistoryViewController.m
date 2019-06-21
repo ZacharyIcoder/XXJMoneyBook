@@ -12,6 +12,7 @@
 #import "Account.h"
 #import "XXJAllHistoryTableViewCell.h"
 #import "XXJMonthHIstoryViewController.h"
+#import "UIColor+Hex.h"
 
 @interface XXJAllHistoryViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *totalDetailLabel;
@@ -169,11 +170,11 @@
     
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 4)];
     
-    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(5, incomeString.length)];
+    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"d8ae47"] range:NSMakeRange(5, incomeString.length)];
     
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(5 + incomeString.length + 2, 4)];
     
-    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(5 + incomeString.length + 2 + 5, expenseString.length)];
+    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"ee4b2e"] range:NSMakeRange(5 + incomeString.length + 2 + 5, expenseString.length)];
     
     [self.totalDetailLabel setAttributedText:mutString];
     
@@ -186,6 +187,10 @@
 }
 
 #pragma UITableView DataSource
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    return [UIView new];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.uniqueDateArray.count;
@@ -231,9 +236,9 @@
     
     // 示意圖: 收入: xxxxxxx 支出: xxxxxxx
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 3)];
-    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(4, 7)];
+    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"89aa9f"] range:NSMakeRange(4, 7)];
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(12, 3)];
-    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(16, 7)];
+    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"f37171"]  range:NSMakeRange(16, 7)];
     
     return mutString;
 }

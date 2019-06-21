@@ -12,6 +12,7 @@
 #import "Account.h"
 #import "XXJAccountViewController.h"
 #import <CoreData/CoreData.h>
+#import "UIColor+Hex.h"
 
 @interface XXJMonthHIstoryViewController () <UITableViewDataSource>
 
@@ -145,11 +146,11 @@
     
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 5)];
     
-    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(6, incomeString.length)];
+    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"d8ae47"]  range:NSMakeRange(6, incomeString.length)];
     
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(6 + incomeString.length + 2, 5)];
     
-    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(6 + incomeString.length + 2 + 6, expenseString.length)];
+    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"ee4b2e"] range:NSMakeRange(6 + incomeString.length + 2 + 6, expenseString.length)];
     
     [self.TotalMoneyLabel setAttributedText:mutString];
     
@@ -209,8 +210,8 @@
     
     // 示意图: 收入: xxxxxxx 支出: xxxxxxx
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 3)];
-    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(4, 7)];
-    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(12, 3)];
+    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"89aa9f"] range:NSMakeRange(4, 7)];
+    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"f37171"] range:NSMakeRange(12, 3)];
     [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(16, 7)];
     
     return mutString;

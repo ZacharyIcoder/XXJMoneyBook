@@ -12,6 +12,8 @@
 #import "XXJAccountTableViewCell.h"
 #import "XXJNewAccountTableViewController.h"
 #import "Account.h"
+#import "UIColor+Hex.h"
+#import "UIVieww+CConstraint/UIView+Constraint.h"
 
 @interface XXJAccountViewController () <UITableViewDelegate, UITableViewDataSource, PassingDateDelegate>
 
@@ -268,18 +270,18 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if (self.passedDate) { // 若有別處傳來的日期(此時是那個沒有記帳按鈕的UI在顯示)
-        self.navigationItem.title = self.passedDate;
+    if (self.passedDate) {
+        self.navigationItem.title = [NSString stringWithFormat:@"%@ %@", @"今日",self.passedDate];
     } else {
-        // 剛打開應用時，將passedDate設為當前日期(為了在fetchAccount時能篩選並展示當天的帳單)
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateFormat = @"yyyy-MM-dd";
+        dateFormatter.dateFormat = @"yyyy.MM.dd";
         self.passedDate = [dateFormatter stringFromDate:[NSDate date]];
-        self.navigationItem.title = self.passedDate;
+        self.navigationItem.title = [NSString stringWithFormat:@"%@ %@", @"今日",self.passedDate];
     }
     
     [self fetchAccounts];
     [self.accountTableView reloadData];
+    NSLog(@"fetech new account");
     
     // 計算結餘總額
     [self calculateMoneySumAndSetText];
@@ -345,17 +347,22 @@
         }
     }
     
-    NSString *moneySumString = [NSString stringWithFormat:@"今日結餘: %@", [NSNumber numberWithDouble:[[NSString stringWithFormat:@"%.2f", moneySum] doubleValue]]];
+    NSString *moneySumString = [NSString stringWithFormat:@"今日結餘 %@", [NSNumber numberWithDouble:[[NSString stringWithFormat:@"%.2f", moneySum] doubleValue]]];
     
     NSMutableAttributedString *mutString = [[NSMutableAttributedString alloc] initWithString:moneySumString];
     
     // 在moneySumLabel上前面字體黑色，後半段根據正負決定顏色
-    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, 5)];
+    [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"303338"] range:NSMakeRange(0, 5)];
+    [mutString addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:16] range:NSMakeRange(0, 4)];
+    [mutString addAttribute:NSUnderlineStyleAttributeName value:@(NSUnderlineStyleSingle) range:NSMakeRange(5, moneySumString.length - 5)];
     
     if (moneySum >= 0) {
-        [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(5, moneySumString.length - 5)];
+        [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"d8ae47"] range:NSMakeRange(4, moneySumString.length - 4)];
+        [mutString addAttribute:NSUnderlineColorAttributeName value:[UIColor hexColor:@"d8ae47"] range:NSMakeRange(5, moneySumString.length - 5)];
+        
     } else {
-        [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(5, moneySumString.length - 5)];
+        [mutString addAttribute:NSForegroundColorAttributeName value:[UIColor hexColor:@"ee4b2e"] range:NSMakeRange(4, moneySumString.length - 4)];
+        [mutString addAttribute:NSUnderlineColorAttributeName value:[UIColor hexColor:@"ee4b2e"] range:NSMakeRange(5, moneySumString.length - 5)];
     }
     
     [self.moneySumLabel setAttributedText:mutString];
@@ -373,9 +380,9 @@
     
     // 根據類型選擇不同顏色
     if ([account.incomeType isEqualToString:@"income"]) {
-        cell.money.textColor = [UIColor blueColor];
+        cell.money.textColor = [UIColor hexColor:@"89aa9f"];
     } else {
-        cell.money.textColor = [UIColor redColor];
+        cell.money.textColor = [UIColor hexColor:@"f37171"];
     }
 }
 
@@ -392,6 +399,23 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.fetchedResults.count;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    if (self.fetchedResults.count == 0) {
+        UIView *emptyView = [UIView new];
+        UILabel *label = [UILabel new];
+        label.text = @"今日尚未記帳喔!";
+        label.textColor = [UIColor lightGrayColor];
+        label.font = [UIFont systemFontOfSize:15];
+        label.numberOfLines = 0;
+        label.textAlignment = NSTextAlignmentCenter;
+        [emptyView addSubview:label];
+        [label constraints:emptyView constant:UIEdgeInsetsMake(5, 5, -5, -5)];
+        return emptyView;
+    } else {
+        return [UIView new];
+    }
 }
 
 

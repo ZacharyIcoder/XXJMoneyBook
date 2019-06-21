@@ -11,6 +11,7 @@
 #import "XXJAccountViewController.h"
 #import "UIViewController+BackButtonHandler.h"
 #import "VENCalculatorInputTextField.h"
+#import "UIColor+Hex.h"
 
 @interface XXJNewAccountTableViewController () <UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -66,7 +67,7 @@
         
         self.customTextField.textAlignment = NSTextAlignmentRight;
         self.customTextField.placeholder = @"輸入金額";
-        self.customTextField.textColor = [UIColor redColor];
+        self.customTextField.textColor = [UIColor hexColor:@"4788C7"];
         
     }
     
@@ -75,9 +76,9 @@
     if (self.isSegueFromTableView) {
         self.customTextField.text = self.accountInSelectedRow.money;
         if ([self.incomeType isEqualToString:@"income"]) {
-            self.customTextField.textColor = [UIColor blueColor];
+            self.customTextField.textColor = [UIColor hexColor:@"89aa9f"];
         } else {
-            self.customTextField.textColor = [UIColor redColor];
+            self.customTextField.textColor = [UIColor hexColor:@"f37171"];
         }
     }
     
@@ -102,6 +103,10 @@
         // 如果是點擊tableView而來，顯示傳遞過來的各個屬性
         self.dateLabel.text = self.accountInSelectedRow.date;
         self.detailTextView.text = self.accountInSelectedRow.detail;
+        if ([self.detailTextView.text isEqualToString:@"詳細描述(選填)"]) {
+            self.detailTextView.textColor = [UIColor lightGrayColor];
+            self.detailTextView.delegate = self;
+        }
         self.incomeType = self.accountInSelectedRow.incomeType;
         self.typeLabel.text = self.accountInSelectedRow.type;
         
@@ -111,7 +116,7 @@
         // 如果是點擊記帳按鈕而來
         //日期顯示默認為當前日期
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateFormat = @"yyyy-MM-dd";
+        dateFormatter.dateFormat = @"yyyy.MM.dd";
         self.dateLabel.text = [dateFormatter stringFromDate:[NSDate date]];
         
         //利用textView的delegate實現其placeholder
@@ -304,7 +309,7 @@
                 account.detail = self.detailTextView.text;
             } else {
                 // 當用戶未編輯詳細描述時，將account的detail設為空
-                account.detail = @"";
+                account.detail = @"詳細描述(選填)";
             }
         }
         
@@ -478,7 +483,7 @@
 - (void)datePickerValueDidChanged:(UIDatePicker *)sender {
     // NSDate轉NSString
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"yyyy-MM-dd";
+    dateFormatter.dateFormat = @"yyyy.MM.dd";
     self.dateLabel.text = [dateFormatter stringFromDate:sender.date];
 }
 
@@ -628,14 +633,17 @@
         // 選擇不同種類時改變incomeType值，以使得dataSource方法中得以判斷右邊需要多少行,並改變customTextField的字體顏色
         if (row == 0) {
             self.incomeType = @"expense";
-            self.customTextField.textColor = [UIColor redColor];
-            // 當切換到支出選項時，默認顯示支出第一個類別的名稱(不然的話還得要拉一下才可以)
+            // 當切換到支出選項時，默認顯示支出第一個類別的名稱 (不然的話還得要拉一下才可以)
             self.typeLabel.text = self.expenseArray[0];
         } else {
             self.incomeType = @"income";
-            self.customTextField.textColor = [UIColor blueColor];
             // 當切換到收入選項時，默認顯示收入第一個類別的名稱
             self.typeLabel.text = self.incomeArray[0];
+        }
+        if ([self.incomeType isEqualToString:@"income"]) {
+            self.customTextField.textColor = [UIColor hexColor:@"89aa9f"];
+        } else {
+            self.customTextField.textColor = [UIColor hexColor:@"f37171"];
         }
         [self.pickerView reloadComponent:1];
     } else {
@@ -643,6 +651,12 @@
             self.typeLabel.text = self.incomeArray[row];
         } else {
             self.typeLabel.text = self.expenseArray[row];
+        }
+        
+        if ([self.incomeType isEqualToString:@"income"]) {
+            self.customTextField.textColor = [UIColor hexColor:@"89aa9f"];
+        } else {
+            self.customTextField.textColor = [UIColor hexColor:@"f37171"];
         }
     }
 }
