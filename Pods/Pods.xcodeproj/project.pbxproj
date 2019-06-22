@@ -25,11 +25,11 @@
 		0D3F4BEC39CB765DF4C9C5EF2B2A9758 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94BD6E7441C89717330776FD5E90124 /* CoreGraphics.framework */; };
 		0F073A52610DB60EAF1ADFC5ACEA255F /* LCDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0DEC83EC12248E99E31D94DEE4764F /* LCDatabasePool.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0FE1DE47853ADA278545F3100DC27F2B /* AVGeoPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = B8481D6FBC841C7B970164C2C1155600 /* AVGeoPoint.m */; };
+		1063516D456A3840C74EE4E8FD411A95 /* NSString+VENCalculatorInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A1E8E11E18585D65A5809B00D94EE6E /* NSString+VENCalculatorInputView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		115758EA95E12980304C3CBD9D6E35BF /* AVAvailability.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CE97935E4D29CCB7DED2C2C26D0563F /* AVAvailability.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		11C73E1C4221129366F719A97956345A /* LCRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = B44BDC12F0B7A72C488450A673038E0D /* LCRouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		150D61526D0C4128529AC32A4012CCF5 /* AVAnalyticsImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 82D577218D0CCE5D30F9F1F4A7B4ED5D /* AVAnalyticsImpl.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		15A4E46B4A3DB14BA382631093F6CC40 /* AVObjectUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 80ABE5EFD972514212EE1BC5F5C6D9F0 /* AVObjectUtils.m */; };
-		17403ED6B9DDBA072F6A0C0BD8C87F91 /* UITextField+VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4AE0C390E13521FF171B91B8E918B /* UITextField+VENCalculatorInputView.m */; };
 		17D56713B9C9617593C8DB098F17ECF8 /* LCDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A18CB494CBD7A2DCD104C01BFAFC33F /* LCDatabase.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		184A03B4A3A0269AD58DE363874EBB9F /* AVACL.m in Sources */ = {isa = PBXBuildFile; fileRef = FE086F405A8B69A1BFFDB4D382028AF4 /* AVACL.m */; };
 		199CC674421CDAC85732BDDB6A4C41F5 /* LCSSLChallenger.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E91045406122160913925E03C216B60 /* LCSSLChallenger.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -39,10 +39,13 @@
 		2109F5AF9B667ABC2C92E35C057F1124 /* AVSaveOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 01B6D6146726EF1476F34CB2569DF852 /* AVSaveOption.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		215883B686D34C7682CA41EAC3F7DDDF /* AVSMS.m in Sources */ = {isa = PBXBuildFile; fileRef = 344ECC50675A1AD892C878F2D4A628D3 /* AVSMS.m */; };
 		2375EA37F79865F758D2F41D7BFB9274 /* LCResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F37557D5CF55BA62F73D1DA9A1CC1D /* LCResultSet.m */; };
+		24D09252E5B4F4875FA77338C0B93494 /* VENMoneyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 57057838D80C3F9CC4AA455AB3458B4F /* VENMoneyCalculator.m */; };
+		24EBAC6AD91B19CEA5F7012B4E514BDE /* VENCalculatorInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9464465C757D31C24649D1E1183A9DFF /* VENCalculatorInputView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		25F176864848148D28F44F0C399FF91B /* AVAnalyticsImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F90BF303235762E298113C9CACA860F /* AVAnalyticsImpl.m */; };
 		25FF4C1D7C356D84D3A55FB24FB63976 /* LCURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C4B6E649BF4398155803C553A511040 /* LCURLResponseSerialization.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		289BAD8C6C8F60C49FE1575E28A2D8E9 /* AVAnalytics_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0565613BB594A355C8A7A862556D91BA /* AVAnalytics_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2C165A8D938B16EC0B2E50E1E66EAE3C /* AVObjectUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3134D85D888E2D8108E77252CC5BACD8 /* AVObjectUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2E9416493AC148EB50AF42DE6A122D31 /* VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBF42DC42B05D5111DC04B36215DD83 /* VENCalculatorInputView.m */; };
 		2EF864B2B922EF9EC679A0E130EA2B3E /* AVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 069906058C30B9D83EDBB7F4FA25490D /* AVFile.m */; };
 		3835EB435B6375697840C35E94F4EA46 /* AVAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D9CFB0CA0D640B5834DAA786D50CCE /* AVAnalytics.m */; };
 		39715C24CDA04D314CF6DBBC9E34B2C2 /* AVAnonymousUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DBE7A741318A56BE3B05D264757999 /* AVAnonymousUtils.m */; };
@@ -56,6 +59,7 @@
 		4B1D25C603C1B4956F0F83254905FD0F /* AVPaasClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C319A97D18B7220DF43CD890166D7E0 /* AVPaasClient.m */; };
 		4B81574AB7AD3B447B150C60A81BE02F /* LCResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = D43DBE6C09A8D90C45FF16FF8E867DFD /* LCResultSet.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4E60D3B81D7474CFE291E21CD32DBDAB /* AVDynamicObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A4827254592699D63BCE5C04E9462C /* AVDynamicObject.m */; };
+		4F75C976B8A5068227C77DA751D7AC4C /* UITextField+VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4AE0C390E13521FF171B91B8E918B /* UITextField+VENCalculatorInputView.m */; };
 		503F96F1BFB8912D0D7D57778A4A0B54 /* EXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 84C91FCB34E654DC23364E0337D1B2F0 /* EXTScope.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		51D0FED9594287E5E9EEFA7A5076DC1F /* LCKeyValueStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A589CCD1B9E3CC6F9D4FAF63B2C6FA7D /* LCKeyValueStore.m */; };
 		543050B26983BEF1356A6C68DB4154F2 /* AVScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7AEE569824343475550CD6CEB7497E /* AVScheduler.m */; };
@@ -65,6 +69,7 @@
 		5E08A5B18C5987CFA8A9EB3EF6560E64 /* AVPush.h in Headers */ = {isa = PBXBuildFile; fileRef = 67CE3230E1FB9C0B39B0DEBDA3FF2F8C /* AVPush.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		606E50EAFDE7620AA1EDD6188431105F /* AVRole.h in Headers */ = {isa = PBXBuildFile; fileRef = 888AA4FF2AEA48C0792C43A46ED1320B /* AVRole.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		638DDBFEC2BB5BF33F656DF53AD03583 /* AVStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A8431A0F1998EB14293B4D10B49C60F /* AVStatus.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		646FD78F8EE2590AFAB3E5A8EED4EEC3 /* VENCalculatorInputView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3F94BC15FEC9D9755BCB31B9D1B066 /* VENCalculatorInputView-dummy.m */; };
 		65F9FB1C65ABA123A2A74AFD6B70F65A /* AVSMS.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F112B04D6282DBC7CB6445083B8B7C /* AVSMS.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		66831890E7C95EB62E0728D5E97DADBD /* AVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8F523063C4CFF4BE023396B77A671A /* AVLogger.m */; };
 		67316F8D8D10F773F54E59F3D50108D1 /* AVGeoPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D51B492BBB050B988227478926D5B9C /* AVGeoPoint.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -73,8 +78,8 @@
 		6B4CC8CBF13A6D372FB88FBA31332608 /* AVFile_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A4D0C63D7D1BE5F1AF1BBD8F5E5C5B2 /* AVFile_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		70BC93E2B54EF97207D69F8D04654D68 /* AVScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 031D2082949A635F2ABCE2AFA44284AF /* AVScheduler.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		70CC8C2BFB5A5F0933C682A5866CB63A /* AVPaasClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 605137285DB3B0E27687ED9972F1AD78 /* AVPaasClient.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7113EA4C77D65837F6F44E8C76AC96AC /* NSString+VENCalculatorInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A1E8E11E18585D65A5809B00D94EE6E /* NSString+VENCalculatorInputView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		746C84BC4B3717641C6CBC1C0229B112 /* AVCloudQueryResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD371375EC36C93F56AF94D1F2C692A /* AVCloudQueryResult.m */; };
+		75055E45D9B054CB4393618049662DBF /* VENCalculatorInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F6381DDE44C88DD8F5D73EF2C21E7D /* VENCalculatorInputTextField.m */; };
 		7612544655382FC8F6DC882545D0BD37 /* LCDatabaseMigrator.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E085A26D1B980AEC881A3AFAB9C861 /* LCDatabaseMigrator.m */; };
 		7639E9E5CBDFD3978E02631F6373992C /* AVCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF354331E8ECDE4A55FE4EF247AE100 /* AVCloud.m */; };
 		7788DCFB6F36F19AEE51B23F05D5A53C /* AVFileQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = B60DA406464965B750107402CD338003 /* AVFileQuery.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -85,10 +90,8 @@
 		7EAE8FE4D233F77E655CD759D1D23DE1 /* AVFriendQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = F27566E72F0482D95501CAAAA374E464 /* AVFriendQuery.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7F1F6D0046C9D5B24327793AAB524326 /* AVPaasClient_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = E384645CAE34B8A2314FD8E773BC6A38 /* AVPaasClient_internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7F36373150DE7421C107ADF29D9B29A2 /* AVInstallation_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 89400F8476A73A503C49D2B3501E2619 /* AVInstallation_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7FC072A58D26516CC16AA7576FB87931 /* VENCalculatorInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F6381DDE44C88DD8F5D73EF2C21E7D /* VENCalculatorInputTextField.m */; };
 		7FD745BF1A34AFAAD60EE1448C2274FA /* AVUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CB102111E0968E05A840438460CE7039 /* AVUtils.m */; };
 		7FD7E4AE6B7B856A7EF8989BF7306AE3 /* AVQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C838D57CB7F71D563A66AB54F6FD8F8 /* AVQuery.m */; };
-		80983987A00BB466EF01696B375E51C8 /* VENMoneyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 57057838D80C3F9CC4AA455AB3458B4F /* VENMoneyCalculator.m */; };
 		83E0AB62AF1FE3359C104F974E5FEEED /* AVObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 293D46EAD6FE7375BA6C7F551994DB87 /* AVObject.m */; };
 		87002CBC2F4763A26B7C153322F7E133 /* AVGeoPoint_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DAC8DE62C3E9CF3F0A8A348388D38D1 /* AVGeoPoint_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		88DFC4B91F626AC0624F2F1BF43F3449 /* AVOSCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = D47584D5AD6184A5D5056FA1BD74B387 /* AVOSCloud.m */; };
@@ -109,19 +112,20 @@
 		9A4A35FDF379C91BE87BCCEEB614CB54 /* AVCloudQueryResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 01AB1678C94EAB1100F48E9C376D448D /* AVCloudQueryResult.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9BD42D1CDF7BC756C4FF15C00B9BE0FA /* AVLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F2CF4A76EBD13D6D0457E8B31FCD2174 /* AVLocationManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9BE274DF82FC616F34B900EF9FF16420 /* AVSaveOption_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A99F2B051E9CB55EDC0A90A6CC11A7B9 /* AVSaveOption_internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9D738FDA99E888D06EA56E88D93172A4 /* UITextField+VENCalculatorInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C6D7EAC6A271B6EE69118B1D6D43F1A /* UITextField+VENCalculatorInputView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9DE43D0EC4EBF1BE47A463F17F031450 /* LCNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5C3C39CAF7D7CEECB593B753A94A7B /* LCNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9F746805539CD88018A378160BCB57BD /* AVAnonymousUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = FD8D1ADD7411A38D99F752BD5A164443 /* AVAnonymousUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A1879386D2623A5D72779F82D35ADF11 /* AVCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2B49CE126563C661E4B482A9D8E2E2D /* AVCacheManager.m */; };
 		A387FA6D483ACA2A88E1DC341B08AA99 /* AVObject.h in Headers */ = {isa = PBXBuildFile; fileRef = C4473E32F8A15CEB317A2CAFBD4886F5 /* AVObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A7CDA56BCDB438AAE844E6340D7FC707 /* SDMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF30A6FC14DB28708581246D6CDDBF4 /* SDMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A82B44B8218D9A824DD23DE8B68B5E3C /* AVInstallation.h in Headers */ = {isa = PBXBuildFile; fileRef = 069D3BEC2BAE3FDF41202DBCD6F4A714 /* AVInstallation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A92A02E733E708055255EA49BB5DFBAB /* VENCalculatorInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9464465C757D31C24649D1E1183A9DFF /* VENCalculatorInputView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A9BBFB4030523F1664A99A0A5C4F2F7F /* AVSaveOption.m in Sources */ = {isa = PBXBuildFile; fileRef = B7342649FB32ED9B0863C81EC30B557C /* AVSaveOption.m */; };
 		AA706054902E3D730B3E57A08D898A1D /* AVUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = FEEFC627EB82A317BC461AB7A2181F42 /* AVUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		ABCF57430F2C9378858E8CF96B65C960 /* AVSubclassing.h in Headers */ = {isa = PBXBuildFile; fileRef = 320021EC072206968DD20C93080BF541 /* AVSubclassing.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AC6732B8B7DEBA6A8F49681A21A335C6 /* AVFileQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C665DF981E86BF74431A1BFD6C1AE37 /* AVFileQuery.m */; };
 		AD997F21579DF7952DBBD030D7FC8E37 /* AVAnalyticsUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 254384EDFAAE9E574E60C9C1DC0D9BFE /* AVAnalyticsUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AF54A1548B23972937BF051DCCCCFA99 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B7D234C9F6F843A284B77C4113DE1B /* MobileCoreServices.framework */; };
+		AFF768790E823F41B29C82296C0F861B /* Pods-BlueCralishMoneyBook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EBF9D3EF07849EC3D93E3FDC1790BF /* Pods-BlueCralishMoneyBook-dummy.m */; };
 		B13EC9DBCBA384CB02BE9DC75FFD1219 /* AVCloud.h in Headers */ = {isa = PBXBuildFile; fileRef = C535C6382E445458DC7EC412974350F1 /* AVCloud.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B1C62460983C45EF0EF3B459C5907907 /* LCNetworkStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3970FD7D73B975CDF417647EDB8E37 /* LCNetworkStatistics.m */; };
 		B26E542501D2F1E1F9F0371C78B61935 /* LCURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E0677FEECD53DA5D2BBA195BED9CD /* LCURLRequestSerialization.m */; };
@@ -129,7 +133,6 @@
 		B33573A724505059AF439C9D4E96BA80 /* LCSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B9E491F4ACFDFBAC9EF6F5FD189CD31 /* LCSecurityPolicy.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B352B4F9A8B5E7C454B01079F5791FC9 /* LCFileTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF585E489D454C7332383EBFF87E97D /* LCFileTaskManager.m */; };
 		B3CF6352AAFFF001CE1985B5562C253E /* AVPush_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFD93225126B304DD79AF70755E34B5 /* AVPush_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B487452069C6DBEB6909B65AD3E3B268 /* VENCalculatorInputView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3F94BC15FEC9D9755BCB31B9D1B066 /* VENCalculatorInputView-dummy.m */; };
 		B5433F847544586CAE901A17FFF7F4AE /* AVCloud_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 44B38A847048FB92ACF1DD32D11EE108 /* AVCloud_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B83A48B7F90B54B22EF9FA37A53812C1 /* LCURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2213A0824D2E49D76CE3269491C6AEB8 /* LCURLSessionManager.m */; };
 		BA1B13FC606F17C0CDCA1E22F2093247 /* AVAnalyticsActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7080546D03E526C1DA96A91566109305 /* AVAnalyticsActivity.m */; };
@@ -147,8 +150,8 @@
 		C74E60EF1BADDFCDC63F791FD94D7CFA /* AVUser_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A0689209CBB794F21959EDD46042320 /* AVUser_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C7BCDC7B015AA698C9E5B003BC1D166E /* LCDatabaseCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FD328D28E20D0595EB2CC6D8EA1300 /* LCDatabaseCoordinator.m */; };
 		CDF0882B48781004E8D295D768AB45FC /* AVRelation.m in Sources */ = {isa = PBXBuildFile; fileRef = 149647E54CA9715C93C2E8492D5FA677 /* AVRelation.m */; };
-		CE1C38C5C21DF12D16691A7D8A260327 /* VENMoneyCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = A857EC1E1319FD1557B87A31CB5F3A9F /* VENMoneyCalculator.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CEFBBC81C8033586AEE0CFB70AC9C4C6 /* AVACL.h in Headers */ = {isa = PBXBuildFile; fileRef = 51E1DCF82A5E8F609C37F9B9BF5C9E69 /* AVACL.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CFE1F1D513C4014DF7A4B7AFE58E9979 /* VENCalculatorInputTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A5DEAD77FD66D8E392410DB9C5EE8992 /* VENCalculatorInputTextField.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D1CD9349A998177558ECF3CB2F1B1981 /* LCRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A2C78C0DDD69E66652F5A2842E1928 /* LCRouter.m */; };
 		D39D995780A7A6889633CBC68A6330C7 /* AVCaptcha.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4DC960C091457F778979C328C29FD /* AVCaptcha.m */; };
 		D7699E7A1082317D3F2BA71F45A59665 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC154CBB648B9EA89473485F9D7B713 /* JRSwizzle.m */; };
@@ -157,7 +160,7 @@
 		D9228133D60D6F7D0890543B55E0C4C7 /* LCURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DA426AE5893572A5BE33D4967B2668 /* LCURLConnection.m */; };
 		D987B35A89B3C5EA656BB4AA49AEAA55 /* AVObject+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 43126D17D7B2B4D2001A140913A4A8B0 /* AVObject+Subclass.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DA8AFCBAC1518D3A797D55A78EB84BCC /* AVRequestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BF9D9C24750EF8418FF82A5223645351 /* AVRequestManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DC8D3DF865B6026F1C1B448D2390D014 /* VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBF42DC42B05D5111DC04B36215DD83 /* VENCalculatorInputView.m */; };
+		DC6E91E6E5897125EBF91F84BE456495 /* NSString+VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6BEB0DC6E7E092E0E42149560F06E73 /* NSString+VENCalculatorInputView.m */; };
 		DD5F95BCC46F96AD1048BD2479295928 /* LCSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD35FD1A16B7712C9C9924A632A2468E /* LCSecurityPolicy.m */; };
 		DDD2F326A8857FA05CCB03B1846DE0E7 /* AVDuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 06D491C676A26B9FFAE233C4134C8F74 /* AVDuration.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DDD9E46641670DC77BEE38EFCBCE1410 /* NSDictionary+LCHash.h in Headers */ = {isa = PBXBuildFile; fileRef = 44EE415760EFBD28B91F95557C3F1B2D /* NSDictionary+LCHash.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -177,7 +180,6 @@
 		ED1A631A238B5EDA49480DA5315CD223 /* LCDatabaseCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E35E0614FAA6425C106662A32796FBD /* LCDatabaseCommon.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EEACF4E3CDD7C0270BDE35DE39692F57 /* AVRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 46400301ED461666BA2A7D8329BDF19B /* AVRequestOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EF2BF5384413756E41016223C6AA0720 /* AVRelation.h in Headers */ = {isa = PBXBuildFile; fileRef = DC830B34EE31B3CC868A552E63A3FBA1 /* AVRelation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F1262CF008DCD5243856C65787AAA46C /* NSString+VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6BEB0DC6E7E092E0E42149560F06E73 /* NSString+VENCalculatorInputView.m */; };
 		F2657F465501066198F1812FB7B01E2D /* LCHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C317BDAC4A5048863B98B0ABD9C7979 /* LCHTTPSessionManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F2D87D78D0ABA837D5EC37FCF8334654 /* AVRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B9AE7B8E62CA78548DBB8A956D23A4 /* AVRequestManager.m */; };
 		F2F0A340D55CD0F8795263BF6E36A181 /* AVAnalyticsSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1F57E81E4C08C81658563A92FAD9A8 /* AVAnalyticsSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -185,30 +187,28 @@
 		F385668B7EA8BDCBAC4A3BDFAEA533CE /* AVACL_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = B75A74EB5D17C2790D337770EC713C05 /* AVACL_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F54C933E62EA3E6777BE27903E031874 /* AVAnalyticsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2B149AE99247F87382A057A526E40F /* AVAnalyticsSession.m */; };
 		F59BE63B5879E70EE6C8AC462500E104 /* LCFileTaskManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F19E011148CCB07E4146092D51F085A /* LCFileTaskManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F5E7F51250DB1E4C3B248BC9A9B0AE3E /* VENCalculatorInputTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A5DEAD77FD66D8E392410DB9C5EE8992 /* VENCalculatorInputTextField.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F6502B60FA24C7F93965D90624FBE4AD /* Pods-XXJMoneyBook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2EBF35148CF44A86BEACE6F33F417D /* Pods-XXJMoneyBook-dummy.m */; };
 		F71CA005290EE5E0F9F9658EEAE42E6D /* AVPersistenceUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 59F4EF2CC8E80B3F9F5CDC2E1F5E9CCE /* AVPersistenceUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F9B4C9644CB2FE1751BA5FA7A36F39E8 /* AVRole.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D9F655275EDD2020CD5553CC065E72 /* AVRole.m */; };
 		F9FA1B17713F1D05E7233BD1B74724C9 /* AVDynamicObject_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = BE36DFFD51489013B261EAB67AB1318B /* AVDynamicObject_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FBC58BF971329014B55D19EBDB798B64 /* VENMoneyCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = A857EC1E1319FD1557B87A31CB5F3A9F /* VENMoneyCalculator.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FD4998C63B7E95ABA62B51FF67008AC7 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8877C53B9AEEC533C5319D7DD4D7C589 /* JRSwizzle.m */; };
 		FDA31527615FD6A668112BC04DA5F449 /* LCDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D7A79AF9B728504E2FCDA0DD16711B0 /* LCDatabaseAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FE0EBC12479598D2B5C3B1710A2BDC3C /* UITextField+VENCalculatorInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C6D7EAC6A271B6EE69118B1D6D43F1A /* UITextField+VENCalculatorInputView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		88356A7236B85895AEA2013347D1E860 /* PBXContainerItemProxy */ = {
+		0820914EDEB79003F142016604FE48E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7345256A72EB0678FE4B9A3B9029B8B7;
+			remoteInfo = VENCalculatorInputView;
+		};
+		97CBA6B1FAB8204E15A45B3314651A7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7E1384970B4C3B83B40127F6214EC41B;
 			remoteInfo = AVOSCloud;
-		};
-		923A5972B95CFE8907A72048C7B9B454 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5C4307C3C9018F7B777267FCB0281A1D;
-			remoteInfo = VENCalculatorInputView;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -217,8 +217,6 @@
 		01AB1678C94EAB1100F48E9C376D448D /* AVCloudQueryResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVCloudQueryResult.h; path = AVOS/AVOSCloud/Query/AVCloudQueryResult.h; sourceTree = "<group>"; };
 		01B6D6146726EF1476F34CB2569DF852 /* AVSaveOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVSaveOption.h; path = AVOS/AVOSCloud/Object/AVSaveOption.h; sourceTree = "<group>"; };
 		031D2082949A635F2ABCE2AFA44284AF /* AVScheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVScheduler.h; path = AVOS/AVOSCloud/Cache/AVScheduler.h; sourceTree = "<group>"; };
-		035AAD05A38E64D7BBF894FA6373F25A /* Pods-XXJMoneyBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XXJMoneyBook.release.xcconfig"; sourceTree = "<group>"; };
-		04FDD59FCE6B33A046D10360F381B0BE /* libAVOSCloud.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAVOSCloud.a; path = libAVOSCloud.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0565613BB594A355C8A7A862556D91BA /* AVAnalytics_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVAnalytics_Internal.h; path = AVOS/AVOSCloud/Analytics/AVAnalytics_Internal.h; sourceTree = "<group>"; };
 		069906058C30B9D83EDBB7F4FA25490D /* AVFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVFile.m; path = AVOS/AVOSCloud/File/AVFile.m; sourceTree = "<group>"; };
 		069D3BEC2BAE3FDF41202DBCD6F4A714 /* AVInstallation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVInstallation.h; path = AVOS/AVOSCloud/Push/AVInstallation.h; sourceTree = "<group>"; };
@@ -230,7 +228,9 @@
 		149647E54CA9715C93C2E8492D5FA677 /* AVRelation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVRelation.m; path = AVOS/AVOSCloud/Object/AVRelation.m; sourceTree = "<group>"; };
 		184F6C80BDBF7408AD33CD536EA47367 /* AVOSCloud_Art.inc */ = {isa = PBXFileReference; includeInIndex = 1; name = AVOSCloud_Art.inc; path = AVOS/AVOSCloud/AVOSCloud_Art.inc; sourceTree = "<group>"; };
 		1884ED4FB826B7B16109280565BCFD2C /* AVDuration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVDuration.m; path = AVOS/AVOSCloud/Analytics/AVDuration.m; sourceTree = "<group>"; };
+		194B00FC2C68AC718E3E841817BE36B1 /* Pods-BlueCralishMoneyBook-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BlueCralishMoneyBook-acknowledgements.plist"; sourceTree = "<group>"; };
 		1A0689209CBB794F21959EDD46042320 /* AVUser_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVUser_Internal.h; path = AVOS/AVOSCloud/User/AVUser_Internal.h; sourceTree = "<group>"; };
+		1A67B0D6C110EB0B75EB6F509409887A /* libVENCalculatorInputView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libVENCalculatorInputView.a; path = libVENCalculatorInputView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AFD93225126B304DD79AF70755E34B5 /* AVPush_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVPush_Internal.h; path = AVOS/AVOSCloud/Push/AVPush_Internal.h; sourceTree = "<group>"; };
 		1C319A97D18B7220DF43CD890166D7E0 /* AVPaasClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVPaasClient.m; path = AVOS/AVOSCloud/Request/AVPaasClient.m; sourceTree = "<group>"; };
 		1C6D7EAC6A271B6EE69118B1D6D43F1A /* UITextField+VENCalculatorInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+VENCalculatorInputView.h"; path = "VENCalculatorInputView/UITextField+VENCalculatorInputView.h"; sourceTree = "<group>"; };
@@ -238,7 +238,6 @@
 		1DF354331E8ECDE4A55FE4EF247AE100 /* AVCloud.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVCloud.m; path = AVOS/AVOSCloud/CloudCode/AVCloud.m; sourceTree = "<group>"; };
 		20B55E27FC42922B0176AF2527D469A7 /* VENCalculatorIconBackspace@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "VENCalculatorIconBackspace@2x.png"; path = "VENCalculatorInputView/Images/VENCalculatorIconBackspace@2x.png"; sourceTree = "<group>"; };
 		2213A0824D2E49D76CE3269491C6AEB8 /* LCURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCURLSessionManager.m; path = AVOS/AVOSCloud/ThirdParty/LCNetworking/LCURLSessionManager.m; sourceTree = "<group>"; };
-		242453DF629F531F82E6A27924399215 /* Pods-XXJMoneyBook-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XXJMoneyBook-acknowledgements.markdown"; sourceTree = "<group>"; };
 		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		254384EDFAAE9E574E60C9C1DC0D9BFE /* AVAnalyticsUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVAnalyticsUtils.h; path = AVOS/AVOSCloud/Analytics/AVAnalyticsUtils.h; sourceTree = "<group>"; };
 		263B2DBDC7DC62AF973DA4123124090C /* JANALYTICSEventObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JANALYTICSEventObject.h; sourceTree = "<group>"; };
@@ -252,24 +251,21 @@
 		2A4D0C63D7D1BE5F1AF1BBD8F5E5C5B2 /* AVFile_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVFile_Internal.h; path = AVOS/AVOSCloud/File/AVFile_Internal.h; sourceTree = "<group>"; };
 		2B2B149AE99247F87382A057A526E40F /* AVAnalyticsSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVAnalyticsSession.m; path = AVOS/AVOSCloud/Analytics/AVAnalyticsSession.m; sourceTree = "<group>"; };
 		2CFA3F177AF0E37C662441E76685EF60 /* AVAnalyticsUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVAnalyticsUtils.m; path = AVOS/AVOSCloud/Analytics/AVAnalyticsUtils.m; sourceTree = "<group>"; };
-		2E3BBD4B706D35215BC0484DA64844D1 /* libVENCalculatorInputView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libVENCalculatorInputView.a; path = libVENCalculatorInputView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F19E011148CCB07E4146092D51F085A /* LCFileTaskManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCFileTaskManager.h; path = AVOS/AVOSCloud/File/LCFileTaskManager.h; sourceTree = "<group>"; };
 		3134D85D888E2D8108E77252CC5BACD8 /* AVObjectUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVObjectUtils.h; path = AVOS/AVOSCloud/Object/AVObjectUtils.h; sourceTree = "<group>"; };
 		320021EC072206968DD20C93080BF541 /* AVSubclassing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVSubclassing.h; path = AVOS/AVOSCloud/Object/AVSubclassing.h; sourceTree = "<group>"; };
 		325E270CF1F28D206264F611867FC9CF /* AVFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVFile.h; path = AVOS/AVOSCloud/File/AVFile.h; sourceTree = "<group>"; };
-		32D5997D2D6F6411BA067B27F8723F50 /* Pods-XXJMoneyBook-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XXJMoneyBook-frameworks.sh"; sourceTree = "<group>"; };
 		33441E96573FA915A3EAB95986091B77 /* LCDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCDatabaseQueue.m; path = AVOS/AVOSCloud/ThirdParty/LCDB/LCDatabaseQueue.m; sourceTree = "<group>"; };
 		33975116B47219DAE3818ADCBDB0D631 /* AVOSCloud.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AVOSCloud.xcconfig; sourceTree = "<group>"; };
 		344ECC50675A1AD892C878F2D4A628D3 /* AVSMS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVSMS.m; path = AVOS/AVOSCloud/SMS/AVSMS.m; sourceTree = "<group>"; };
+		352A8241874ADE748928F078D006028F /* libAVOSCloud.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAVOSCloud.a; path = libAVOSCloud.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		36DA426AE5893572A5BE33D4967B2668 /* LCURLConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCURLConnection.m; path = AVOS/AVOSCloud/Utils/LCURLConnection.m; sourceTree = "<group>"; };
 		386E6EB44B099DAC6A5B39FEEE2E9F52 /* LCDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCDatabase.m; path = AVOS/AVOSCloud/ThirdParty/LCDB/LCDatabase.m; sourceTree = "<group>"; };
-		39A34A1D8642BB0F46BB856290B3B9C3 /* Pods-XXJMoneyBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XXJMoneyBook.debug.xcconfig"; sourceTree = "<group>"; };
 		39F61713746B5B1DBC7EBA2AE5E76A06 /* AVLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVLogger.h; path = AVOS/AVOSCloud/Utils/AVLogger.h; sourceTree = "<group>"; };
 		3A18CB494CBD7A2DCD104C01BFAFC33F /* LCDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCDatabase.h; path = AVOS/AVOSCloud/ThirdParty/LCDB/LCDatabase.h; sourceTree = "<group>"; };
 		3C317BDAC4A5048863B98B0ABD9C7979 /* LCHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCHTTPSessionManager.h; path = AVOS/AVOSCloud/ThirdParty/LCNetworking/LCHTTPSessionManager.h; sourceTree = "<group>"; };
 		3C665DF981E86BF74431A1BFD6C1AE37 /* AVFileQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVFileQuery.m; path = AVOS/AVOSCloud/File/AVFileQuery.m; sourceTree = "<group>"; };
 		3E35E0614FAA6425C106662A32796FBD /* LCDatabaseCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCDatabaseCommon.h; path = AVOS/AVOSCloud/Utils/LCDatabaseCommon.h; sourceTree = "<group>"; };
-		3F2EBF35148CF44A86BEACE6F33F417D /* Pods-XXJMoneyBook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XXJMoneyBook-dummy.m"; sourceTree = "<group>"; };
 		3F39CAE76BC7949BEBD51D5FE77D4D0D /* AVQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVQuery.h; path = AVOS/AVOSCloud/Query/AVQuery.h; sourceTree = "<group>"; };
 		41F37557D5CF55BA62F73D1DA9A1CC1D /* LCResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCResultSet.m; path = AVOS/AVOSCloud/ThirdParty/LCDB/LCResultSet.m; sourceTree = "<group>"; };
 		43126D17D7B2B4D2001A140913A4A8B0 /* AVObject+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AVObject+Subclass.h"; path = "AVOS/AVOSCloud/Object/AVObject+Subclass.h"; sourceTree = "<group>"; };
@@ -286,13 +282,14 @@
 		4BC3AD81C5AE789809793E2862066B85 /* AVOSCloud-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AVOSCloud-prefix.pch"; sourceTree = "<group>"; };
 		4DD4AE0C390E13521FF171B91B8E918B /* UITextField+VENCalculatorInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+VENCalculatorInputView.m"; path = "VENCalculatorInputView/UITextField+VENCalculatorInputView.m"; sourceTree = "<group>"; };
 		4E3970FD7D73B975CDF417647EDB8E37 /* LCNetworkStatistics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCNetworkStatistics.m; path = AVOS/AVOSCloud/Statistics/LCNetworkStatistics.m; sourceTree = "<group>"; };
-		5012D4A316DA3AB1848630B2A6646D1B /* Pods-XXJMoneyBook-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XXJMoneyBook-resources.sh"; sourceTree = "<group>"; };
+		4F0D002B75E0344E0AF2DBC1014C8B19 /* libPods-BlueCralishMoneyBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BlueCralishMoneyBook.a"; path = "libPods-BlueCralishMoneyBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		506740E5DE341BFDC451CC32B2B73CC7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		51E1DCF82A5E8F609C37F9B9BF5C9E69 /* AVACL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVACL.h; path = AVOS/AVOSCloud/ACL/AVACL.h; sourceTree = "<group>"; };
 		543F12F24986D699C1D3B839801DAA01 /* JANALYTICSService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JANALYTICSService.h; sourceTree = "<group>"; };
+		54A50053C153419198CEB79531161933 /* Pods-BlueCralishMoneyBook-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BlueCralishMoneyBook-frameworks.sh"; sourceTree = "<group>"; };
 		57057838D80C3F9CC4AA455AB3458B4F /* VENMoneyCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VENMoneyCalculator.m; path = VENCalculatorInputView/VENMoneyCalculator.m; sourceTree = "<group>"; };
-		574951915085AB4BF93E554F1731A530 /* libPods-XXJMoneyBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-XXJMoneyBook.a"; path = "libPods-XXJMoneyBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		583E0677FEECD53DA5D2BBA195BED9CD /* LCURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCURLRequestSerialization.m; path = AVOS/AVOSCloud/ThirdParty/LCNetworking/LCURLRequestSerialization.m; sourceTree = "<group>"; };
+		5939ABFCF0B6B0C9FDE6089B330012DB /* Pods-BlueCralishMoneyBook-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BlueCralishMoneyBook-acknowledgements.markdown"; sourceTree = "<group>"; };
 		59F4EF2CC8E80B3F9F5CDC2E1F5E9CCE /* AVPersistenceUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVPersistenceUtils.h; path = AVOS/AVOSCloud/Cache/AVPersistenceUtils.h; sourceTree = "<group>"; };
 		5A6BBBC1A0CD9FD3A113AE97E7E94776 /* AVConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVConstants.h; path = AVOS/AVOSCloud/AVConstants.h; sourceTree = "<group>"; };
 		5B628278166919A2EB869E2B36F84DB5 /* AVGlobal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVGlobal.h; path = AVOS/AVOSCloud/AVGlobal.h; sourceTree = "<group>"; };
@@ -304,6 +301,7 @@
 		605137285DB3B0E27687ED9972F1AD78 /* AVPaasClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVPaasClient.h; path = AVOS/AVOSCloud/Request/AVPaasClient.h; sourceTree = "<group>"; };
 		630FDF347204B6BDB8792241DC85D347 /* AVQuery_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVQuery_Internal.h; path = AVOS/AVOSCloud/Query/AVQuery_Internal.h; sourceTree = "<group>"; };
 		64E2921E22FA6E4C2D486BCBB73940A3 /* AVOSCloud-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AVOSCloud-dummy.m"; sourceTree = "<group>"; };
+		65FE7F1947E79DFE575E232FA2567057 /* Pods-BlueCralishMoneyBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlueCralishMoneyBook.debug.xcconfig"; sourceTree = "<group>"; };
 		6662AB80FD281DE220FD87E6C2CBEBFF /* AVDynamicObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVDynamicObject.h; path = AVOS/AVOSCloud/Utils/AVDynamicObject.h; sourceTree = "<group>"; };
 		67CE3230E1FB9C0B39B0DEBDA3FF2F8C /* AVPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVPush.h; path = AVOS/AVOSCloud/Push/AVPush.h; sourceTree = "<group>"; };
 		67FE85272CCDF4B21F8B9D35490F17EC /* LCDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCDatabaseQueue.h; path = AVOS/AVOSCloud/ThirdParty/LCDB/LCDatabaseQueue.h; sourceTree = "<group>"; };
@@ -327,6 +325,7 @@
 		7DCC6AAF2D76DC6106A0FFE63FC1D86F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		7E928818CD41665DD7BAD264026D76D2 /* AVReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVReachability.h; path = AVOS/AVOSCloud/Utils/AVReachability.h; sourceTree = "<group>"; };
 		7F81B457CC3D024BB1E09DA886EB9714 /* AVErrorUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVErrorUtils.h; path = AVOS/AVOSCloud/Utils/AVErrorUtils.h; sourceTree = "<group>"; };
+		7FBBA9A50FE66692B8F61F1B97EDA858 /* Pods-BlueCralishMoneyBook-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BlueCralishMoneyBook-resources.sh"; sourceTree = "<group>"; };
 		80ABE5EFD972514212EE1BC5F5C6D9F0 /* AVObjectUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVObjectUtils.m; path = AVOS/AVOSCloud/Object/AVObjectUtils.m; sourceTree = "<group>"; };
 		81F4B52DD8C39564A1378C33C372B314 /* AVFriendQuery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVFriendQuery.m; path = AVOS/AVOSCloud/Query/AVFriendQuery.m; sourceTree = "<group>"; };
 		82D577218D0CCE5D30F9F1F4A7B4ED5D /* AVAnalyticsImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVAnalyticsImpl.h; path = AVOS/AVOSCloud/Analytics/AVAnalyticsImpl.h; sourceTree = "<group>"; };
@@ -349,8 +348,8 @@
 		8F90BF303235762E298113C9CACA860F /* AVAnalyticsImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVAnalyticsImpl.m; path = AVOS/AVOSCloud/Analytics/AVAnalyticsImpl.m; sourceTree = "<group>"; };
 		9002214E6F7B5925B269516B11C9184C /* VENCalculatorInputView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = VENCalculatorInputView.xib; path = VENCalculatorInputView/VENCalculatorInputView.xib; sourceTree = "<group>"; };
 		93DBE7A741318A56BE3B05D264757999 /* AVAnonymousUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVAnonymousUtils.m; path = AVOS/AVOSCloud/User/AVAnonymousUtils.m; sourceTree = "<group>"; };
+		9464398DBF6F779FDBD6BF6212D13E7D /* Pods-BlueCralishMoneyBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BlueCralishMoneyBook.release.xcconfig"; sourceTree = "<group>"; };
 		9464465C757D31C24649D1E1183A9DFF /* VENCalculatorInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VENCalculatorInputView.h; path = VENCalculatorInputView/VENCalculatorInputView.h; sourceTree = "<group>"; };
-		94E30FF778675E7B1050665CF24785D7 /* Pods-XXJMoneyBook-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XXJMoneyBook-acknowledgements.plist"; sourceTree = "<group>"; };
 		973E07E255399720089624E0ED3311CE /* VENCalculatorInputView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VENCalculatorInputView.xcconfig; sourceTree = "<group>"; };
 		9DAC8DE62C3E9CF3F0A8A348388D38D1 /* AVGeoPoint_Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVGeoPoint_Internal.h; path = AVOS/AVOSCloud/Geo/AVGeoPoint_Internal.h; sourceTree = "<group>"; };
 		9DAD69619E3238874C0FBB0C67F8D64F /* VENCalculatorIconBackspace.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = VENCalculatorIconBackspace.png; path = VENCalculatorInputView/Images/VENCalculatorIconBackspace.png; sourceTree = "<group>"; };
@@ -400,6 +399,7 @@
 		D44400F8BBDCAF6236EA819C012B1E1A /* LCDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LCDatabaseAdditions.m; path = AVOS/AVOSCloud/ThirdParty/LCDB/LCDatabaseAdditions.m; sourceTree = "<group>"; };
 		D47584D5AD6184A5D5056FA1BD74B387 /* AVOSCloud.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AVOSCloud.m; path = AVOS/AVOSCloud/AVOSCloud.m; sourceTree = "<group>"; };
 		D82E05D06372B36E11AD411163465C21 /* AVKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVKeychain.h; path = AVOS/AVOSCloud/ThirdParty/JNKeychain/AVKeychain.h; sourceTree = "<group>"; };
+		D9EBF9D3EF07849EC3D93E3FDC1790BF /* Pods-BlueCralishMoneyBook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BlueCralishMoneyBook-dummy.m"; sourceTree = "<group>"; };
 		DBFAB65DC026F2FED75F5F8EBA399D03 /* LCDatabaseCoordinator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LCDatabaseCoordinator.h; path = AVOS/AVOSCloud/Utils/LCDatabaseCoordinator.h; sourceTree = "<group>"; };
 		DC830B34EE31B3CC868A552E63A3FBA1 /* AVRelation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVRelation.h; path = AVOS/AVOSCloud/Object/AVRelation.h; sourceTree = "<group>"; };
 		E384645CAE34B8A2314FD8E773BC6A38 /* AVPaasClient_internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AVPaasClient_internal.h; path = AVOS/AVOSCloud/Request/AVPaasClient_internal.h; sourceTree = "<group>"; };
@@ -426,13 +426,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		15A863EF9127824822436882985E32BE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		33B4E52188F6AB5D8FC7D113DE321329 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -448,7 +441,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A55BD9E6415BB4E42AF67AC8399586A6 /* Frameworks */ = {
+		57316F9013EC828F8538C6163167BE0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDFED936FCE845B01A09226C5978B6C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -523,31 +523,6 @@
 			path = VENCalculatorInputView;
 			sourceTree = "<group>";
 		};
-		48A4D7D3154AEC77247FFA8658516B87 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				04FDD59FCE6B33A046D10360F381B0BE /* libAVOSCloud.a */,
-				574951915085AB4BF93E554F1731A530 /* libPods-XXJMoneyBook.a */,
-				2E3BBD4B706D35215BC0484DA64844D1 /* libVENCalculatorInputView.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5688BB4458F419C1806AA216BBDFB1E6 /* Pods-XXJMoneyBook */ = {
-			isa = PBXGroup;
-			children = (
-				242453DF629F531F82E6A27924399215 /* Pods-XXJMoneyBook-acknowledgements.markdown */,
-				94E30FF778675E7B1050665CF24785D7 /* Pods-XXJMoneyBook-acknowledgements.plist */,
-				3F2EBF35148CF44A86BEACE6F33F417D /* Pods-XXJMoneyBook-dummy.m */,
-				32D5997D2D6F6411BA067B27F8723F50 /* Pods-XXJMoneyBook-frameworks.sh */,
-				5012D4A316DA3AB1848630B2A6646D1B /* Pods-XXJMoneyBook-resources.sh */,
-				39A34A1D8642BB0F46BB856290B3B9C3 /* Pods-XXJMoneyBook.debug.xcconfig */,
-				035AAD05A38E64D7BBF894FA6373F25A /* Pods-XXJMoneyBook.release.xcconfig */,
-			);
-			name = "Pods-XXJMoneyBook";
-			path = "Target Support Files/Pods-XXJMoneyBook";
-			sourceTree = "<group>";
-		};
 		79120366F115B84664D8336C80B64A90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +537,16 @@
 				296459EEF2182FC2F4D38214F27EACB5 /* libjanalytics-ios-1.2.1.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DBF950054928BC3CAAAB54640A2092D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				352A8241874ADE748928F078D006028F /* libAVOSCloud.a */,
+				4F0D002B75E0344E0AF2DBC1014C8B19 /* libPods-BlueCralishMoneyBook.a */,
+				1A67B0D6C110EB0B75EB6F509409887A /* libVENCalculatorInputView.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A05904BABCF6D796C54C8E8551187B01 /* AVOSCloud */ = {
@@ -739,14 +724,6 @@
 			path = AVOSCloud;
 			sourceTree = "<group>";
 		};
-		A6E380BA158CFC4041F8484CBCEE2309 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5688BB4458F419C1806AA216BBDFB1E6 /* Pods-XXJMoneyBook */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		B09BF8D4207A449C8670FE40C1F75F5D /* JAnalytics */ = {
 			isa = PBXGroup;
 			children = (
@@ -781,9 +758,17 @@
 				24390EFD555DD124430DFF9724065945 /* Podfile */,
 				F119B4A0ABE017AECEE69836596133B2 /* Frameworks */,
 				FDD30C2E05D8E84816D27D2E5D2327F5 /* Pods */,
-				48A4D7D3154AEC77247FFA8658516B87 /* Products */,
-				A6E380BA158CFC4041F8484CBCEE2309 /* Targets Support Files */,
+				9DBF950054928BC3CAAAB54640A2092D /* Products */,
+				EF4B8C82354183554F3D1033373F5FB9 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		EF4B8C82354183554F3D1033373F5FB9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1A3F8476CDD777E75ECCE3B7EE896C4 /* Pods-BlueCralishMoneyBook */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		EFEFAFAA79738E706E63E632619590CC /* Resources */ = {
@@ -802,6 +787,21 @@
 				242A02E5D4D392B0777C0F7E27DC4385 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1A3F8476CDD777E75ECCE3B7EE896C4 /* Pods-BlueCralishMoneyBook */ = {
+			isa = PBXGroup;
+			children = (
+				5939ABFCF0B6B0C9FDE6089B330012DB /* Pods-BlueCralishMoneyBook-acknowledgements.markdown */,
+				194B00FC2C68AC718E3E841817BE36B1 /* Pods-BlueCralishMoneyBook-acknowledgements.plist */,
+				D9EBF9D3EF07849EC3D93E3FDC1790BF /* Pods-BlueCralishMoneyBook-dummy.m */,
+				54A50053C153419198CEB79531161933 /* Pods-BlueCralishMoneyBook-frameworks.sh */,
+				7FBBA9A50FE66692B8F61F1B97EDA858 /* Pods-BlueCralishMoneyBook-resources.sh */,
+				65FE7F1947E79DFE575E232FA2567057 /* Pods-BlueCralishMoneyBook.debug.xcconfig */,
+				9464398DBF6F779FDBD6BF6212D13E7D /* Pods-BlueCralishMoneyBook.release.xcconfig */,
+			);
+			name = "Pods-BlueCralishMoneyBook";
+			path = "Target Support Files/Pods-BlueCralishMoneyBook";
 			sourceTree = "<group>";
 		};
 		FA46206CF4F7E36FF26B53ECC1506913 /* JPush */ = {
@@ -829,22 +829,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1018996121C6ED47537AFFC8327F027A /* Headers */ = {
+		07106E9F253E916EEA7DD3B43379BAB2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1063516D456A3840C74EE4E8FD411A95 /* NSString+VENCalculatorInputView.h in Headers */,
+				9D738FDA99E888D06EA56E88D93172A4 /* UITextField+VENCalculatorInputView.h in Headers */,
+				CFE1F1D513C4014DF7A4B7AFE58E9979 /* VENCalculatorInputTextField.h in Headers */,
+				24EBAC6AD91B19CEA5F7012B4E514BDE /* VENCalculatorInputView.h in Headers */,
+				FBC58BF971329014B55D19EBDB798B64 /* VENMoneyCalculator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A2BFF3FBB632659E4431A0A93C68A05 /* Headers */ = {
+		66BCDD4D9E3563C26517C044B68CE0D8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7113EA4C77D65837F6F44E8C76AC96AC /* NSString+VENCalculatorInputView.h in Headers */,
-				FE0EBC12479598D2B5C3B1710A2BDC3C /* UITextField+VENCalculatorInputView.h in Headers */,
-				F5E7F51250DB1E4C3B248BC9A9B0AE3E /* VENCalculatorInputTextField.h in Headers */,
-				A92A02E733E708055255EA49BB5DFBAB /* VENCalculatorInputView.h in Headers */,
-				CE1C38C5C21DF12D16691A7D8A260327 /* VENMoneyCalculator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -956,32 +956,32 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0024D0760FBF154A9DBC5315A7BF4AFE /* Pods-XXJMoneyBook */ = {
+		274889D0E7B22FC7F5C05DC957C2E756 /* Pods-BlueCralishMoneyBook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93B96207F2500D43218D120F1907335B /* Build configuration list for PBXNativeTarget "Pods-XXJMoneyBook" */;
+			buildConfigurationList = CF6DAF33CF1E6CA2627DB1E7ECA707E7 /* Build configuration list for PBXNativeTarget "Pods-BlueCralishMoneyBook" */;
 			buildPhases = (
-				1018996121C6ED47537AFFC8327F027A /* Headers */,
-				C882B44C0EAF8BB3ACD08FDB4BA82084 /* Sources */,
-				15A863EF9127824822436882985E32BE /* Frameworks */,
+				66BCDD4D9E3563C26517C044B68CE0D8 /* Headers */,
+				ADA7F36F0EBF0E18918DC155D379CCA8 /* Sources */,
+				57316F9013EC828F8538C6163167BE0D /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				18BC895DFBC04FFCB5942A7EF92A3841 /* PBXTargetDependency */,
-				AB8D3533AA44DFF18F5999CE8D2E34B5 /* PBXTargetDependency */,
+				BB11A5F9BDD779E27F6622128DFD8792 /* PBXTargetDependency */,
+				22DE45E090B74C606A6FB8E5C681352B /* PBXTargetDependency */,
 			);
-			name = "Pods-XXJMoneyBook";
-			productName = "Pods-XXJMoneyBook";
-			productReference = 574951915085AB4BF93E554F1731A530 /* libPods-XXJMoneyBook.a */;
+			name = "Pods-BlueCralishMoneyBook";
+			productName = "Pods-BlueCralishMoneyBook";
+			productReference = 4F0D002B75E0344E0AF2DBC1014C8B19 /* libPods-BlueCralishMoneyBook.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		5C4307C3C9018F7B777267FCB0281A1D /* VENCalculatorInputView */ = {
+		7345256A72EB0678FE4B9A3B9029B8B7 /* VENCalculatorInputView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C23869CDACD8B1D42C1729892E65E1A8 /* Build configuration list for PBXNativeTarget "VENCalculatorInputView" */;
+			buildConfigurationList = BA69717F76694921ACB8C46093018D7C /* Build configuration list for PBXNativeTarget "VENCalculatorInputView" */;
 			buildPhases = (
-				2A2BFF3FBB632659E4431A0A93C68A05 /* Headers */,
-				98F6EBEF11C63B2A3D729B3D060AE7EE /* Sources */,
-				A55BD9E6415BB4E42AF67AC8399586A6 /* Frameworks */,
+				07106E9F253E916EEA7DD3B43379BAB2 /* Headers */,
+				30B1B27C3F5AD8A6C9AFEC84955C7F06 /* Sources */,
+				ADDFED936FCE845B01A09226C5978B6C /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -989,7 +989,7 @@
 			);
 			name = VENCalculatorInputView;
 			productName = VENCalculatorInputView;
-			productReference = 2E3BBD4B706D35215BC0484DA64844D1 /* libVENCalculatorInputView.a */;
+			productReference = 1A67B0D6C110EB0B75EB6F509409887A /* libVENCalculatorInputView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		7E1384970B4C3B83B40127F6214EC41B /* AVOSCloud */ = {
@@ -1006,7 +1006,7 @@
 			);
 			name = AVOSCloud;
 			productName = AVOSCloud;
-			productReference = 04FDD59FCE6B33A046D10360F381B0BE /* libAVOSCloud.a */;
+			productReference = 352A8241874ADE748928F078D006028F /* libAVOSCloud.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -1026,36 +1026,36 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 48A4D7D3154AEC77247FFA8658516B87 /* Products */;
+			productRefGroup = 9DBF950054928BC3CAAAB54640A2092D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				7E1384970B4C3B83B40127F6214EC41B /* AVOSCloud */,
-				0024D0760FBF154A9DBC5315A7BF4AFE /* Pods-XXJMoneyBook */,
-				5C4307C3C9018F7B777267FCB0281A1D /* VENCalculatorInputView */,
+				274889D0E7B22FC7F5C05DC957C2E756 /* Pods-BlueCralishMoneyBook */,
+				7345256A72EB0678FE4B9A3B9029B8B7 /* VENCalculatorInputView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		98F6EBEF11C63B2A3D729B3D060AE7EE /* Sources */ = {
+		30B1B27C3F5AD8A6C9AFEC84955C7F06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1262CF008DCD5243856C65787AAA46C /* NSString+VENCalculatorInputView.m in Sources */,
-				17403ED6B9DDBA072F6A0C0BD8C87F91 /* UITextField+VENCalculatorInputView.m in Sources */,
-				7FC072A58D26516CC16AA7576FB87931 /* VENCalculatorInputTextField.m in Sources */,
-				B487452069C6DBEB6909B65AD3E3B268 /* VENCalculatorInputView-dummy.m in Sources */,
-				DC8D3DF865B6026F1C1B448D2390D014 /* VENCalculatorInputView.m in Sources */,
-				80983987A00BB466EF01696B375E51C8 /* VENMoneyCalculator.m in Sources */,
+				DC6E91E6E5897125EBF91F84BE456495 /* NSString+VENCalculatorInputView.m in Sources */,
+				4F75C976B8A5068227C77DA751D7AC4C /* UITextField+VENCalculatorInputView.m in Sources */,
+				75055E45D9B054CB4393618049662DBF /* VENCalculatorInputTextField.m in Sources */,
+				646FD78F8EE2590AFAB3E5A8EED4EEC3 /* VENCalculatorInputView-dummy.m in Sources */,
+				2E9416493AC148EB50AF42DE6A122D31 /* VENCalculatorInputView.m in Sources */,
+				24D09252E5B4F4875FA77338C0B93494 /* VENMoneyCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C882B44C0EAF8BB3ACD08FDB4BA82084 /* Sources */ = {
+		ADA7F36F0EBF0E18918DC155D379CCA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6502B60FA24C7F93965D90624FBE4AD /* Pods-XXJMoneyBook-dummy.m in Sources */,
+				AFF768790E823F41B29C82296C0F861B /* Pods-BlueCralishMoneyBook-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1137,24 +1137,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		18BC895DFBC04FFCB5942A7EF92A3841 /* PBXTargetDependency */ = {
+		22DE45E090B74C606A6FB8E5C681352B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VENCalculatorInputView;
+			target = 7345256A72EB0678FE4B9A3B9029B8B7 /* VENCalculatorInputView */;
+			targetProxy = 0820914EDEB79003F142016604FE48E4 /* PBXContainerItemProxy */;
+		};
+		BB11A5F9BDD779E27F6622128DFD8792 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AVOSCloud;
 			target = 7E1384970B4C3B83B40127F6214EC41B /* AVOSCloud */;
-			targetProxy = 88356A7236B85895AEA2013347D1E860 /* PBXContainerItemProxy */;
-		};
-		AB8D3533AA44DFF18F5999CE8D2E34B5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = VENCalculatorInputView;
-			target = 5C4307C3C9018F7B777267FCB0281A1D /* VENCalculatorInputView */;
-			targetProxy = 923A5972B95CFE8907A72048C7B9B454 /* PBXContainerItemProxy */;
+			targetProxy = 97CBA6B1FAB8204E15A45B3314651A7D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		05A3C5CD31A5D425DDC0B18745A39E77 /* Release */ = {
+		43C764777FB30F862B023B6B4DDE56B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 035AAD05A38E64D7BBF894FA6373F25A /* Pods-XXJMoneyBook.release.xcconfig */;
+			baseConfigurationReference = 9464398DBF6F779FDBD6BF6212D13E7D /* Pods-BlueCralishMoneyBook.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1174,7 +1174,7 @@
 			};
 			name = Release;
 		};
-		50746316F18F5A4755B0FB12720449F2 /* Release */ = {
+		5B3037D1FB1F7DA432963CB36E65564B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 973E07E255399720089624E0ED3311CE /* VENCalculatorInputView.xcconfig */;
 			buildSettings = {
@@ -1195,9 +1195,8 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		5EA5006381E12BC9AA7DEEBC8BCE4905 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1261,27 +1260,6 @@
 			};
 			name = Release;
 		};
-		5F6E7ABC7AFFA8F988570E7D698750D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39A34A1D8642BB0F46BB856290B3B9C3 /* Pods-XXJMoneyBook.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		7C030325369AAFA8A216CEDF3130D099 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 33975116B47219DAE3818ADCBDB0D631 /* AVOSCloud.xcconfig */;
@@ -1327,6 +1305,27 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEBBCB1EBA4FD8A28E1B139D386E06F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65FE7F1947E79DFE575E232FA2567057 /* Pods-BlueCralishMoneyBook.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1397,7 +1396,7 @@
 			};
 			name = Debug;
 		};
-		C9118786DE3E7CC68667BE87ED2CC3C8 /* Debug */ = {
+		D81593B05BE28FD0C540B4A43AE5F8C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 973E07E255399720089624E0ED3311CE /* VENCalculatorInputView.xcconfig */;
 			buildSettings = {
@@ -1418,8 +1417,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1433,20 +1433,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93B96207F2500D43218D120F1907335B /* Build configuration list for PBXNativeTarget "Pods-XXJMoneyBook" */ = {
+		BA69717F76694921ACB8C46093018D7C /* Build configuration list for PBXNativeTarget "VENCalculatorInputView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5F6E7ABC7AFFA8F988570E7D698750D0 /* Debug */,
-				05A3C5CD31A5D425DDC0B18745A39E77 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C23869CDACD8B1D42C1729892E65E1A8 /* Build configuration list for PBXNativeTarget "VENCalculatorInputView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9118786DE3E7CC68667BE87ED2CC3C8 /* Debug */,
-				50746316F18F5A4755B0FB12720449F2 /* Release */,
+				5B3037D1FB1F7DA432963CB36E65564B /* Debug */,
+				D81593B05BE28FD0C540B4A43AE5F8C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1456,6 +1447,15 @@
 			buildConfigurations = (
 				7EA66B31C72225940BE0D54E2FE11560 /* Debug */,
 				7C030325369AAFA8A216CEDF3130D099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF6DAF33CF1E6CA2627DB1E7ECA707E7 /* Build configuration list for PBXNativeTarget "Pods-BlueCralishMoneyBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEBBCB1EBA4FD8A28E1B139D386E06F6 /* Debug */,
+				43C764777FB30F862B023B6B4DDE56B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

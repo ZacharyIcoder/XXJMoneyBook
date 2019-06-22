@@ -1,0 +1,4 @@
+#import "DanceBlueCralishOperateTypeTableViewControllerB.h"
+@implementation DanceBlueCralishOperateTypeTableViewControllerB
+
+@end

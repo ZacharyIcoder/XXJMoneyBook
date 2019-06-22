@@ -1,0 +1,1218 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F057DAA1C8D6B28003DA3C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F057DA91C8D6B28003DA3C7 /* main.m */; };
+		7F057DAD1C8D6B28003DA3C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F057DAC1C8D6B28003DA3C7 /* AppDelegate.m */; };
+		7F057DB61C8D6B28003DA3C7 /* BlueCralishBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F057DB41C8D6B28003DA3C7 /* BlueCralishBook.xcdatamodeld */; };
+		7F057DB81C8D6B28003DA3C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F057DB71C8D6B28003DA3C7 /* Assets.xcassets */; };
+		7F057DBB1C8D6B28003DA3C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F057DB91C8D6B28003DA3C7 /* LaunchScreen.storyboard */; };
+		7F057DE51C8D6B8E003DA3C7 /* BlueCralishAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F057DDF1C8D6B8E003DA3C7 /* BlueCralishAccountViewController.m */; };
+		7F057DE61C8D6B8E003DA3C7 /* BlueCralishNewAccountTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F057DE11C8D6B8E003DA3C7 /* BlueCralishNewAccountTableViewController.m */; };
+		7F057DE81C8D6B8E003DA3C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F057DE41C8D6B8E003DA3C7 /* Main.storyboard */; };
+		7F057DED1C8DA504003DA3C7 /* BlueCralishAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F057DEC1C8DA504003DA3C7 /* BlueCralishAccountTableViewCell.m */; };
+		7F077CF11C926DCC00D85707 /* BlueCralishAllHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077CF01C926DCC00D85707 /* BlueCralishAllHistoryViewController.m */; };
+		7F077CF61C926E9300D85707 /* BlueCralishAllHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077CF51C926E9300D85707 /* BlueCralishAllHistoryTableViewCell.m */; };
+		7F077CFA1C92B0D400D85707 /* BlueCralishMonthHIstoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077CF91C92B0D400D85707 /* BlueCralishMonthHIstoryViewController.m */; };
+		7F077D031C93F67700D85707 /* BlueCralishPieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D021C93F67700D85707 /* BlueCralishPieView.m */; };
+		7F077D071C940B9700D85707 /* BlueCralishPieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D061C940B9700D85707 /* BlueCralishPieViewController.m */; };
+		7F077D4B1C9516CD00D85707 /* BlueCralishPieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D4A1C9516CD00D85707 /* BlueCralishPieTableViewCell.m */; };
+		7F077D501C966B8000D85707 /* BlueCralishTypeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D4F1C966B8000D85707 /* BlueCralishTypeDetailViewController.m */; };
+		7F077D541C96C73F00D85707 /* BlueCralishSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D531C96C73F00D85707 /* BlueCralishSettingTableViewController.m */; };
+		7F077D591C96D37C00D85707 /* BlueCralishOperateTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D581C96D37C00D85707 /* BlueCralishOperateTypeTableViewController.m */; };
+		7F077D5D1C96D47700D85707 /* BlueCralishOperateTypeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F077D5C1C96D47700D85707 /* BlueCralishOperateTypeTableViewCell.m */; };
+		7F10B83A1C9939CC00A8F3AF /* BlueCralishAddTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F10B8391C9939CB00A8F3AF /* BlueCralishAddTypeViewController.m */; };
+		7F10B83E1C9942F200A8F3AF /* BlueCralishAddTypeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F10B83D1C9942F200A8F3AF /* BlueCralishAddTypeCollectionViewCell.m */; };
+		7FE29C951CA3C77000681ED6 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE29C941CA3C77000681ED6 /* UIViewController+BackButtonHandler.m */; };
+		7FF2307C1C8FC4200065F312 /* Account+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF230791C8FC4200065F312 /* Account+CoreDataProperties.m */; };
+		7FF2307D1C8FC4200065F312 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF2307B1C8FC4200065F312 /* Account.m */; };
+		945C6036222E6C750067D71C /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 945C6035222E6C750067D71C /* TabBarViewController.m */; };
+		948032872264767900D42A03 /* URLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 948032862264767900D42A03 /* URLSessionManager.m */; };
+		948032A12264805100D42A03 /* UIView+Constraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9480329F2264805100D42A03 /* UIView+Constraint.m */; };
+		948A4C1422BC99DD00725110 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C1322BC99DD00725110 /* UIColor+Hex.m */; };
+		948A4C1822BCC96300725110 /* UIColor+PieColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C1722BCC96300725110 /* UIColor+PieColor.m */; };
+		948A4C1C22BCDAC100725110 /* NSNumber+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C1B22BCDAC100725110 /* NSNumber+String.m */; };
+		948A4CA922BDF02500725110 /* UITabBar+Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C1E22BDF02500725110 /* UITabBar+Run.m */; };
+		948A4CAA22BDF02500725110 /* UIWebView+ConstraintPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C1F22BDF02500725110 /* UIWebView+ConstraintPattern.m */; };
+		948A4CAB22BDF02500725110 /* UIWebView+EatWalk.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C2022BDF02500725110 /* UIWebView+EatWalk.m */; };
+		948A4CAC22BDF02500725110 /* UIViewController+Dance.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C2122BDF02500725110 /* UIViewController+Dance.m */; };
+		948A4CAD22BDF02500725110 /* UITabBar+Dance.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C2222BDF02500725110 /* UITabBar+Dance.m */; };
+		948A4CAE22BDF02500725110 /* UIPickerView+SingRaise.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C2322BDF02500725110 /* UIPickerView+SingRaise.m */; };
+		948A4CAF22BDF02500725110 /* UITabBar+Eat.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C2922BDF02500725110 /* UITabBar+Eat.m */; };
+		948A4CB022BDF02500725110 /* UIImageView+Sleep.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C2A22BDF02500725110 /* UIImageView+Sleep.m */; };
+		948A4CB122BDF02500725110 /* UIWebView+Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C2D22BDF02500725110 /* UIWebView+Run.m */; };
+		948A4CB222BDF02500725110 /* UITabBar+DreamScream.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C3222BDF02500725110 /* UITabBar+DreamScream.m */; };
+		948A4CB322BDF02500725110 /* UILabel+Sing.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C3322BDF02500725110 /* UILabel+Sing.m */; };
+		948A4CB422BDF02500725110 /* DanceBlueCralishSettingTableViewControllerU.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C3622BDF02500725110 /* DanceBlueCralishSettingTableViewControllerU.m */; };
+		948A4CB522BDF02500725110 /* LookNSNumbern.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C3B22BDF02500725110 /* LookNSNumbern.m */; };
+		948A4CB622BDF02500725110 /* SleepBlueCralishAccountViewControllerE.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C3E22BDF02500725110 /* SleepBlueCralishAccountViewControllerE.m */; };
+		948A4CB722BDF02500725110 /* ListenUITabBaru.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C3F22BDF02500725110 /* ListenUITabBaru.m */; };
+		948A4CB822BDF02500725110 /* RunBlueCralishAllHistoryViewControllert.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C4022BDF02500725110 /* RunBlueCralishAllHistoryViewControllert.m */; };
+		948A4CB922BDF02500725110 /* WalkUITabBarF.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C4122BDF02500725110 /* WalkUITabBarF.m */; };
+		948A4CBA22BDF02500725110 /* SpeakUIProgressViewy.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C4222BDF02500725110 /* SpeakUIProgressViewy.m */; };
+		948A4CBB22BDF02500725110 /* SingBlueCralishPieViewd.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C4722BDF02500725110 /* SingBlueCralishPieViewd.m */; };
+		948A4CBC22BDF02500725110 /* ScreamBlueCralishMonthHIstoryViewControllerr.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C4B22BDF02500725110 /* ScreamBlueCralishMonthHIstoryViewControllerr.m */; };
+		948A4CBD22BDF02500725110 /* ScreamBlueCralishAddTypeViewControllerq.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C4F22BDF02500725110 /* ScreamBlueCralishAddTypeViewControllerq.m */; };
+		948A4CBE22BDF02500725110 /* ScreamBlueCralishAccountTableViewCellA.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C5422BDF02500725110 /* ScreamBlueCralishAccountTableViewCellA.m */; };
+		948A4CBF22BDF02500725110 /* EatUIAlertViewk.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C5522BDF02500725110 /* EatUIAlertViewk.m */; };
+		948A4CC022BDF02500725110 /* PatternUIViewS.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C5722BDF02500725110 /* PatternUIViewS.m */; };
+		948A4CC122BDF02500725110 /* SleepUIViewControllerl.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C5922BDF02500725110 /* SleepUIViewControllerl.m */; };
+		948A4CC222BDF02500725110 /* ClimbUIColorK.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C5A22BDF02500725110 /* ClimbUIColorK.m */; };
+		948A4CC322BDF02500725110 /* DanceBlueCralishOperateTypeTableViewControllerB.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C5C22BDF02500725110 /* DanceBlueCralishOperateTypeTableViewControllerB.m */; };
+		948A4CC422BDF02500725110 /* RaiseUILabelI.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C5D22BDF02500725110 /* RaiseUILabelI.m */; };
+		948A4CC522BDF02500725110 /* RunBlueCralishAllHistoryTableViewCellB.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C5E22BDF02500725110 /* RunBlueCralishAllHistoryTableViewCellB.m */; };
+		948A4CC622BDF02500725110 /* DanceUIColorY.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C5F22BDF02500725110 /* DanceUIColorY.m */; };
+		948A4CC722BDF02500725110 /* SpeakUIPickerViewV.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C6022BDF02500725110 /* SpeakUIPickerViewV.m */; };
+		948A4CC822BDF02500725110 /* DanceUINavigationControllerq.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C6322BDF02500725110 /* DanceUINavigationControllerq.m */; };
+		948A4CC922BDF02500725110 /* RunUIWebViewG.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C6422BDF02500725110 /* RunUIWebViewG.m */; };
+		948A4CCA22BDF02500725110 /* WalkUIWebViewd.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C6A22BDF02500725110 /* WalkUIWebViewd.m */; };
+		948A4CCB22BDF02500725110 /* DrinkUIWebViewe.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C6B22BDF02500725110 /* DrinkUIWebViewe.m */; };
+		948A4CCC22BDF02500725110 /* DreamUITabBarD.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C6C22BDF02500725110 /* DreamUITabBarD.m */; };
+		948A4CCD22BDF02500725110 /* DanceBlueCralishPieTableViewCellB.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C6D22BDF02500725110 /* DanceBlueCralishPieTableViewCellB.m */; };
+		948A4CCE22BDF02500725110 /* DrinkUITabBarK.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C6F22BDF02500725110 /* DrinkUITabBarK.m */; };
+		948A4CCF22BDF02500725110 /* ScreamUIWebViewf.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C7022BDF02500725110 /* ScreamUIWebViewf.m */; };
+		948A4CD022BDF02500725110 /* SpeakUIViewControllery.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C7222BDF02500725110 /* SpeakUIViewControllery.m */; };
+		948A4CD122BDF02500725110 /* DreamBlueCralishTypeDetailViewControllera.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C7422BDF02500725110 /* DreamBlueCralishTypeDetailViewControllera.m */; };
+		948A4CD222BDF02500725110 /* JumpBlueCralishNewAccountTableViewControllerK.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C7522BDF02500725110 /* JumpBlueCralishNewAccountTableViewControllerK.m */; };
+		948A4CD322BDF02500725110 /* LookBlueCralishPieViewControllerd.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C7722BDF02500725110 /* LookBlueCralishPieViewControllerd.m */; };
+		948A4CD422BDF02500725110 /* ClimbURLSessionManagerR.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C7822BDF02500725110 /* ClimbURLSessionManagerR.m */; };
+		948A4CD522BDF02500725110 /* SleepBlueCralishOperateTypeTableViewCellQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C7A22BDF02500725110 /* SleepBlueCralishOperateTypeTableViewCellQ.m */; };
+		948A4CD622BDF02500725110 /* EatAppDelegateG.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C7B22BDF02500725110 /* EatAppDelegateG.m */; };
+		948A4CD722BDF02500725110 /* UITabBar+Scream.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C7C22BDF02500725110 /* UITabBar+Scream.m */; };
+		948A4CD822BDF02500725110 /* UIViewController+DanceSpeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C7E22BDF02500725110 /* UIViewController+DanceSpeak.m */; };
+		948A4CD922BDF02500725110 /* UIViewController+LookSpeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C8022BDF02500725110 /* UIViewController+LookSpeak.m */; };
+		948A4CDA22BDF02500725110 /* UIViewController+Scream.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C8122BDF02500725110 /* UIViewController+Scream.m */; };
+		948A4CDB22BDF02500725110 /* UIWebView+Dream.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C8422BDF02500725110 /* UIWebView+Dream.m */; };
+		948A4CDC22BDF02500725110 /* UITabBar+HexDance.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C8622BDF02500725110 /* UITabBar+HexDance.m */; };
+		948A4CDD22BDF02500725110 /* UIImageView+DanceDream.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C8722BDF02500725110 /* UIImageView+DanceDream.m */; };
+		948A4CDE22BDF02500725110 /* UITabBar+RunDrink.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C8922BDF02500725110 /* UITabBar+RunDrink.m */; };
+		948A4CDF22BDF02500725110 /* UIImageView+HexDanceListen.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C9022BDF02500725110 /* UIImageView+HexDanceListen.m */; };
+		948A4CE022BDF02500725110 /* UIProgressView+ScreamDrink.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C9122BDF02500725110 /* UIProgressView+ScreamDrink.m */; };
+		948A4CE122BDF02500725110 /* UIWebView+StringLookEat.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C9422BDF02500725110 /* UIWebView+StringLookEat.m */; };
+		948A4CE222BDF02500725110 /* UIViewController+Sleep.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C9522BDF02500725110 /* UIViewController+Sleep.m */; };
+		948A4CE322BDF02500725110 /* UIProgressView+PieColorClimb.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C9622BDF02500725110 /* UIProgressView+PieColorClimb.m */; };
+		948A4CE422BDF02500725110 /* UIWebView+Climb.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C9A22BDF02500725110 /* UIWebView+Climb.m */; };
+		948A4CE522BDF02500725110 /* UIWebView+PieColorClimbSpeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C9B22BDF02500725110 /* UIWebView+PieColorClimbSpeak.m */; };
+		948A4CE622BDF02500725110 /* UIWebView+ConstraintPatternWalk.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C9C22BDF02500725110 /* UIWebView+ConstraintPatternWalk.m */; };
+		948A4CE722BDF02500725110 /* UIAlertView+ShouldPopOnBackButtonDance.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C9D22BDF02500725110 /* UIAlertView+ShouldPopOnBackButtonDance.m */; };
+		948A4CE822BDF02500725110 /* UIPickerView+Look.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4C9E22BDF02500725110 /* UIPickerView+Look.m */; };
+		948A4CE922BDF02500725110 /* UILabel+ClimbRun.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4CA122BDF02500725110 /* UILabel+ClimbRun.m */; };
+		948A4CEA22BDF02500725110 /* UIProgressView+Jump.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4CA222BDF02500725110 /* UIProgressView+Jump.m */; };
+		948A4CEB22BDF02500725110 /* UIAlertView+StringLook.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4CA722BDF02500725110 /* UIAlertView+StringLook.m */; };
+		948A4CEC22BDF02500725110 /* UIImageView+ScreamSleep.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4CA822BDF02500725110 /* UIImageView+ScreamSleep.m */; };
+		D0321D5C2C70953D8537F9B7 /* libPods-BlueCralishMoneyBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8130AE51C225AEFCDA2DCFB4 /* libPods-BlueCralishMoneyBook.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6F152EFECE01BD412CA477F0 /* Pods-XXJMoneyBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXJMoneyBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-XXJMoneyBook/Pods-XXJMoneyBook.release.xcconfig"; sourceTree = "<group>"; };
+		75A451683DB6A356367B36DA /* Pods-BlueCralishMoneyBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueCralishMoneyBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlueCralishMoneyBook/Pods-BlueCralishMoneyBook.debug.xcconfig"; sourceTree = "<group>"; };
+		7F057DA51C8D6B28003DA3C7 /* BlueCralishMoneyBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueCralishMoneyBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F057DA91C8D6B28003DA3C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F057DAB1C8D6B28003DA3C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7F057DAC1C8D6B28003DA3C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7F057DB51C8D6B28003DA3C7 /* AZXTallyBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AZXTallyBook.xcdatamodel; sourceTree = "<group>"; };
+		7F057DB71C8D6B28003DA3C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F057DBA1C8D6B28003DA3C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7F057DBC1C8D6B28003DA3C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F057DDE1C8D6B8E003DA3C7 /* BlueCralishAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishAccountViewController.h; sourceTree = "<group>"; };
+		7F057DDF1C8D6B8E003DA3C7 /* BlueCralishAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishAccountViewController.m; sourceTree = "<group>"; };
+		7F057DE01C8D6B8E003DA3C7 /* BlueCralishNewAccountTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishNewAccountTableViewController.h; sourceTree = "<group>"; };
+		7F057DE11C8D6B8E003DA3C7 /* BlueCralishNewAccountTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishNewAccountTableViewController.m; sourceTree = "<group>"; };
+		7F057DE41C8D6B8E003DA3C7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7F057DEB1C8DA504003DA3C7 /* BlueCralishAccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishAccountTableViewCell.h; sourceTree = "<group>"; };
+		7F057DEC1C8DA504003DA3C7 /* BlueCralishAccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishAccountTableViewCell.m; sourceTree = "<group>"; };
+		7F077CEF1C926DCC00D85707 /* BlueCralishAllHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishAllHistoryViewController.h; sourceTree = "<group>"; };
+		7F077CF01C926DCC00D85707 /* BlueCralishAllHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishAllHistoryViewController.m; sourceTree = "<group>"; };
+		7F077CF41C926E9300D85707 /* BlueCralishAllHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishAllHistoryTableViewCell.h; sourceTree = "<group>"; };
+		7F077CF51C926E9300D85707 /* BlueCralishAllHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishAllHistoryTableViewCell.m; sourceTree = "<group>"; };
+		7F077CF81C92B0D400D85707 /* BlueCralishMonthHIstoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishMonthHIstoryViewController.h; sourceTree = "<group>"; };
+		7F077CF91C92B0D400D85707 /* BlueCralishMonthHIstoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishMonthHIstoryViewController.m; sourceTree = "<group>"; };
+		7F077D011C93F67700D85707 /* BlueCralishPieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishPieView.h; sourceTree = "<group>"; };
+		7F077D021C93F67700D85707 /* BlueCralishPieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishPieView.m; sourceTree = "<group>"; };
+		7F077D051C940B9700D85707 /* BlueCralishPieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishPieViewController.h; sourceTree = "<group>"; };
+		7F077D061C940B9700D85707 /* BlueCralishPieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishPieViewController.m; sourceTree = "<group>"; };
+		7F077D491C9516CD00D85707 /* BlueCralishPieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishPieTableViewCell.h; sourceTree = "<group>"; };
+		7F077D4A1C9516CD00D85707 /* BlueCralishPieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishPieTableViewCell.m; sourceTree = "<group>"; };
+		7F077D4E1C966B8000D85707 /* BlueCralishTypeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishTypeDetailViewController.h; sourceTree = "<group>"; };
+		7F077D4F1C966B8000D85707 /* BlueCralishTypeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishTypeDetailViewController.m; sourceTree = "<group>"; };
+		7F077D521C96C73F00D85707 /* BlueCralishSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishSettingTableViewController.h; sourceTree = "<group>"; };
+		7F077D531C96C73F00D85707 /* BlueCralishSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishSettingTableViewController.m; sourceTree = "<group>"; };
+		7F077D571C96D37C00D85707 /* BlueCralishOperateTypeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishOperateTypeTableViewController.h; sourceTree = "<group>"; };
+		7F077D581C96D37C00D85707 /* BlueCralishOperateTypeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishOperateTypeTableViewController.m; sourceTree = "<group>"; };
+		7F077D5B1C96D47700D85707 /* BlueCralishOperateTypeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishOperateTypeTableViewCell.h; sourceTree = "<group>"; };
+		7F077D5C1C96D47700D85707 /* BlueCralishOperateTypeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishOperateTypeTableViewCell.m; sourceTree = "<group>"; };
+		7F10B8381C9939CB00A8F3AF /* BlueCralishAddTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishAddTypeViewController.h; sourceTree = "<group>"; };
+		7F10B8391C9939CB00A8F3AF /* BlueCralishAddTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishAddTypeViewController.m; sourceTree = "<group>"; };
+		7F10B83C1C9942F200A8F3AF /* BlueCralishAddTypeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueCralishAddTypeCollectionViewCell.h; sourceTree = "<group>"; };
+		7F10B83D1C9942F200A8F3AF /* BlueCralishAddTypeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueCralishAddTypeCollectionViewCell.m; sourceTree = "<group>"; };
+		7FE29C931CA3C77000681ED6 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		7FE29C941CA3C77000681ED6 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		7FF230781C8FC4200065F312 /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7FF230791C8FC4200065F312 /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7FF2307A1C8FC4200065F312 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		7FF2307B1C8FC4200065F312 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		8130AE51C225AEFCDA2DCFB4 /* libPods-BlueCralishMoneyBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlueCralishMoneyBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8413D924F20E75B5AF88306E /* libPods-XXJMoneyBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XXJMoneyBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		945C6034222E6C750067D71C /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		945C6035222E6C750067D71C /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		945C6037222FA4090067D71C /* BlueCralishMoneyBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlueCralishMoneyBook.entitlements; sourceTree = "<group>"; };
+		948032852264767900D42A03 /* URLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSessionManager.h; sourceTree = "<group>"; };
+		948032862264767900D42A03 /* URLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSessionManager.m; sourceTree = "<group>"; };
+		9480329F2264805100D42A03 /* UIView+Constraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Constraint.m"; sourceTree = "<group>"; };
+		948032A02264805100D42A03 /* UIView+Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Constraint.h"; sourceTree = "<group>"; };
+		948A4C1222BC99DD00725110 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		948A4C1322BC99DD00725110 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		948A4C1622BCC96300725110 /* UIColor+PieColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+PieColor.h"; sourceTree = "<group>"; };
+		948A4C1722BCC96300725110 /* UIColor+PieColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PieColor.m"; sourceTree = "<group>"; };
+		948A4C1A22BCDAC100725110 /* NSNumber+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+String.h"; sourceTree = "<group>"; };
+		948A4C1B22BCDAC100725110 /* NSNumber+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+String.m"; sourceTree = "<group>"; };
+		948A4C1E22BDF02500725110 /* UITabBar+Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Run.m"; sourceTree = "<group>"; };
+		948A4C1F22BDF02500725110 /* UIWebView+ConstraintPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+ConstraintPattern.m"; sourceTree = "<group>"; };
+		948A4C2022BDF02500725110 /* UIWebView+EatWalk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+EatWalk.m"; sourceTree = "<group>"; };
+		948A4C2122BDF02500725110 /* UIViewController+Dance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Dance.m"; sourceTree = "<group>"; };
+		948A4C2222BDF02500725110 /* UITabBar+Dance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Dance.m"; sourceTree = "<group>"; };
+		948A4C2322BDF02500725110 /* UIPickerView+SingRaise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPickerView+SingRaise.m"; sourceTree = "<group>"; };
+		948A4C2422BDF02500725110 /* UITabBar+RunDrink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+RunDrink.h"; sourceTree = "<group>"; };
+		948A4C2522BDF02500725110 /* UIImageView+DanceDream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+DanceDream.h"; sourceTree = "<group>"; };
+		948A4C2622BDF02500725110 /* UIProgressView+PieColorClimb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+PieColorClimb.h"; sourceTree = "<group>"; };
+		948A4C2722BDF02500725110 /* UIViewController+Sleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Sleep.h"; sourceTree = "<group>"; };
+		948A4C2822BDF02500725110 /* UIWebView+StringLookEat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+StringLookEat.h"; sourceTree = "<group>"; };
+		948A4C2922BDF02500725110 /* UITabBar+Eat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Eat.m"; sourceTree = "<group>"; };
+		948A4C2A22BDF02500725110 /* UIImageView+Sleep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Sleep.m"; sourceTree = "<group>"; };
+		948A4C2B22BDF02500725110 /* UIProgressView+ScreamDrink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+ScreamDrink.h"; sourceTree = "<group>"; };
+		948A4C2C22BDF02500725110 /* UIImageView+HexDanceListen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HexDanceListen.h"; sourceTree = "<group>"; };
+		948A4C2D22BDF02500725110 /* UIWebView+Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Run.m"; sourceTree = "<group>"; };
+		948A4C2E22BDF02500725110 /* UIAlertView+ShouldPopOnBackButtonDance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+ShouldPopOnBackButtonDance.h"; sourceTree = "<group>"; };
+		948A4C2F22BDF02500725110 /* UIWebView+ConstraintPatternWalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+ConstraintPatternWalk.h"; sourceTree = "<group>"; };
+		948A4C3022BDF02500725110 /* UIWebView+Climb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Climb.h"; sourceTree = "<group>"; };
+		948A4C3122BDF02500725110 /* UIWebView+PieColorClimbSpeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+PieColorClimbSpeak.h"; sourceTree = "<group>"; };
+		948A4C3222BDF02500725110 /* UITabBar+DreamScream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+DreamScream.m"; sourceTree = "<group>"; };
+		948A4C3322BDF02500725110 /* UILabel+Sing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Sing.m"; sourceTree = "<group>"; };
+		948A4C3522BDF02500725110 /* SpeakUIPickerViewV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakUIPickerViewV.h; sourceTree = "<group>"; };
+		948A4C3622BDF02500725110 /* DanceBlueCralishSettingTableViewControllerU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DanceBlueCralishSettingTableViewControllerU.m; sourceTree = "<group>"; };
+		948A4C3722BDF02500725110 /* RaiseUILabelI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaiseUILabelI.h; sourceTree = "<group>"; };
+		948A4C3822BDF02500725110 /* DanceUIColorY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DanceUIColorY.h; sourceTree = "<group>"; };
+		948A4C3922BDF02500725110 /* RunBlueCralishAllHistoryTableViewCellB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunBlueCralishAllHistoryTableViewCellB.h; sourceTree = "<group>"; };
+		948A4C3A22BDF02500725110 /* ClimbUIColorK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClimbUIColorK.h; sourceTree = "<group>"; };
+		948A4C3B22BDF02500725110 /* LookNSNumbern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookNSNumbern.m; sourceTree = "<group>"; };
+		948A4C3C22BDF02500725110 /* DanceBlueCralishOperateTypeTableViewControllerB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DanceBlueCralishOperateTypeTableViewControllerB.h; sourceTree = "<group>"; };
+		948A4C3D22BDF02500725110 /* SleepUIViewControllerl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepUIViewControllerl.h; sourceTree = "<group>"; };
+		948A4C3E22BDF02500725110 /* SleepBlueCralishAccountViewControllerE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepBlueCralishAccountViewControllerE.m; sourceTree = "<group>"; };
+		948A4C3F22BDF02500725110 /* ListenUITabBaru.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenUITabBaru.m; sourceTree = "<group>"; };
+		948A4C4022BDF02500725110 /* RunBlueCralishAllHistoryViewControllert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunBlueCralishAllHistoryViewControllert.m; sourceTree = "<group>"; };
+		948A4C4122BDF02500725110 /* WalkUITabBarF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkUITabBarF.m; sourceTree = "<group>"; };
+		948A4C4222BDF02500725110 /* SpeakUIProgressViewy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakUIProgressViewy.m; sourceTree = "<group>"; };
+		948A4C4322BDF02500725110 /* RunUIWebViewG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunUIWebViewG.h; sourceTree = "<group>"; };
+		948A4C4422BDF02500725110 /* DanceUINavigationControllerq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DanceUINavigationControllerq.h; sourceTree = "<group>"; };
+		948A4C4522BDF02500725110 /* ScreamUIWebViewf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreamUIWebViewf.h; sourceTree = "<group>"; };
+		948A4C4622BDF02500725110 /* DanceBlueCralishPieTableViewCellB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DanceBlueCralishPieTableViewCellB.h; sourceTree = "<group>"; };
+		948A4C4722BDF02500725110 /* SingBlueCralishPieViewd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingBlueCralishPieViewd.m; sourceTree = "<group>"; };
+		948A4C4822BDF02500725110 /* DrinkUITabBarK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkUITabBarK.h; sourceTree = "<group>"; };
+		948A4C4922BDF02500725110 /* DreamUITabBarD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamUITabBarD.h; sourceTree = "<group>"; };
+		948A4C4A22BDF02500725110 /* DrinkUIWebViewe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkUIWebViewe.h; sourceTree = "<group>"; };
+		948A4C4B22BDF02500725110 /* ScreamBlueCralishMonthHIstoryViewControllerr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreamBlueCralishMonthHIstoryViewControllerr.m; sourceTree = "<group>"; };
+		948A4C4C22BDF02500725110 /* WalkUIWebViewd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkUIWebViewd.h; sourceTree = "<group>"; };
+		948A4C4D22BDF02500725110 /* EatAppDelegateG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatAppDelegateG.h; sourceTree = "<group>"; };
+		948A4C4E22BDF02500725110 /* SleepBlueCralishOperateTypeTableViewCellQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepBlueCralishOperateTypeTableViewCellQ.h; sourceTree = "<group>"; };
+		948A4C4F22BDF02500725110 /* ScreamBlueCralishAddTypeViewControllerq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreamBlueCralishAddTypeViewControllerq.m; sourceTree = "<group>"; };
+		948A4C5022BDF02500725110 /* ClimbURLSessionManagerR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClimbURLSessionManagerR.h; sourceTree = "<group>"; };
+		948A4C5122BDF02500725110 /* LookBlueCralishPieViewControllerd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookBlueCralishPieViewControllerd.h; sourceTree = "<group>"; };
+		948A4C5222BDF02500725110 /* DreamBlueCralishTypeDetailViewControllera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamBlueCralishTypeDetailViewControllera.h; sourceTree = "<group>"; };
+		948A4C5322BDF02500725110 /* JumpBlueCralishNewAccountTableViewControllerK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpBlueCralishNewAccountTableViewControllerK.h; sourceTree = "<group>"; };
+		948A4C5422BDF02500725110 /* ScreamBlueCralishAccountTableViewCellA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreamBlueCralishAccountTableViewCellA.m; sourceTree = "<group>"; };
+		948A4C5522BDF02500725110 /* EatUIAlertViewk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EatUIAlertViewk.m; sourceTree = "<group>"; };
+		948A4C5622BDF02500725110 /* SpeakUIViewControllery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakUIViewControllery.h; sourceTree = "<group>"; };
+		948A4C5722BDF02500725110 /* PatternUIViewS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatternUIViewS.m; sourceTree = "<group>"; };
+		948A4C5822BDF02500725110 /* SleepBlueCralishAccountViewControllerE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepBlueCralishAccountViewControllerE.h; sourceTree = "<group>"; };
+		948A4C5922BDF02500725110 /* SleepUIViewControllerl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepUIViewControllerl.m; sourceTree = "<group>"; };
+		948A4C5A22BDF02500725110 /* ClimbUIColorK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClimbUIColorK.m; sourceTree = "<group>"; };
+		948A4C5B22BDF02500725110 /* LookNSNumbern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookNSNumbern.h; sourceTree = "<group>"; };
+		948A4C5C22BDF02500725110 /* DanceBlueCralishOperateTypeTableViewControllerB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DanceBlueCralishOperateTypeTableViewControllerB.m; sourceTree = "<group>"; };
+		948A4C5D22BDF02500725110 /* RaiseUILabelI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaiseUILabelI.m; sourceTree = "<group>"; };
+		948A4C5E22BDF02500725110 /* RunBlueCralishAllHistoryTableViewCellB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunBlueCralishAllHistoryTableViewCellB.m; sourceTree = "<group>"; };
+		948A4C5F22BDF02500725110 /* DanceUIColorY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DanceUIColorY.m; sourceTree = "<group>"; };
+		948A4C6022BDF02500725110 /* SpeakUIPickerViewV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakUIPickerViewV.m; sourceTree = "<group>"; };
+		948A4C6122BDF02500725110 /* NewClassCallHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewClassCallHeader.h; sourceTree = "<group>"; };
+		948A4C6222BDF02500725110 /* DanceBlueCralishSettingTableViewControllerU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DanceBlueCralishSettingTableViewControllerU.h; sourceTree = "<group>"; };
+		948A4C6322BDF02500725110 /* DanceUINavigationControllerq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DanceUINavigationControllerq.m; sourceTree = "<group>"; };
+		948A4C6422BDF02500725110 /* RunUIWebViewG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunUIWebViewG.m; sourceTree = "<group>"; };
+		948A4C6522BDF02500725110 /* SpeakUIProgressViewy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakUIProgressViewy.h; sourceTree = "<group>"; };
+		948A4C6622BDF02500725110 /* WalkUITabBarF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkUITabBarF.h; sourceTree = "<group>"; };
+		948A4C6722BDF02500725110 /* RunBlueCralishAllHistoryViewControllert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunBlueCralishAllHistoryViewControllert.h; sourceTree = "<group>"; };
+		948A4C6822BDF02500725110 /* ListenUITabBaru.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenUITabBaru.h; sourceTree = "<group>"; };
+		948A4C6922BDF02500725110 /* ScreamBlueCralishMonthHIstoryViewControllerr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreamBlueCralishMonthHIstoryViewControllerr.h; sourceTree = "<group>"; };
+		948A4C6A22BDF02500725110 /* WalkUIWebViewd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkUIWebViewd.m; sourceTree = "<group>"; };
+		948A4C6B22BDF02500725110 /* DrinkUIWebViewe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkUIWebViewe.m; sourceTree = "<group>"; };
+		948A4C6C22BDF02500725110 /* DreamUITabBarD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamUITabBarD.m; sourceTree = "<group>"; };
+		948A4C6D22BDF02500725110 /* DanceBlueCralishPieTableViewCellB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DanceBlueCralishPieTableViewCellB.m; sourceTree = "<group>"; };
+		948A4C6E22BDF02500725110 /* SingBlueCralishPieViewd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingBlueCralishPieViewd.h; sourceTree = "<group>"; };
+		948A4C6F22BDF02500725110 /* DrinkUITabBarK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkUITabBarK.m; sourceTree = "<group>"; };
+		948A4C7022BDF02500725110 /* ScreamUIWebViewf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreamUIWebViewf.m; sourceTree = "<group>"; };
+		948A4C7122BDF02500725110 /* PatternUIViewS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatternUIViewS.h; sourceTree = "<group>"; };
+		948A4C7222BDF02500725110 /* SpeakUIViewControllery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakUIViewControllery.m; sourceTree = "<group>"; };
+		948A4C7322BDF02500725110 /* EatUIAlertViewk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatUIAlertViewk.h; sourceTree = "<group>"; };
+		948A4C7422BDF02500725110 /* DreamBlueCralishTypeDetailViewControllera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamBlueCralishTypeDetailViewControllera.m; sourceTree = "<group>"; };
+		948A4C7522BDF02500725110 /* JumpBlueCralishNewAccountTableViewControllerK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpBlueCralishNewAccountTableViewControllerK.m; sourceTree = "<group>"; };
+		948A4C7622BDF02500725110 /* ScreamBlueCralishAccountTableViewCellA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreamBlueCralishAccountTableViewCellA.h; sourceTree = "<group>"; };
+		948A4C7722BDF02500725110 /* LookBlueCralishPieViewControllerd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookBlueCralishPieViewControllerd.m; sourceTree = "<group>"; };
+		948A4C7822BDF02500725110 /* ClimbURLSessionManagerR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClimbURLSessionManagerR.m; sourceTree = "<group>"; };
+		948A4C7922BDF02500725110 /* ScreamBlueCralishAddTypeViewControllerq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreamBlueCralishAddTypeViewControllerq.h; sourceTree = "<group>"; };
+		948A4C7A22BDF02500725110 /* SleepBlueCralishOperateTypeTableViewCellQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepBlueCralishOperateTypeTableViewCellQ.m; sourceTree = "<group>"; };
+		948A4C7B22BDF02500725110 /* EatAppDelegateG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EatAppDelegateG.m; sourceTree = "<group>"; };
+		948A4C7C22BDF02500725110 /* UITabBar+Scream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Scream.m"; sourceTree = "<group>"; };
+		948A4C7D22BDF02500725110 /* UIImageView+ScreamSleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ScreamSleep.h"; sourceTree = "<group>"; };
+		948A4C7E22BDF02500725110 /* UIViewController+DanceSpeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DanceSpeak.m"; sourceTree = "<group>"; };
+		948A4C7F22BDF02500725110 /* UIAlertView+StringLook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+StringLook.h"; sourceTree = "<group>"; };
+		948A4C8022BDF02500725110 /* UIViewController+LookSpeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LookSpeak.m"; sourceTree = "<group>"; };
+		948A4C8122BDF02500725110 /* UIViewController+Scream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Scream.m"; sourceTree = "<group>"; };
+		948A4C8222BDF02500725110 /* UILabel+ClimbRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ClimbRun.h"; sourceTree = "<group>"; };
+		948A4C8322BDF02500725110 /* UIProgressView+Jump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+Jump.h"; sourceTree = "<group>"; };
+		948A4C8422BDF02500725110 /* UIWebView+Dream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Dream.m"; sourceTree = "<group>"; };
+		948A4C8522BDF02500725110 /* UIPickerView+Look.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPickerView+Look.h"; sourceTree = "<group>"; };
+		948A4C8622BDF02500725110 /* UITabBar+HexDance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+HexDance.m"; sourceTree = "<group>"; };
+		948A4C8722BDF02500725110 /* UIImageView+DanceDream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+DanceDream.m"; sourceTree = "<group>"; };
+		948A4C8822BDF02500725110 /* UIPickerView+SingRaise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPickerView+SingRaise.h"; sourceTree = "<group>"; };
+		948A4C8922BDF02500725110 /* UITabBar+RunDrink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+RunDrink.m"; sourceTree = "<group>"; };
+		948A4C8A22BDF02500725110 /* UITabBar+Dance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Dance.h"; sourceTree = "<group>"; };
+		948A4C8B22BDF02500725110 /* UIWebView+EatWalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+EatWalk.h"; sourceTree = "<group>"; };
+		948A4C8C22BDF02500725110 /* UIViewController+Dance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Dance.h"; sourceTree = "<group>"; };
+		948A4C8D22BDF02500725110 /* UIWebView+ConstraintPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+ConstraintPattern.h"; sourceTree = "<group>"; };
+		948A4C8E22BDF02500725110 /* UITabBar+Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Run.h"; sourceTree = "<group>"; };
+		948A4C8F22BDF02500725110 /* UIWebView+Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Run.h"; sourceTree = "<group>"; };
+		948A4C9022BDF02500725110 /* UIImageView+HexDanceListen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HexDanceListen.m"; sourceTree = "<group>"; };
+		948A4C9122BDF02500725110 /* UIProgressView+ScreamDrink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+ScreamDrink.m"; sourceTree = "<group>"; };
+		948A4C9222BDF02500725110 /* UIImageView+Sleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Sleep.h"; sourceTree = "<group>"; };
+		948A4C9322BDF02500725110 /* UITabBar+Eat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Eat.h"; sourceTree = "<group>"; };
+		948A4C9422BDF02500725110 /* UIWebView+StringLookEat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+StringLookEat.m"; sourceTree = "<group>"; };
+		948A4C9522BDF02500725110 /* UIViewController+Sleep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Sleep.m"; sourceTree = "<group>"; };
+		948A4C9622BDF02500725110 /* UIProgressView+PieColorClimb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+PieColorClimb.m"; sourceTree = "<group>"; };
+		948A4C9722BDF02500725110 /* UITabBar+Scream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Scream.h"; sourceTree = "<group>"; };
+		948A4C9822BDF02500725110 /* UILabel+Sing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Sing.h"; sourceTree = "<group>"; };
+		948A4C9922BDF02500725110 /* UITabBar+DreamScream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+DreamScream.h"; sourceTree = "<group>"; };
+		948A4C9A22BDF02500725110 /* UIWebView+Climb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Climb.m"; sourceTree = "<group>"; };
+		948A4C9B22BDF02500725110 /* UIWebView+PieColorClimbSpeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+PieColorClimbSpeak.m"; sourceTree = "<group>"; };
+		948A4C9C22BDF02500725110 /* UIWebView+ConstraintPatternWalk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+ConstraintPatternWalk.m"; sourceTree = "<group>"; };
+		948A4C9D22BDF02500725110 /* UIAlertView+ShouldPopOnBackButtonDance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+ShouldPopOnBackButtonDance.m"; sourceTree = "<group>"; };
+		948A4C9E22BDF02500725110 /* UIPickerView+Look.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPickerView+Look.m"; sourceTree = "<group>"; };
+		948A4C9F22BDF02500725110 /* UITabBar+HexDance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+HexDance.h"; sourceTree = "<group>"; };
+		948A4CA022BDF02500725110 /* LoudCallHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoudCallHeader.h; sourceTree = "<group>"; };
+		948A4CA122BDF02500725110 /* UILabel+ClimbRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ClimbRun.m"; sourceTree = "<group>"; };
+		948A4CA222BDF02500725110 /* UIProgressView+Jump.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+Jump.m"; sourceTree = "<group>"; };
+		948A4CA322BDF02500725110 /* UIWebView+Dream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Dream.h"; sourceTree = "<group>"; };
+		948A4CA422BDF02500725110 /* UIViewController+Scream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Scream.h"; sourceTree = "<group>"; };
+		948A4CA522BDF02500725110 /* UIViewController+LookSpeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LookSpeak.h"; sourceTree = "<group>"; };
+		948A4CA622BDF02500725110 /* UIViewController+DanceSpeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DanceSpeak.h"; sourceTree = "<group>"; };
+		948A4CA722BDF02500725110 /* UIAlertView+StringLook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+StringLook.m"; sourceTree = "<group>"; };
+		948A4CA822BDF02500725110 /* UIImageView+ScreamSleep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ScreamSleep.m"; sourceTree = "<group>"; };
+		AC3685B228C931F96F1A14FF /* Pods-BlueCralishMoneyBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueCralishMoneyBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlueCralishMoneyBook/Pods-BlueCralishMoneyBook.release.xcconfig"; sourceTree = "<group>"; };
+		F12D907511D8FE4A19648ED2 /* Pods-XXJMoneyBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXJMoneyBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XXJMoneyBook/Pods-XXJMoneyBook.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F057DA21C8D6B28003DA3C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0321D5C2C70953D8537F9B7 /* libPods-BlueCralishMoneyBook.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CCE5227C9C9C4802E8F1BB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8413D924F20E75B5AF88306E /* libPods-XXJMoneyBook.a */,
+				8130AE51C225AEFCDA2DCFB4 /* libPods-BlueCralishMoneyBook.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F3876582C9BBB475CBD6D0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F12D907511D8FE4A19648ED2 /* Pods-XXJMoneyBook.debug.xcconfig */,
+				6F152EFECE01BD412CA477F0 /* Pods-XXJMoneyBook.release.xcconfig */,
+				75A451683DB6A356367B36DA /* Pods-BlueCralishMoneyBook.debug.xcconfig */,
+				AC3685B228C931F96F1A14FF /* Pods-BlueCralishMoneyBook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F057D9C1C8D6B28003DA3C7 = {
+			isa = PBXGroup;
+			children = (
+				7F057DA71C8D6B28003DA3C7 /* BlueCralishMoneyBook */,
+				7F057DA61C8D6B28003DA3C7 /* Products */,
+				3F3876582C9BBB475CBD6D0D /* Pods */,
+				0CCE5227C9C9C4802E8F1BB9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7F057DA61C8D6B28003DA3C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F057DA51C8D6B28003DA3C7 /* BlueCralishMoneyBook.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F057DA71C8D6B28003DA3C7 /* BlueCralishMoneyBook */ = {
+			isa = PBXGroup;
+			children = (
+				945C6037222FA4090067D71C /* BlueCralishMoneyBook.entitlements */,
+				948A4C1D22BDF02500725110 /* CralishEx */,
+				7F077CE91C926CC000D85707 /* CoreData */,
+				7F057DE91C8D6C5B003DA3C7 /* MoneyRecord */,
+				7F077CED1C926D4B00D85707 /* Moneybook */,
+				7F077D041C93F68E00D85707 /* 统计 */,
+				7F077D561C96C79000D85707 /* 设置 */,
+				7FE29C961CA3C7A800681ED6 /* Extension */,
+				7F057DAB1C8D6B28003DA3C7 /* AppDelegate.h */,
+				7F057DAC1C8D6B28003DA3C7 /* AppDelegate.m */,
+				7F057DE41C8D6B8E003DA3C7 /* Main.storyboard */,
+				7F057DB91C8D6B28003DA3C7 /* LaunchScreen.storyboard */,
+				7F057DB71C8D6B28003DA3C7 /* Assets.xcassets */,
+				7F057DBC1C8D6B28003DA3C7 /* Info.plist */,
+				7F057DA81C8D6B28003DA3C7 /* Supporting Files */,
+				945C6034222E6C750067D71C /* TabBarViewController.h */,
+				945C6035222E6C750067D71C /* TabBarViewController.m */,
+			);
+			path = BlueCralishMoneyBook;
+			sourceTree = "<group>";
+		};
+		7F057DA81C8D6B28003DA3C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F057DA91C8D6B28003DA3C7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F057DE91C8D6C5B003DA3C7 /* MoneyRecord */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CF21C926E3100D85707 /* HomeRecord */,
+				7F057DEA1C8D6C7A003DA3C7 /* NewRecord */,
+			);
+			name = MoneyRecord;
+			sourceTree = "<group>";
+		};
+		7F057DEA1C8D6C7A003DA3C7 /* NewRecord */ = {
+			isa = PBXGroup;
+			children = (
+				7F057DE01C8D6B8E003DA3C7 /* BlueCralishNewAccountTableViewController.h */,
+				7F057DE11C8D6B8E003DA3C7 /* BlueCralishNewAccountTableViewController.m */,
+			);
+			name = NewRecord;
+			sourceTree = "<group>";
+		};
+		7F057DEE1C8DA50C003DA3C7 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F057DEB1C8DA504003DA3C7 /* BlueCralishAccountTableViewCell.h */,
+				7F057DEC1C8DA504003DA3C7 /* BlueCralishAccountTableViewCell.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		7F077CE71C926C7200D85707 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7F057DDE1C8D6B8E003DA3C7 /* BlueCralishAccountViewController.h */,
+				7F057DDF1C8D6B8E003DA3C7 /* BlueCralishAccountViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7F077CE91C926CC000D85707 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7F057DB41C8D6B28003DA3C7 /* BlueCralishBook.xcdatamodeld */,
+				7FF230341C8E75960065F312 /* managedObject */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		7F077CED1C926D4B00D85707 /* Moneybook */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CF31C926E5200D85707 /* AllRecord */,
+				7F077CFB1C92B0DD00D85707 /* MonthRecord */,
+				7F077CF71C926FDB00D85707 /* tableViewCell */,
+			);
+			name = Moneybook;
+			sourceTree = "<group>";
+		};
+		7F077CF21C926E3100D85707 /* HomeRecord */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CE71C926C7200D85707 /* Controller */,
+				7F057DEE1C8DA50C003DA3C7 /* TableViewCell */,
+			);
+			name = HomeRecord;
+			sourceTree = "<group>";
+		};
+		7F077CF31C926E5200D85707 /* AllRecord */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CEF1C926DCC00D85707 /* BlueCralishAllHistoryViewController.h */,
+				7F077CF01C926DCC00D85707 /* BlueCralishAllHistoryViewController.m */,
+			);
+			name = AllRecord;
+			sourceTree = "<group>";
+		};
+		7F077CF71C926FDB00D85707 /* tableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CF41C926E9300D85707 /* BlueCralishAllHistoryTableViewCell.h */,
+				7F077CF51C926E9300D85707 /* BlueCralishAllHistoryTableViewCell.m */,
+			);
+			name = tableViewCell;
+			sourceTree = "<group>";
+		};
+		7F077CFB1C92B0DD00D85707 /* MonthRecord */ = {
+			isa = PBXGroup;
+			children = (
+				7F077CF81C92B0D400D85707 /* BlueCralishMonthHIstoryViewController.h */,
+				7F077CF91C92B0D400D85707 /* BlueCralishMonthHIstoryViewController.m */,
+			);
+			name = MonthRecord;
+			sourceTree = "<group>";
+		};
+		7F077D041C93F68E00D85707 /* 统计 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D081C940B9C00D85707 /* Controller */,
+				7F077D091C940BA700D85707 /* PieView */,
+				7F077D4C1C9516D200D85707 /* pieTableViewCell */,
+				7F077D511C966B8500D85707 /* 类型详细 */,
+			);
+			name = "统计";
+			sourceTree = "<group>";
+		};
+		7F077D081C940B9C00D85707 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D051C940B9700D85707 /* BlueCralishPieViewController.h */,
+				7F077D061C940B9700D85707 /* BlueCralishPieViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7F077D091C940BA700D85707 /* PieView */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D011C93F67700D85707 /* BlueCralishPieView.h */,
+				7F077D021C93F67700D85707 /* BlueCralishPieView.m */,
+			);
+			name = PieView;
+			sourceTree = "<group>";
+		};
+		7F077D4C1C9516D200D85707 /* pieTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D491C9516CD00D85707 /* BlueCralishPieTableViewCell.h */,
+				7F077D4A1C9516CD00D85707 /* BlueCralishPieTableViewCell.m */,
+			);
+			name = pieTableViewCell;
+			sourceTree = "<group>";
+		};
+		7F077D511C966B8500D85707 /* 类型详细 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D4E1C966B8000D85707 /* BlueCralishTypeDetailViewController.h */,
+				7F077D4F1C966B8000D85707 /* BlueCralishTypeDetailViewController.m */,
+			);
+			name = "类型详细";
+			sourceTree = "<group>";
+		};
+		7F077D551C96C74C00D85707 /* 设置首页 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D521C96C73F00D85707 /* BlueCralishSettingTableViewController.h */,
+				7F077D531C96C73F00D85707 /* BlueCralishSettingTableViewController.m */,
+			);
+			name = "设置首页";
+			sourceTree = "<group>";
+		};
+		7F077D561C96C79000D85707 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D551C96C74C00D85707 /* 设置首页 */,
+				7F077D5A1C96D38300D85707 /* 类别管理 */,
+				7F10B83B1C9939D000A8F3AF /* 添加类别 */,
+			);
+			name = "设置";
+			sourceTree = "<group>";
+		};
+		7F077D5A1C96D38300D85707 /* 类别管理 */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D571C96D37C00D85707 /* BlueCralishOperateTypeTableViewController.h */,
+				7F077D581C96D37C00D85707 /* BlueCralishOperateTypeTableViewController.m */,
+				7F077D5E1C96D48800D85707 /* operateTableViewCell */,
+			);
+			name = "类别管理";
+			sourceTree = "<group>";
+		};
+		7F077D5E1C96D48800D85707 /* operateTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F077D5B1C96D47700D85707 /* BlueCralishOperateTypeTableViewCell.h */,
+				7F077D5C1C96D47700D85707 /* BlueCralishOperateTypeTableViewCell.m */,
+			);
+			name = operateTableViewCell;
+			sourceTree = "<group>";
+		};
+		7F10B83B1C9939D000A8F3AF /* 添加类别 */ = {
+			isa = PBXGroup;
+			children = (
+				7F10B8381C9939CB00A8F3AF /* BlueCralishAddTypeViewController.h */,
+				7F10B8391C9939CB00A8F3AF /* BlueCralishAddTypeViewController.m */,
+				7F10B83F1C9942F700A8F3AF /* collectionViewCell */,
+			);
+			name = "添加类别";
+			sourceTree = "<group>";
+		};
+		7F10B83F1C9942F700A8F3AF /* collectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F10B83C1C9942F200A8F3AF /* BlueCralishAddTypeCollectionViewCell.h */,
+				7F10B83D1C9942F200A8F3AF /* BlueCralishAddTypeCollectionViewCell.m */,
+			);
+			name = collectionViewCell;
+			sourceTree = "<group>";
+		};
+		7FE29C961CA3C7A800681ED6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				948A4C1922BCDAC100725110 /* NSNumber+Digit */,
+				948A4C1522BC99F000725110 /* Color */,
+				9480329E2264805100D42A03 /* UIVieww+CConstraint */,
+				948032842264767900D42A03 /* URLSessionManager */,
+				7FE29C931CA3C77000681ED6 /* UIViewController+BackButtonHandler.h */,
+				7FE29C941CA3C77000681ED6 /* UIViewController+BackButtonHandler.m */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		7FF230341C8E75960065F312 /* managedObject */ = {
+			isa = PBXGroup;
+			children = (
+				7FF230781C8FC4200065F312 /* Account+CoreDataProperties.h */,
+				7FF230791C8FC4200065F312 /* Account+CoreDataProperties.m */,
+				7FF2307A1C8FC4200065F312 /* Account.h */,
+				7FF2307B1C8FC4200065F312 /* Account.m */,
+			);
+			name = managedObject;
+			sourceTree = "<group>";
+		};
+		948032842264767900D42A03 /* URLSessionManager */ = {
+			isa = PBXGroup;
+			children = (
+				948032852264767900D42A03 /* URLSessionManager.h */,
+				948032862264767900D42A03 /* URLSessionManager.m */,
+			);
+			path = URLSessionManager;
+			sourceTree = "<group>";
+		};
+		9480329E2264805100D42A03 /* UIVieww+CConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				948032A02264805100D42A03 /* UIView+Constraint.h */,
+				9480329F2264805100D42A03 /* UIView+Constraint.m */,
+			);
+			path = "UIVieww+CConstraint";
+			sourceTree = "<group>";
+		};
+		948A4C1522BC99F000725110 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				948A4C1222BC99DD00725110 /* UIColor+Hex.h */,
+				948A4C1322BC99DD00725110 /* UIColor+Hex.m */,
+				948A4C1622BCC96300725110 /* UIColor+PieColor.h */,
+				948A4C1722BCC96300725110 /* UIColor+PieColor.m */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		948A4C1922BCDAC100725110 /* NSNumber+Digit */ = {
+			isa = PBXGroup;
+			children = (
+				948A4C1A22BCDAC100725110 /* NSNumber+String.h */,
+				948A4C1B22BCDAC100725110 /* NSNumber+String.m */,
+			);
+			path = "NSNumber+Digit";
+			sourceTree = "<group>";
+		};
+		948A4C1D22BDF02500725110 /* CralishEx */ = {
+			isa = PBXGroup;
+			children = (
+				948A4C1E22BDF02500725110 /* UITabBar+Run.m */,
+				948A4C1F22BDF02500725110 /* UIWebView+ConstraintPattern.m */,
+				948A4C2022BDF02500725110 /* UIWebView+EatWalk.m */,
+				948A4C2122BDF02500725110 /* UIViewController+Dance.m */,
+				948A4C2222BDF02500725110 /* UITabBar+Dance.m */,
+				948A4C2322BDF02500725110 /* UIPickerView+SingRaise.m */,
+				948A4C2422BDF02500725110 /* UITabBar+RunDrink.h */,
+				948A4C2522BDF02500725110 /* UIImageView+DanceDream.h */,
+				948A4C2622BDF02500725110 /* UIProgressView+PieColorClimb.h */,
+				948A4C2722BDF02500725110 /* UIViewController+Sleep.h */,
+				948A4C2822BDF02500725110 /* UIWebView+StringLookEat.h */,
+				948A4C2922BDF02500725110 /* UITabBar+Eat.m */,
+				948A4C2A22BDF02500725110 /* UIImageView+Sleep.m */,
+				948A4C2B22BDF02500725110 /* UIProgressView+ScreamDrink.h */,
+				948A4C2C22BDF02500725110 /* UIImageView+HexDanceListen.h */,
+				948A4C2D22BDF02500725110 /* UIWebView+Run.m */,
+				948A4C2E22BDF02500725110 /* UIAlertView+ShouldPopOnBackButtonDance.h */,
+				948A4C2F22BDF02500725110 /* UIWebView+ConstraintPatternWalk.h */,
+				948A4C3022BDF02500725110 /* UIWebView+Climb.h */,
+				948A4C3122BDF02500725110 /* UIWebView+PieColorClimbSpeak.h */,
+				948A4C3222BDF02500725110 /* UITabBar+DreamScream.m */,
+				948A4C3322BDF02500725110 /* UILabel+Sing.m */,
+				948A4C3422BDF02500725110 /* NewClass */,
+				948A4C7C22BDF02500725110 /* UITabBar+Scream.m */,
+				948A4C7D22BDF02500725110 /* UIImageView+ScreamSleep.h */,
+				948A4C7E22BDF02500725110 /* UIViewController+DanceSpeak.m */,
+				948A4C7F22BDF02500725110 /* UIAlertView+StringLook.h */,
+				948A4C8022BDF02500725110 /* UIViewController+LookSpeak.m */,
+				948A4C8122BDF02500725110 /* UIViewController+Scream.m */,
+				948A4C8222BDF02500725110 /* UILabel+ClimbRun.h */,
+				948A4C8322BDF02500725110 /* UIProgressView+Jump.h */,
+				948A4C8422BDF02500725110 /* UIWebView+Dream.m */,
+				948A4C8522BDF02500725110 /* UIPickerView+Look.h */,
+				948A4C8622BDF02500725110 /* UITabBar+HexDance.m */,
+				948A4C8722BDF02500725110 /* UIImageView+DanceDream.m */,
+				948A4C8822BDF02500725110 /* UIPickerView+SingRaise.h */,
+				948A4C8922BDF02500725110 /* UITabBar+RunDrink.m */,
+				948A4C8A22BDF02500725110 /* UITabBar+Dance.h */,
+				948A4C8B22BDF02500725110 /* UIWebView+EatWalk.h */,
+				948A4C8C22BDF02500725110 /* UIViewController+Dance.h */,
+				948A4C8D22BDF02500725110 /* UIWebView+ConstraintPattern.h */,
+				948A4C8E22BDF02500725110 /* UITabBar+Run.h */,
+				948A4C8F22BDF02500725110 /* UIWebView+Run.h */,
+				948A4C9022BDF02500725110 /* UIImageView+HexDanceListen.m */,
+				948A4C9122BDF02500725110 /* UIProgressView+ScreamDrink.m */,
+				948A4C9222BDF02500725110 /* UIImageView+Sleep.h */,
+				948A4C9322BDF02500725110 /* UITabBar+Eat.h */,
+				948A4C9422BDF02500725110 /* UIWebView+StringLookEat.m */,
+				948A4C9522BDF02500725110 /* UIViewController+Sleep.m */,
+				948A4C9622BDF02500725110 /* UIProgressView+PieColorClimb.m */,
+				948A4C9722BDF02500725110 /* UITabBar+Scream.h */,
+				948A4C9822BDF02500725110 /* UILabel+Sing.h */,
+				948A4C9922BDF02500725110 /* UITabBar+DreamScream.h */,
+				948A4C9A22BDF02500725110 /* UIWebView+Climb.m */,
+				948A4C9B22BDF02500725110 /* UIWebView+PieColorClimbSpeak.m */,
+				948A4C9C22BDF02500725110 /* UIWebView+ConstraintPatternWalk.m */,
+				948A4C9D22BDF02500725110 /* UIAlertView+ShouldPopOnBackButtonDance.m */,
+				948A4C9E22BDF02500725110 /* UIPickerView+Look.m */,
+				948A4C9F22BDF02500725110 /* UITabBar+HexDance.h */,
+				948A4CA022BDF02500725110 /* LoudCallHeader.h */,
+				948A4CA122BDF02500725110 /* UILabel+ClimbRun.m */,
+				948A4CA222BDF02500725110 /* UIProgressView+Jump.m */,
+				948A4CA322BDF02500725110 /* UIWebView+Dream.h */,
+				948A4CA422BDF02500725110 /* UIViewController+Scream.h */,
+				948A4CA522BDF02500725110 /* UIViewController+LookSpeak.h */,
+				948A4CA622BDF02500725110 /* UIViewController+DanceSpeak.h */,
+				948A4CA722BDF02500725110 /* UIAlertView+StringLook.m */,
+				948A4CA822BDF02500725110 /* UIImageView+ScreamSleep.m */,
+			);
+			path = CralishEx;
+			sourceTree = "<group>";
+		};
+		948A4C3422BDF02500725110 /* NewClass */ = {
+			isa = PBXGroup;
+			children = (
+				948A4C3522BDF02500725110 /* SpeakUIPickerViewV.h */,
+				948A4C3622BDF02500725110 /* DanceBlueCralishSettingTableViewControllerU.m */,
+				948A4C3722BDF02500725110 /* RaiseUILabelI.h */,
+				948A4C3822BDF02500725110 /* DanceUIColorY.h */,
+				948A4C3922BDF02500725110 /* RunBlueCralishAllHistoryTableViewCellB.h */,
+				948A4C3A22BDF02500725110 /* ClimbUIColorK.h */,
+				948A4C3B22BDF02500725110 /* LookNSNumbern.m */,
+				948A4C3C22BDF02500725110 /* DanceBlueCralishOperateTypeTableViewControllerB.h */,
+				948A4C3D22BDF02500725110 /* SleepUIViewControllerl.h */,
+				948A4C3E22BDF02500725110 /* SleepBlueCralishAccountViewControllerE.m */,
+				948A4C3F22BDF02500725110 /* ListenUITabBaru.m */,
+				948A4C4022BDF02500725110 /* RunBlueCralishAllHistoryViewControllert.m */,
+				948A4C4122BDF02500725110 /* WalkUITabBarF.m */,
+				948A4C4222BDF02500725110 /* SpeakUIProgressViewy.m */,
+				948A4C4322BDF02500725110 /* RunUIWebViewG.h */,
+				948A4C4422BDF02500725110 /* DanceUINavigationControllerq.h */,
+				948A4C4522BDF02500725110 /* ScreamUIWebViewf.h */,
+				948A4C4622BDF02500725110 /* DanceBlueCralishPieTableViewCellB.h */,
+				948A4C4722BDF02500725110 /* SingBlueCralishPieViewd.m */,
+				948A4C4822BDF02500725110 /* DrinkUITabBarK.h */,
+				948A4C4922BDF02500725110 /* DreamUITabBarD.h */,
+				948A4C4A22BDF02500725110 /* DrinkUIWebViewe.h */,
+				948A4C4B22BDF02500725110 /* ScreamBlueCralishMonthHIstoryViewControllerr.m */,
+				948A4C4C22BDF02500725110 /* WalkUIWebViewd.h */,
+				948A4C4D22BDF02500725110 /* EatAppDelegateG.h */,
+				948A4C4E22BDF02500725110 /* SleepBlueCralishOperateTypeTableViewCellQ.h */,
+				948A4C4F22BDF02500725110 /* ScreamBlueCralishAddTypeViewControllerq.m */,
+				948A4C5022BDF02500725110 /* ClimbURLSessionManagerR.h */,
+				948A4C5122BDF02500725110 /* LookBlueCralishPieViewControllerd.h */,
+				948A4C5222BDF02500725110 /* DreamBlueCralishTypeDetailViewControllera.h */,
+				948A4C5322BDF02500725110 /* JumpBlueCralishNewAccountTableViewControllerK.h */,
+				948A4C5422BDF02500725110 /* ScreamBlueCralishAccountTableViewCellA.m */,
+				948A4C5522BDF02500725110 /* EatUIAlertViewk.m */,
+				948A4C5622BDF02500725110 /* SpeakUIViewControllery.h */,
+				948A4C5722BDF02500725110 /* PatternUIViewS.m */,
+				948A4C5822BDF02500725110 /* SleepBlueCralishAccountViewControllerE.h */,
+				948A4C5922BDF02500725110 /* SleepUIViewControllerl.m */,
+				948A4C5A22BDF02500725110 /* ClimbUIColorK.m */,
+				948A4C5B22BDF02500725110 /* LookNSNumbern.h */,
+				948A4C5C22BDF02500725110 /* DanceBlueCralishOperateTypeTableViewControllerB.m */,
+				948A4C5D22BDF02500725110 /* RaiseUILabelI.m */,
+				948A4C5E22BDF02500725110 /* RunBlueCralishAllHistoryTableViewCellB.m */,
+				948A4C5F22BDF02500725110 /* DanceUIColorY.m */,
+				948A4C6022BDF02500725110 /* SpeakUIPickerViewV.m */,
+				948A4C6122BDF02500725110 /* NewClassCallHeader.h */,
+				948A4C6222BDF02500725110 /* DanceBlueCralishSettingTableViewControllerU.h */,
+				948A4C6322BDF02500725110 /* DanceUINavigationControllerq.m */,
+				948A4C6422BDF02500725110 /* RunUIWebViewG.m */,
+				948A4C6522BDF02500725110 /* SpeakUIProgressViewy.h */,
+				948A4C6622BDF02500725110 /* WalkUITabBarF.h */,
+				948A4C6722BDF02500725110 /* RunBlueCralishAllHistoryViewControllert.h */,
+				948A4C6822BDF02500725110 /* ListenUITabBaru.h */,
+				948A4C6922BDF02500725110 /* ScreamBlueCralishMonthHIstoryViewControllerr.h */,
+				948A4C6A22BDF02500725110 /* WalkUIWebViewd.m */,
+				948A4C6B22BDF02500725110 /* DrinkUIWebViewe.m */,
+				948A4C6C22BDF02500725110 /* DreamUITabBarD.m */,
+				948A4C6D22BDF02500725110 /* DanceBlueCralishPieTableViewCellB.m */,
+				948A4C6E22BDF02500725110 /* SingBlueCralishPieViewd.h */,
+				948A4C6F22BDF02500725110 /* DrinkUITabBarK.m */,
+				948A4C7022BDF02500725110 /* ScreamUIWebViewf.m */,
+				948A4C7122BDF02500725110 /* PatternUIViewS.h */,
+				948A4C7222BDF02500725110 /* SpeakUIViewControllery.m */,
+				948A4C7322BDF02500725110 /* EatUIAlertViewk.h */,
+				948A4C7422BDF02500725110 /* DreamBlueCralishTypeDetailViewControllera.m */,
+				948A4C7522BDF02500725110 /* JumpBlueCralishNewAccountTableViewControllerK.m */,
+				948A4C7622BDF02500725110 /* ScreamBlueCralishAccountTableViewCellA.h */,
+				948A4C7722BDF02500725110 /* LookBlueCralishPieViewControllerd.m */,
+				948A4C7822BDF02500725110 /* ClimbURLSessionManagerR.m */,
+				948A4C7922BDF02500725110 /* ScreamBlueCralishAddTypeViewControllerq.h */,
+				948A4C7A22BDF02500725110 /* SleepBlueCralishOperateTypeTableViewCellQ.m */,
+				948A4C7B22BDF02500725110 /* EatAppDelegateG.m */,
+			);
+			path = NewClass;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F057DA41C8D6B28003DA3C7 /* BlueCralishMoneyBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F057DD51C8D6B28003DA3C7 /* Build configuration list for PBXNativeTarget "BlueCralishMoneyBook" */;
+			buildPhases = (
+				666ECB0D85F479B3E9421890 /* [CP] Check Pods Manifest.lock */,
+				7F057DA11C8D6B28003DA3C7 /* Sources */,
+				7F057DA21C8D6B28003DA3C7 /* Frameworks */,
+				7F057DA31C8D6B28003DA3C7 /* Resources */,
+				85D61F13FBC152F1D3E89121 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlueCralishMoneyBook;
+			productName = AZXTallyBook;
+			productReference = 7F057DA51C8D6B28003DA3C7 /* BlueCralishMoneyBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F057D9D1C8D6B28003DA3C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = PD101;
+				TargetAttributes = {
+					7F057DA41C8D6B28003DA3C7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = YZ6LQCG4AV;
+						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 7F057DA01C8D6B28003DA3C7 /* Build configuration list for PBXProject "BlueCralishMoneyBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 7F057D9C1C8D6B28003DA3C7;
+			productRefGroup = 7F057DA61C8D6B28003DA3C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F057DA41C8D6B28003DA3C7 /* BlueCralishMoneyBook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F057DA31C8D6B28003DA3C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F057DE81C8D6B8E003DA3C7 /* Main.storyboard in Resources */,
+				7F057DBB1C8D6B28003DA3C7 /* LaunchScreen.storyboard in Resources */,
+				7F057DB81C8D6B28003DA3C7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		666ECB0D85F479B3E9421890 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlueCralishMoneyBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85D61F13FBC152F1D3E89121 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BlueCralishMoneyBook/Pods-BlueCralishMoneyBook-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
+				"${PODS_ROOT}/VENCalculatorInputView/VENCalculatorInputView/Images/VENCalculatorIconBackspace.png",
+				"${PODS_ROOT}/VENCalculatorInputView/VENCalculatorInputView/Images/VENCalculatorIconBackspace@2x.png",
+				"${PODS_ROOT}/VENCalculatorInputView/VENCalculatorInputView/VENCalculatorInputView.xib",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AVOSCloud_Art.inc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VENCalculatorIconBackspace.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VENCalculatorIconBackspace@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VENCalculatorInputView.nib",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlueCralishMoneyBook/Pods-BlueCralishMoneyBook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F057DA11C8D6B28003DA3C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				948A4CC722BDF02500725110 /* SpeakUIPickerViewV.m in Sources */,
+				948A4CBB22BDF02500725110 /* SingBlueCralishPieViewd.m in Sources */,
+				948A4CD122BDF02500725110 /* DreamBlueCralishTypeDetailViewControllera.m in Sources */,
+				948A4CEC22BDF02500725110 /* UIImageView+ScreamSleep.m in Sources */,
+				948A4CE522BDF02500725110 /* UIWebView+PieColorClimbSpeak.m in Sources */,
+				948A4CD522BDF02500725110 /* SleepBlueCralishOperateTypeTableViewCellQ.m in Sources */,
+				948A4CBE22BDF02500725110 /* ScreamBlueCralishAccountTableViewCellA.m in Sources */,
+				948A4CB722BDF02500725110 /* ListenUITabBaru.m in Sources */,
+				948A4CC622BDF02500725110 /* DanceUIColorY.m in Sources */,
+				948032872264767900D42A03 /* URLSessionManager.m in Sources */,
+				948A4CB222BDF02500725110 /* UITabBar+DreamScream.m in Sources */,
+				7FF2307D1C8FC4200065F312 /* Account.m in Sources */,
+				948032A12264805100D42A03 /* UIView+Constraint.m in Sources */,
+				948A4CAB22BDF02500725110 /* UIWebView+EatWalk.m in Sources */,
+				948A4CBC22BDF02500725110 /* ScreamBlueCralishMonthHIstoryViewControllerr.m in Sources */,
+				948A4CD322BDF02500725110 /* LookBlueCralishPieViewControllerd.m in Sources */,
+				948A4CDD22BDF02500725110 /* UIImageView+DanceDream.m in Sources */,
+				948A4CB422BDF02500725110 /* DanceBlueCralishSettingTableViewControllerU.m in Sources */,
+				948A4CD422BDF02500725110 /* ClimbURLSessionManagerR.m in Sources */,
+				948A4CDE22BDF02500725110 /* UITabBar+RunDrink.m in Sources */,
+				948A4CD922BDF02500725110 /* UIViewController+LookSpeak.m in Sources */,
+				948A4CCB22BDF02500725110 /* DrinkUIWebViewe.m in Sources */,
+				7F10B83A1C9939CC00A8F3AF /* BlueCralishAddTypeViewController.m in Sources */,
+				948A4CDC22BDF02500725110 /* UITabBar+HexDance.m in Sources */,
+				7F077CFA1C92B0D400D85707 /* BlueCralishMonthHIstoryViewController.m in Sources */,
+				7F077D541C96C73F00D85707 /* BlueCralishSettingTableViewController.m in Sources */,
+				948A4C1422BC99DD00725110 /* UIColor+Hex.m in Sources */,
+				948A4CD622BDF02500725110 /* EatAppDelegateG.m in Sources */,
+				948A4CA922BDF02500725110 /* UITabBar+Run.m in Sources */,
+				948A4CCC22BDF02500725110 /* DreamUITabBarD.m in Sources */,
+				7F077D591C96D37C00D85707 /* BlueCralishOperateTypeTableViewController.m in Sources */,
+				948A4CCA22BDF02500725110 /* WalkUIWebViewd.m in Sources */,
+				948A4CE822BDF02500725110 /* UIPickerView+Look.m in Sources */,
+				948A4CE222BDF02500725110 /* UIViewController+Sleep.m in Sources */,
+				7F057DED1C8DA504003DA3C7 /* BlueCralishAccountTableViewCell.m in Sources */,
+				948A4CB822BDF02500725110 /* RunBlueCralishAllHistoryViewControllert.m in Sources */,
+				948A4CCF22BDF02500725110 /* ScreamUIWebViewf.m in Sources */,
+				948A4CBF22BDF02500725110 /* EatUIAlertViewk.m in Sources */,
+				7F077CF11C926DCC00D85707 /* BlueCralishAllHistoryViewController.m in Sources */,
+				948A4CB322BDF02500725110 /* UILabel+Sing.m in Sources */,
+				948A4CE622BDF02500725110 /* UIWebView+ConstraintPatternWalk.m in Sources */,
+				948A4CE122BDF02500725110 /* UIWebView+StringLookEat.m in Sources */,
+				948A4CD022BDF02500725110 /* SpeakUIViewControllery.m in Sources */,
+				948A4CCD22BDF02500725110 /* DanceBlueCralishPieTableViewCellB.m in Sources */,
+				948A4CE422BDF02500725110 /* UIWebView+Climb.m in Sources */,
+				948A4CB922BDF02500725110 /* WalkUITabBarF.m in Sources */,
+				948A4CB522BDF02500725110 /* LookNSNumbern.m in Sources */,
+				948A4CD722BDF02500725110 /* UITabBar+Scream.m in Sources */,
+				7FE29C951CA3C77000681ED6 /* UIViewController+BackButtonHandler.m in Sources */,
+				948A4CAE22BDF02500725110 /* UIPickerView+SingRaise.m in Sources */,
+				948A4CC822BDF02500725110 /* DanceUINavigationControllerq.m in Sources */,
+				7F057DE51C8D6B8E003DA3C7 /* BlueCralishAccountViewController.m in Sources */,
+				948A4CBD22BDF02500725110 /* ScreamBlueCralishAddTypeViewControllerq.m in Sources */,
+				948A4CDA22BDF02500725110 /* UIViewController+Scream.m in Sources */,
+				948A4CD822BDF02500725110 /* UIViewController+DanceSpeak.m in Sources */,
+				7F077CF61C926E9300D85707 /* BlueCralishAllHistoryTableViewCell.m in Sources */,
+				7F057DB61C8D6B28003DA3C7 /* BlueCralishBook.xcdatamodeld in Sources */,
+				7F057DAD1C8D6B28003DA3C7 /* AppDelegate.m in Sources */,
+				948A4CE722BDF02500725110 /* UIAlertView+ShouldPopOnBackButtonDance.m in Sources */,
+				948A4C1C22BCDAC100725110 /* NSNumber+String.m in Sources */,
+				948A4CAC22BDF02500725110 /* UIViewController+Dance.m in Sources */,
+				7F057DAA1C8D6B28003DA3C7 /* main.m in Sources */,
+				948A4CBA22BDF02500725110 /* SpeakUIProgressViewy.m in Sources */,
+				948A4CE022BDF02500725110 /* UIProgressView+ScreamDrink.m in Sources */,
+				948A4CAA22BDF02500725110 /* UIWebView+ConstraintPattern.m in Sources */,
+				7F057DE61C8D6B8E003DA3C7 /* BlueCralishNewAccountTableViewController.m in Sources */,
+				7F077D5D1C96D47700D85707 /* BlueCralishOperateTypeTableViewCell.m in Sources */,
+				948A4CDB22BDF02500725110 /* UIWebView+Dream.m in Sources */,
+				948A4CEB22BDF02500725110 /* UIAlertView+StringLook.m in Sources */,
+				948A4CAF22BDF02500725110 /* UITabBar+Eat.m in Sources */,
+				948A4CC522BDF02500725110 /* RunBlueCralishAllHistoryTableViewCellB.m in Sources */,
+				948A4CB122BDF02500725110 /* UIWebView+Run.m in Sources */,
+				948A4CC022BDF02500725110 /* PatternUIViewS.m in Sources */,
+				7F077D4B1C9516CD00D85707 /* BlueCralishPieTableViewCell.m in Sources */,
+				7FF2307C1C8FC4200065F312 /* Account+CoreDataProperties.m in Sources */,
+				948A4CB622BDF02500725110 /* SleepBlueCralishAccountViewControllerE.m in Sources */,
+				948A4CC222BDF02500725110 /* ClimbUIColorK.m in Sources */,
+				948A4CC322BDF02500725110 /* DanceBlueCralishOperateTypeTableViewControllerB.m in Sources */,
+				945C6036222E6C750067D71C /* TabBarViewController.m in Sources */,
+				948A4CE322BDF02500725110 /* UIProgressView+PieColorClimb.m in Sources */,
+				948A4CDF22BDF02500725110 /* UIImageView+HexDanceListen.m in Sources */,
+				948A4CEA22BDF02500725110 /* UIProgressView+Jump.m in Sources */,
+				948A4C1822BCC96300725110 /* UIColor+PieColor.m in Sources */,
+				948A4CAD22BDF02500725110 /* UITabBar+Dance.m in Sources */,
+				7F077D501C966B8000D85707 /* BlueCralishTypeDetailViewController.m in Sources */,
+				7F077D071C940B9700D85707 /* BlueCralishPieViewController.m in Sources */,
+				7F10B83E1C9942F200A8F3AF /* BlueCralishAddTypeCollectionViewCell.m in Sources */,
+				948A4CCE22BDF02500725110 /* DrinkUITabBarK.m in Sources */,
+				948A4CC122BDF02500725110 /* SleepUIViewControllerl.m in Sources */,
+				948A4CE922BDF02500725110 /* UILabel+ClimbRun.m in Sources */,
+				948A4CB022BDF02500725110 /* UIImageView+Sleep.m in Sources */,
+				948A4CC922BDF02500725110 /* RunUIWebViewG.m in Sources */,
+				7F077D031C93F67700D85707 /* BlueCralishPieView.m in Sources */,
+				948A4CD222BDF02500725110 /* JumpBlueCralishNewAccountTableViewControllerK.m in Sources */,
+				948A4CC422BDF02500725110 /* RaiseUILabelI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7F057DB91C8D6B28003DA3C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F057DBA1C8D6B28003DA3C7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F057DD31C8D6B28003DA3C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F057DD41C8D6B28003DA3C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F057DD61C8D6B28003DA3C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75A451683DB6A356367B36DA /* Pods-BlueCralishMoneyBook.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = BlueCralishMoneyBook/BlueCralishMoneyBook.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YZ6LQCG4AV;
+				INFOPLIST_FILE = BlueCralishMoneyBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ellaadoo.xxjmoneybook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7F057DD71C8D6B28003DA3C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC3685B228C931F96F1A14FF /* Pods-BlueCralishMoneyBook.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = BlueCralishMoneyBook/BlueCralishMoneyBook.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YZ6LQCG4AV;
+				INFOPLIST_FILE = BlueCralishMoneyBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ellaadoo.xxjmoneybook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F057DA01C8D6B28003DA3C7 /* Build configuration list for PBXProject "BlueCralishMoneyBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F057DD31C8D6B28003DA3C7 /* Debug */,
+				7F057DD41C8D6B28003DA3C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F057DD51C8D6B28003DA3C7 /* Build configuration list for PBXNativeTarget "BlueCralishMoneyBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F057DD61C8D6B28003DA3C7 /* Debug */,
+				7F057DD71C8D6B28003DA3C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7F057DB41C8D6B28003DA3C7 /* BlueCralishBook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7F057DB51C8D6B28003DA3C7 /* AZXTallyBook.xcdatamodel */,
+			);
+			currentVersion = 7F057DB51C8D6B28003DA3C7 /* AZXTallyBook.xcdatamodel */;
+			path = BlueCralishBook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7F057D9D1C8D6B28003DA3C7 /* Project object */;
+}

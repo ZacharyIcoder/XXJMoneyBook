@@ -1,0 +1,4 @@
+#import "ScreamBlueCralishMonthHIstoryViewControllerr.h"
+@implementation ScreamBlueCralishMonthHIstoryViewControllerr
+
+@end
