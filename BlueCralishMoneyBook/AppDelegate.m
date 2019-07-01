@@ -9,12 +9,7 @@
 #define kJPushAppKey @"7b298d61f41fb2f4930009aa"
 #define kJPushChannel @"Publish channel"
 
-#define kAAAAppID @"kyHYPwnP2CFPJ2FW9YeiiqAb-gzGzoHsz"
-#define kAAAAppKey @"xItG5QvhvYhEWKT7Vv7EOjMA"
-
-
 #import "AppDelegate.h"
-#import <AVOSCloud/AVOSCloud.h>
 #import "JPUSHService.h"
 #import <UserNotifications/UserNotifications.h>
 #import "JANALYTICSService.h"
@@ -27,8 +22,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [AVOSCloud setApplicationId:kAAAAppID clientKey:kAAAAppKey];
-    [AVOSCloud setAllLogsEnabled:YES];
     
     //Required
     //notice: 3.0.0 及以后版本注册可以这样写，也可以继续用之前的注册方式
@@ -44,22 +37,22 @@
         // NSSet<UNNotificationCategory *> *categories for iOS10 or later
         // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
     }
-//    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
     
-//    [JPUSHService setupWithOption:launchOptions appKey:kJPushAppKey
-//                          channel:kJPushChannel
-//                 apsForProduction:NO
-//            advertisingIdentifier: nil];
+    [JPUSHService setupWithOption:launchOptions appKey:kJPushAppKey
+                          channel:kJPushChannel
+                 apsForProduction:NO
+            advertisingIdentifier: nil];
     
     
-//    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
-//        if(resCode == 0){
-//            NSLog(@"registrationID获取成功：%@",registrationID);
-//        }
-//        else{
-//            NSLog(@"registrationID获取失败，code：%d",resCode);
-//        }
-//    }];
+    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
+        if(resCode == 0){
+            NSLog(@"registrationID获取成功：%@",registrationID);
+        }
+        else{
+            NSLog(@"registrationID获取失败，code：%d",resCode);
+        }
+    }];
     
     JANALYTICSLaunchConfig *config = [[JANALYTICSLaunchConfig alloc] init];
     config.appKey = kJPushAppKey;
@@ -67,11 +60,6 @@
     [JANALYTICSService setupWithConfig:config];
     
     return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -83,14 +71,6 @@
     [defaults setBool:NO forKey:@"appDidLaunch"];
     // 并保持CoreData的数据
     [self saveContext];
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

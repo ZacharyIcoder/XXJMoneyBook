@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "274889D0E7B22FC7F5C05DC957C2E756"
+               BlueprintIdentifier = "7FCD2B4DE122E09B92C8E3287436A903"
                BuildableName = "libPods-BlueCralishMoneyBook.a"
                BlueprintName = "Pods-BlueCralishMoneyBook"
                ReferencedContainer = "container:Pods.xcodeproj">
