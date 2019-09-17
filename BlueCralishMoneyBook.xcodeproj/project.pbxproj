@@ -106,6 +106,14 @@
 		948A4CEB22BDF02500725110 /* UIAlertView+StringLook.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4CA722BDF02500725110 /* UIAlertView+StringLook.m */; };
 		948A4CEC22BDF02500725110 /* UIImageView+ScreamSleep.m in Sources */ = {isa = PBXBuildFile; fileRef = 948A4CA822BDF02500725110 /* UIImageView+ScreamSleep.m */; };
 		D0321D5C2C70953D8537F9B7 /* libPods-BlueCralishMoneyBook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8130AE51C225AEFCDA2DCFB4 /* libPods-BlueCralishMoneyBook.a */; };
+		F40FB40F2328BECF00A32045 /* ShareHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40FB40E2328BECF00A32045 /* ShareHomeViewController.m */; };
+		F40FB4132328D5A700A32045 /* ShareBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F40FB4122328D5A700A32045 /* ShareBannerTableViewCell.m */; };
+		F40FB4152328D5BC00A32045 /* ShareHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F40FB4142328D5BC00A32045 /* ShareHomeCell.xib */; };
+		F40FB4182328DF0800A32045 /* ShareHomeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F40FB4172328DF0800A32045 /* ShareHomeFactory.m */; };
+		F40FB41B2328E33600A32045 /* ShareFriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F40FB41A2328E33600A32045 /* ShareFriendTableViewCell.m */; };
+		F40FB41E2329072400A32045 /* Share.m in Sources */ = {isa = PBXBuildFile; fileRef = F40FB41D2329072400A32045 /* Share.m */; };
+		F40FB421232F87E700A32045 /* ShareAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40FB420232F87E700A32045 /* ShareAddViewController.m */; };
+		F40FB424232FC25900A32045 /* NSNumber+String.m in Sources */ = {isa = PBXBuildFile; fileRef = F40FB423232FC25900A32045 /* NSNumber+String.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -311,6 +319,21 @@
 		948A4CA822BDF02500725110 /* UIImageView+ScreamSleep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ScreamSleep.m"; sourceTree = "<group>"; };
 		AC3685B228C931F96F1A14FF /* Pods-BlueCralishMoneyBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueCralishMoneyBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlueCralishMoneyBook/Pods-BlueCralishMoneyBook.release.xcconfig"; sourceTree = "<group>"; };
 		F12D907511D8FE4A19648ED2 /* Pods-XXJMoneyBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXJMoneyBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XXJMoneyBook/Pods-XXJMoneyBook.debug.xcconfig"; sourceTree = "<group>"; };
+		F40FB40D2328BECF00A32045 /* ShareHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareHomeViewController.h; sourceTree = "<group>"; };
+		F40FB40E2328BECF00A32045 /* ShareHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareHomeViewController.m; sourceTree = "<group>"; };
+		F40FB4112328D5A700A32045 /* ShareBannerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareBannerTableViewCell.h; sourceTree = "<group>"; };
+		F40FB4122328D5A700A32045 /* ShareBannerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareBannerTableViewCell.m; sourceTree = "<group>"; };
+		F40FB4142328D5BC00A32045 /* ShareHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareHomeCell.xib; sourceTree = "<group>"; };
+		F40FB4162328DF0800A32045 /* ShareHomeFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareHomeFactory.h; sourceTree = "<group>"; };
+		F40FB4172328DF0800A32045 /* ShareHomeFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareHomeFactory.m; sourceTree = "<group>"; };
+		F40FB4192328E33600A32045 /* ShareFriendTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareFriendTableViewCell.h; sourceTree = "<group>"; };
+		F40FB41A2328E33600A32045 /* ShareFriendTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareFriendTableViewCell.m; sourceTree = "<group>"; };
+		F40FB41C2329072400A32045 /* Share.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Share.h; sourceTree = "<group>"; };
+		F40FB41D2329072400A32045 /* Share.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Share.m; sourceTree = "<group>"; };
+		F40FB41F232F87E700A32045 /* ShareAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareAddViewController.h; sourceTree = "<group>"; };
+		F40FB420232F87E700A32045 /* ShareAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareAddViewController.m; sourceTree = "<group>"; };
+		F40FB422232FC25900A32045 /* NSNumber+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+String.h"; path = "BlueCralishMoneyBook/NSNumber+String.h"; sourceTree = SOURCE_ROOT; };
+		F40FB423232FC25900A32045 /* NSNumber+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+String.m"; path = "BlueCralishMoneyBook/NSNumber+String.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,7 +389,7 @@
 		7F057DA71C8D6B28003DA3C7 /* BlueCralishMoneyBook */ = {
 			isa = PBXGroup;
 			children = (
-				945C6037222FA4090067D71C /* BlueCralishMoneyBook.entitlements */,
+				F40FB40C2328BD4E00A32045 /* 分享 */,
 				948A4C1D22BDF02500725110 /* CralishEx */,
 				7F077CE91C926CC000D85707 /* CoreData */,
 				7F057DE91C8D6C5B003DA3C7 /* MoneyRecord */,
@@ -380,6 +403,7 @@
 				7F057DB91C8D6B28003DA3C7 /* LaunchScreen.storyboard */,
 				7F057DB71C8D6B28003DA3C7 /* Assets.xcassets */,
 				7F057DBC1C8D6B28003DA3C7 /* Info.plist */,
+				945C6037222FA4090067D71C /* BlueCralishMoneyBook.entitlements */,
 				7F057DA81C8D6B28003DA3C7 /* Supporting Files */,
 				945C6034222E6C750067D71C /* TabBarViewController.h */,
 				945C6035222E6C750067D71C /* TabBarViewController.m */,
@@ -655,6 +679,8 @@
 		948A4C1D22BDF02500725110 /* CralishEx */ = {
 			isa = PBXGroup;
 			children = (
+				F40FB422232FC25900A32045 /* NSNumber+String.h */,
+				F40FB423232FC25900A32045 /* NSNumber+String.m */,
 				948A4C1E22BDF02500725110 /* UITabBar+Run.m */,
 				948A4C1F22BDF02500725110 /* UIWebView+ConstraintPattern.m */,
 				948A4C2022BDF02500725110 /* UIWebView+EatWalk.m */,
@@ -805,6 +831,34 @@
 			path = NewClass;
 			sourceTree = "<group>";
 		};
+		F40FB40C2328BD4E00A32045 /* 分享 */ = {
+			isa = PBXGroup;
+			children = (
+				F40FB4102328D57C00A32045 /* cell */,
+				F40FB40D2328BECF00A32045 /* ShareHomeViewController.h */,
+				F40FB40E2328BECF00A32045 /* ShareHomeViewController.m */,
+				F40FB41F232F87E700A32045 /* ShareAddViewController.h */,
+				F40FB420232F87E700A32045 /* ShareAddViewController.m */,
+			);
+			name = "分享";
+			sourceTree = "<group>";
+		};
+		F40FB4102328D57C00A32045 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				F40FB4112328D5A700A32045 /* ShareBannerTableViewCell.h */,
+				F40FB4122328D5A700A32045 /* ShareBannerTableViewCell.m */,
+				F40FB4192328E33600A32045 /* ShareFriendTableViewCell.h */,
+				F40FB41A2328E33600A32045 /* ShareFriendTableViewCell.m */,
+				F40FB4142328D5BC00A32045 /* ShareHomeCell.xib */,
+				F40FB4162328DF0800A32045 /* ShareHomeFactory.h */,
+				F40FB4172328DF0800A32045 /* ShareHomeFactory.m */,
+				F40FB41C2329072400A32045 /* Share.h */,
+				F40FB41D2329072400A32045 /* Share.m */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -838,9 +892,8 @@
 				TargetAttributes = {
 					7F057DA41C8D6B28003DA3C7 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = YZ6LQCG4AV;
 						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -875,6 +928,7 @@
 			files = (
 				7F057DE81C8D6B8E003DA3C7 /* Main.storyboard in Resources */,
 				7F057DBB1C8D6B28003DA3C7 /* LaunchScreen.storyboard in Resources */,
+				F40FB4152328D5BC00A32045 /* ShareHomeCell.xib in Resources */,
 				7F057DB81C8D6B28003DA3C7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -906,7 +960,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BlueCralishMoneyBook/Pods-BlueCralishMoneyBook-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BlueCralishMoneyBook/Pods-BlueCralishMoneyBook-resources.sh",
 				"${PODS_ROOT}/VENCalculatorInputView/VENCalculatorInputView/Images/VENCalculatorIconBackspace.png",
 				"${PODS_ROOT}/VENCalculatorInputView/VENCalculatorInputView/Images/VENCalculatorIconBackspace@2x.png",
 				"${PODS_ROOT}/VENCalculatorInputView/VENCalculatorInputView/VENCalculatorInputView.xib",
@@ -919,7 +973,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlueCralishMoneyBook/Pods-BlueCralishMoneyBook-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlueCralishMoneyBook/Pods-BlueCralishMoneyBook-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -951,6 +1005,7 @@
 				948A4CDE22BDF02500725110 /* UITabBar+RunDrink.m in Sources */,
 				948A4CD922BDF02500725110 /* UIViewController+LookSpeak.m in Sources */,
 				948A4CCB22BDF02500725110 /* DrinkUIWebViewe.m in Sources */,
+				F40FB421232F87E700A32045 /* ShareAddViewController.m in Sources */,
 				7F10B83A1C9939CC00A8F3AF /* BlueCralishAddTypeViewController.m in Sources */,
 				948A4CDC22BDF02500725110 /* UITabBar+HexDance.m in Sources */,
 				7F077CFA1C92B0D400D85707 /* BlueCralishMonthHIstoryViewController.m in Sources */,
@@ -970,6 +1025,7 @@
 				7F077CF11C926DCC00D85707 /* BlueCralishAllHistoryViewController.m in Sources */,
 				948A4CB322BDF02500725110 /* UILabel+Sing.m in Sources */,
 				948A4CE622BDF02500725110 /* UIWebView+ConstraintPatternWalk.m in Sources */,
+				F40FB41E2329072400A32045 /* Share.m in Sources */,
 				948A4CE122BDF02500725110 /* UIWebView+StringLookEat.m in Sources */,
 				948A4CD022BDF02500725110 /* SpeakUIViewControllery.m in Sources */,
 				948A4CCD22BDF02500725110 /* DanceBlueCralishPieTableViewCellB.m in Sources */,
@@ -990,12 +1046,14 @@
 				948A4CE722BDF02500725110 /* UIAlertView+ShouldPopOnBackButtonDance.m in Sources */,
 				948A4C1C22BCDAC100725110 /* NSNumber+String.m in Sources */,
 				948A4CAC22BDF02500725110 /* UIViewController+Dance.m in Sources */,
+				F40FB41B2328E33600A32045 /* ShareFriendTableViewCell.m in Sources */,
 				7F057DAA1C8D6B28003DA3C7 /* main.m in Sources */,
 				948A4CBA22BDF02500725110 /* SpeakUIProgressViewy.m in Sources */,
 				948A4CE022BDF02500725110 /* UIProgressView+ScreamDrink.m in Sources */,
 				948A4CAA22BDF02500725110 /* UIWebView+ConstraintPattern.m in Sources */,
 				7F057DE61C8D6B8E003DA3C7 /* BlueCralishNewAccountTableViewController.m in Sources */,
 				7F077D5D1C96D47700D85707 /* BlueCralishOperateTypeTableViewCell.m in Sources */,
+				F40FB4132328D5A700A32045 /* ShareBannerTableViewCell.m in Sources */,
 				948A4CDB22BDF02500725110 /* UIWebView+Dream.m in Sources */,
 				948A4CEB22BDF02500725110 /* UIAlertView+StringLook.m in Sources */,
 				948A4CAF22BDF02500725110 /* UITabBar+Eat.m in Sources */,
@@ -1008,6 +1066,7 @@
 				948A4CC222BDF02500725110 /* ClimbUIColorK.m in Sources */,
 				948A4CC322BDF02500725110 /* DanceBlueCralishOperateTypeTableViewControllerB.m in Sources */,
 				945C6036222E6C750067D71C /* TabBarViewController.m in Sources */,
+				F40FB40F2328BECF00A32045 /* ShareHomeViewController.m in Sources */,
 				948A4CE322BDF02500725110 /* UIProgressView+PieColorClimb.m in Sources */,
 				948A4CDF22BDF02500725110 /* UIImageView+HexDanceListen.m in Sources */,
 				948A4CEA22BDF02500725110 /* UIProgressView+Jump.m in Sources */,
@@ -1018,11 +1077,13 @@
 				7F10B83E1C9942F200A8F3AF /* BlueCralishAddTypeCollectionViewCell.m in Sources */,
 				948A4CCE22BDF02500725110 /* DrinkUITabBarK.m in Sources */,
 				948A4CC122BDF02500725110 /* SleepUIViewControllerl.m in Sources */,
+				F40FB4182328DF0800A32045 /* ShareHomeFactory.m in Sources */,
 				948A4CE922BDF02500725110 /* UILabel+ClimbRun.m in Sources */,
 				948A4CB022BDF02500725110 /* UIImageView+Sleep.m in Sources */,
 				948A4CC922BDF02500725110 /* RunUIWebViewG.m in Sources */,
 				7F077D031C93F67700D85707 /* BlueCralishPieView.m in Sources */,
 				948A4CD222BDF02500725110 /* JumpBlueCralishNewAccountTableViewControllerK.m in Sources */,
+				F40FB424232FC25900A32045 /* NSNumber+String.m in Sources */,
 				948A4CC422BDF02500725110 /* RaiseUILabelI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1137,12 +1198,12 @@
 				CODE_SIGN_ENTITLEMENTS = BlueCralishMoneyBook/BlueCralishMoneyBook.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZ6LQCG4AV;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BlueCralishMoneyBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ellaadoo.xxjmoneybook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cralish.handy.moneybook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1162,12 +1223,12 @@
 				CODE_SIGN_ENTITLEMENTS = BlueCralishMoneyBook/BlueCralishMoneyBook.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZ6LQCG4AV;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BlueCralishMoneyBook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ellaadoo.xxjmoneybook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cralish.handy.moneybook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

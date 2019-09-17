@@ -1,0 +1,6 @@
+module Pods_BlueCralishMoneyBook {
+  umbrella header "Pods-BlueCralishMoneyBook-umbrella.h"
+
+  export *
+  module * { export * }
+}

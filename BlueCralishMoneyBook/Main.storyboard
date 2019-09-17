@@ -314,6 +314,165 @@
             </objects>
             <point key="canvasLocation" x="1904.8" y="-956.67166416791611"/>
         </scene>
+        <!--新增分帐记录-->
+        <scene sceneID="PEf-jg-dQy">
+            <objects>
+                <viewController storyboardIdentifier="ShareAddViewController" title="新增分帐记录" id="Mcc-IK-90a" customClass="ShareAddViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7IR-lg-zUk"/>
+                        <viewControllerLayoutGuide type="bottom" id="C49-kO-4hC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kt5-fh-S7v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分帐对象" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h82-x9-qZc">
+                                <rect key="frame" x="20" y="60" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eha-3J-UCG">
+                                <rect key="frame" x="187.5" y="52.5" width="167.5" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="61m-yR-Ce9"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Vo-3j-I5B">
+                                <rect key="frame" x="187.5" y="117.5" width="167.5" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="edp-Uc-G1T"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="帐单金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sat-mb-KCv">
+                                <rect key="frame" x="20" y="125" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdK-37-res">
+                                <rect key="frame" x="20" y="599" width="335" height="48"/>
+                                <color key="backgroundColor" red="0.51981454740343269" green="0.6673413212435233" blue="0.60924189016931185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LdK-37-res" secondAttribute="height" multiplier="7:1" id="AN2-26-CMk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="结束分帐">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishedShareButtonDidTapped:" destination="Mcc-IK-90a" eventType="touchUpInside" id="Wo8-Um-hxf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEg-TK-6SV">
+                                <rect key="frame" x="140" y="117.5" width="36" height="36"/>
+                                <color key="backgroundColor" red="0.89411764705882346" green="0.81568627450980391" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cEg-TK-6SV" secondAttribute="height" multiplier="1:1" id="GKd-e0-fc8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="借">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="leandOweButtonDidTapped:" destination="Mcc-IK-90a" eventType="touchUpInside" id="HRi-eg-obY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94720426660000001" green="1" blue="0.98081630990000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LdK-37-res" secondAttribute="trailing" constant="20" id="1G5-yG-qwR"/>
+                            <constraint firstItem="8Vo-3j-I5B" firstAttribute="centerY" secondItem="sat-mb-KCv" secondAttribute="centerY" id="1a3-Nd-w7p"/>
+                            <constraint firstItem="h82-x9-qZc" firstAttribute="top" secondItem="7IR-lg-zUk" secondAttribute="bottom" constant="40" id="1kW-8S-BtS"/>
+                            <constraint firstItem="C49-kO-4hC" firstAttribute="top" secondItem="LdK-37-res" secondAttribute="bottom" constant="20" id="2IM-JL-JdO"/>
+                            <constraint firstItem="h82-x9-qZc" firstAttribute="leading" secondItem="kt5-fh-S7v" secondAttribute="leading" constant="20" id="49J-2J-h0j"/>
+                            <constraint firstItem="cEg-TK-6SV" firstAttribute="height" secondItem="8Vo-3j-I5B" secondAttribute="height" id="EBA-SF-Jih"/>
+                            <constraint firstItem="LdK-37-res" firstAttribute="leading" secondItem="kt5-fh-S7v" secondAttribute="leading" constant="20" id="Mlz-vl-gsj"/>
+                            <constraint firstItem="8Vo-3j-I5B" firstAttribute="leading" secondItem="cEg-TK-6SV" secondAttribute="trailing" constant="11.5" id="VEN-nu-9gf"/>
+                            <constraint firstItem="sat-mb-KCv" firstAttribute="leading" secondItem="h82-x9-qZc" secondAttribute="leading" id="ZZ6-Ro-38M"/>
+                            <constraint firstItem="8Vo-3j-I5B" firstAttribute="trailing" secondItem="eha-3J-UCG" secondAttribute="trailing" id="f0c-he-ase"/>
+                            <constraint firstItem="8Vo-3j-I5B" firstAttribute="leading" secondItem="eha-3J-UCG" secondAttribute="leading" id="gtl-T8-VFb"/>
+                            <constraint firstItem="sat-mb-KCv" firstAttribute="top" secondItem="h82-x9-qZc" secondAttribute="bottom" constant="44" id="pVI-66-Wdj"/>
+                            <constraint firstItem="eha-3J-UCG" firstAttribute="leading" secondItem="kt5-fh-S7v" secondAttribute="centerX" id="rMU-ln-M3O"/>
+                            <constraint firstItem="eha-3J-UCG" firstAttribute="centerY" secondItem="h82-x9-qZc" secondAttribute="centerY" id="tZU-ek-jga"/>
+                            <constraint firstAttribute="trailing" secondItem="eha-3J-UCG" secondAttribute="trailing" constant="20" id="u75-Lb-xeM"/>
+                            <constraint firstItem="cEg-TK-6SV" firstAttribute="centerY" secondItem="8Vo-3j-I5B" secondAttribute="centerY" id="vff-Tc-qct"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lendOweButton" destination="cEg-TK-6SV" id="1m4-aA-LlV"/>
+                        <outlet property="moneyTextField" destination="8Vo-3j-I5B" id="mMn-e1-7pR"/>
+                        <outlet property="nameTextField" destination="eha-3J-UCG" id="Evy-Sc-zJi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yMp-8Q-J3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2350" y="436"/>
+        </scene>
+        <!--分帐记录-->
+        <scene sceneID="V73-UF-mLa">
+            <objects>
+                <viewController id="48P-mL-JCv" customClass="ShareHomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dd7-c5-1nx"/>
+                        <viewControllerLayoutGuide type="bottom" id="kUq-7G-L5F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jxo-K4-lGS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pQs-wI-H3i">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.94720426660000001" green="1" blue="0.98081630990000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="48P-mL-JCv" id="BWj-uJ-92K"/>
+                                    <outlet property="delegate" destination="48P-mL-JCv" id="4aQ-vY-VSq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pQs-wI-H3i" firstAttribute="top" secondItem="dd7-c5-1nx" secondAttribute="bottom" id="6cO-A3-VbA"/>
+                            <constraint firstAttribute="trailing" secondItem="pQs-wI-H3i" secondAttribute="trailing" id="SUy-g2-wVr"/>
+                            <constraint firstItem="kUq-7G-L5F" firstAttribute="top" secondItem="pQs-wI-H3i" secondAttribute="bottom" id="dAY-2V-uGt"/>
+                            <constraint firstItem="pQs-wI-H3i" firstAttribute="leading" secondItem="jxo-K4-lGS" secondAttribute="leading" id="kz7-il-2T3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="分帐记录" id="rmB-ey-VWx">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="8Va-i2-3iw">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZwX-c7-l8h">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="titleEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="修改"/>
+                                <connections>
+                                    <action selector="editButtonDidTapped:" destination="48P-mL-JCv" eventType="touchUpInside" id="pzY-01-UNH"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editButton" destination="ZwX-c7-l8h" id="eqj-Qg-dby"/>
+                        <outlet property="tableView" destination="pQs-wI-H3i" id="eCQ-Tu-Tk9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pv6-oG-uPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1638" y="436"/>
+        </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="txs-6j-poV">
             <objects>
@@ -328,12 +487,13 @@
                         <segue destination="PV3-Vu-0io" kind="relationship" relationship="viewControllers" id="mno-AC-q17"/>
                         <segue destination="Use-Oc-73q" kind="relationship" relationship="viewControllers" id="1Fh-h3-HVF"/>
                         <segue destination="Rpk-Qw-FHE" kind="relationship" relationship="viewControllers" id="vR2-o9-QK3"/>
+                        <segue destination="tuV-10-flC" kind="relationship" relationship="viewControllers" id="nvV-ur-3iC"/>
                         <segue destination="Uws-Uj-h7N" kind="relationship" relationship="viewControllers" id="Voq-Cd-0r2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4oQ-6n-P6L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-806" y="479"/>
+            <point key="canvasLocation" x="137" y="436"/>
         </scene>
         <!--全部帳本記錄-->
         <scene sceneID="Y48-oH-Xeg">
@@ -457,7 +617,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdx-3H-DBY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021" y="275"/>
+            <point key="canvasLocation" x="1959.2" y="274.81259370314842"/>
         </scene>
         <!--Blue Cralish MonthH Istory View Controller-->
         <scene sceneID="H0V-nI-7BS">
@@ -580,13 +740,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZQ-TW-ZPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1906" y="275"/>
+            <point key="canvasLocation" x="2844" y="274.81259370314842"/>
         </scene>
-        <!--記帳-->
+        <!--记帐-->
         <scene sceneID="xPi-Iy-s43">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PV3-Vu-0io" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="記帳" image="记账" id="Sk0-24-SZG"/>
+                    <tabBarItem key="tabBarItem" title="记帐" image="记账" id="Sk0-24-SZG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rd5-Wt-RZq">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -607,11 +767,11 @@
             </objects>
             <point key="canvasLocation" x="180" y="-956"/>
         </scene>
-        <!--帳本-->
+        <!--帐本-->
         <scene sceneID="gZJ-99-hoB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Use-Oc-73q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="帳本" image="账本" id="Cdv-DQ-3BS"/>
+                    <tabBarItem key="tabBarItem" title="帐本" image="账本" id="Cdv-DQ-3BS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="y60-t6-RG5">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -629,7 +789,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQX-iM-mZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="275"/>
+            <point key="canvasLocation" x="1119.2" y="274.81259370314842"/>
         </scene>
         <!--Blue Cralish Pie View Controller-->
         <scene sceneID="an2-Q9-CD2">
@@ -771,7 +931,7 @@
                 <swipeGestureRecognizer direction="right" id="Ca4-Bc-OVl" userLabel="Left Swipe Gesture Recognizer"/>
                 <swipeGestureRecognizer direction="right" id="vpr-1j-Gmu" userLabel="Right Swipe Gesture Recognizer"/>
             </objects>
-            <point key="canvasLocation" x="1021" y="1218"/>
+            <point key="canvasLocation" x="1959.2" y="1217.5412293853074"/>
         </scene>
         <!--Blue Cralish Type Detail View Controller-->
         <scene sceneID="R6e-2X-vEB">
@@ -872,7 +1032,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Sl-y5-pT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1906" y="1218"/>
+            <point key="canvasLocation" x="2844" y="1217.5412293853074"/>
         </scene>
         <!--Blue Cralish Account View Controller-->
         <scene sceneID="jbD-9j-xVL">
@@ -986,11 +1146,11 @@
             </objects>
             <point key="canvasLocation" x="1021" y="-486"/>
         </scene>
-        <!--統計-->
+        <!--统计-->
         <scene sceneID="1CU-hH-Hxh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rpk-Qw-FHE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="統計" image="统计" id="e7K-Rd-gfW"/>
+                    <tabBarItem key="tabBarItem" title="统计" image="统计" id="e7K-Rd-gfW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TZD-sF-cq4">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1008,7 +1168,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKE-KK-yxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="1218"/>
+            <point key="canvasLocation" x="1119.2" y="1217.5412293853074"/>
         </scene>
         <!--設定-->
         <scene sceneID="LnK-r4-UsX">
@@ -1405,11 +1565,11 @@
             </objects>
             <point key="canvasLocation" x="1906" y="2019"/>
         </scene>
-        <!--設定-->
+        <!--设置-->
         <scene sceneID="awr-dD-hde">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uws-Uj-h7N" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="設定" image="设置" id="kFI-Y7-7tu"/>
+                    <tabBarItem key="tabBarItem" title="设置" image="设置" id="kFI-Y7-7tu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vvt-Id-LbR">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1429,8 +1589,30 @@
             </objects>
             <point key="canvasLocation" x="180" y="2394"/>
         </scene>
+        <!--分帐-->
+        <scene sceneID="fXR-d7-9CF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tuV-10-flC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="分帐" image="share" id="VMK-7M-n96"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tgb-vZ-wwR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.60784313729999995" green="0.83137254900000002" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.2784313725" green="0.53333333329999999" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="48P-mL-JCv" kind="relationship" relationship="rootViewController" id="AbR-Jh-FRD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5T1-7z-qYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-852" y="436"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="share" width="50" height="50"/>
         <image name="统计" width="25" height="26"/>
         <image name="记账" width="25" height="25"/>
         <image name="设置" width="25" height="25"/>
@@ -1438,7 +1620,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YpE-dh-EB9"/>
-        <segue reference="CXH-Ph-CXI"/>
+        <segue reference="mcX-TE-Ay4"/>
         <segue reference="f1f-tz-fnq"/>
     </inferredMetricsTieBreakers>
 </document>
